@@ -2,3 +2,44 @@ ai-universe/node_modules/
 ai-universe/.next/
 ai-universe/.env
 .DS_Store
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+ai-universe/node_modules
+ai-universe/.pnp
+ai-universe/.pnp.*
+ai-universe/.yarn/*
+ai-universe/!.yarn/patches
+ai-universe/!.yarn/plugins
+ai-universe/!.yarn/releases
+ai-universe/!.yarn/versions
+
+# testing
+ai-universe/coverage
+
+# next.js
+ai-universe/.next/
+ai-universe/out/
+
+# production
+ai-universe/build
+
+# misc
+ai-universe/.DS_Store
+ai-universe/*.pem
+
+# debug
+ai-universe/npm-debug.log*
+ai-universe/yarn-debug.log*
+ai-universe/yarn-error.log*
+ai-universe/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+ai-universe/.env*
+
+# vercel
+ai-universe/.vercel
+
+# typescript
+ai-universe/*.tsbuildinfo
+ai-universe/next-env.d.ts
