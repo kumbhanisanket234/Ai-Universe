@@ -1,0 +1,4 @@
+ai-universe/node_modules/
+ai-universe/.next/
+ai-universe/.env
+.DS_Store

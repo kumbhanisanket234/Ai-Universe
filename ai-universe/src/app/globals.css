@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  /* font-family: 'inter'; */
+}
+
+.dja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-main {
+  padding: 20px 240px 20px 240px;
+  background-color: rgba(0, 0, 0, 1);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 100%;
+  max-width: 1400px;
+  padding: 15px 35px 15px 15px;
+  border: 1px solid rgba(236, 109, 255, 0.8);
+  border-radius: 80px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(225, 105, 243, 0.2),
+    rgba(177, 35, 199, 0)
+  );
+  box-shadow: 0px -100px 150px 1px rgba(225, 105, 243, 0.5);
+}
+
+.nav-link-container a:hover {
+  color: #ec6dff;
+}
+
+.guid-btn {
+  position: relative;
+  border: 1px solid transparent;
+  padding: 8px 20px;
+  overflow: hidden;
+}
+
+.guid-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background-color: white; /* Adjust to your desired border color */
+  transition: width 1s ease-in-out;
+}
+
+.guid-btn:hover::after {
+  width: 100%;
+}
+
+.guid-btn:hover {
+  font-size: px; /* Replace `px` with your desired font size if needed */
+}
+
+.hero-main {
+  background-color: rgba(0, 0, 0, 1);
+  min-height: 100vh;
+}
+
+.hero {
+  max-width: 1100px;
+}
+
+.hero-register-btn,
+.hero-heading button {
+  border-top: 1px solid rgba(236, 109, 255, 0.5);
+  border-bottom: rgba(236, 109, 255, 0);
+  box-shadow: 0px 2px 5px 0px rgba(218, 38, 222, 0.22);
+  background-color: #160c18;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 8px 20px 8px 20px;
+}
+
+.hero-heading button {
+  font-weight: 400;
+}
+
+.hero-image {
+  filter: drop-shadow(8px 8px 105px rgba(204, 37, 238, 0.5));
+}
