@@ -20,7 +20,7 @@ body {
 }
 
 .navbar-main {
-  padding: 20px 240px 20px 240px;
+  padding: 20px 190px 20px 190px;
   background-color: rgba(0, 0, 0, 1);
 }
 .navbar {
@@ -47,8 +47,10 @@ body {
 .guid-btn {
   position: relative;
   border: 1px solid transparent;
-  padding: 8px 20px;
+  padding: 8px 5px;
   overflow: hidden;
+  display: flex;
+  width: 80px;
 }
 
 .guid-btn::after {
@@ -58,7 +60,7 @@ body {
   left: 0;
   height: 1px;
   width: 0;
-  background-color: white; /* Adjust to your desired border color */
+  background-color: rgba(236, 109, 255, 0.5);
   transition: width 1s ease-in-out;
 }
 
@@ -67,7 +69,11 @@ body {
 }
 
 .guid-btn:hover {
-  font-size: px; /* Replace `px` with your desired font size if needed */
+  font-size: px;
+  .guid-arrow {
+    transition: 1s;
+    margin-left: 10px;
+  }
 }
 
 .hero-main {
@@ -87,7 +93,20 @@ body {
   background-color: #160c18;
   font-weight: 600;
   border-radius: 100px;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 30px;
+}
+
+.hero-register-btn {
+  display: flex;
+  width: 170px;
+  padding: 10px 0px 10px 25px;
+}
+
+.hero-register-btn:hover {
+  .register-arrow {
+    margin-left: 10px;
+    transition: 1s;
+  }
 }
 
 .hero-heading button {
@@ -96,4 +115,199 @@ body {
 
 .hero-image {
   filter: drop-shadow(8px 8px 105px rgba(204, 37, 238, 0.5));
+  animation: moveUpDown 5s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}
+
+.signup-main {
+  background-color: #1d0125;
+  min-height: 100vh;
+}
+
+.signup-image-container {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #260330;
+  min-height: 100vh;
+}
+
+.signup-image {
+  max-height: 740px;
+  /* width: 100%; */
+  object-fit: contain;
+}
+
+.signup-form-container {
+  padding: 30px;
+  width: 55%;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.signup-form-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+.signup-form label {
+  opacity: 70%;
+  font-size: 16px;
+}
+
+.signup-form::placeholder {
+  opacity: 70%;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.signup-form input,
+.signup-form select {
+  border-bottom: 1px solid #595959;
+  width: 100%;
+  background-color: transparent;
+  font-size: 14px;
+}
+
+.signup-form input:focus,
+.signup-form select:focus {
+  outline: none;
+}
+
+.signup-form select option {
+  background-color: #1d0125;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.checkbox {
+  width: unset !important;
+  margin-bottom: 0 !important;
+}
+
+.submit-btn {
+  background-color: #27395b;
+  border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  color: rgba(218, 102, 241, 0.986);
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.signin-link {
+  color: rgba(218, 102, 241, 0.986);
+}
+
+/*custom calendar*/
+.flatpickr-calendar {
+  background-color: #191722 !important;
+  color: white !important;
+  border: 1px solid rgb(119, 75, 224);
+  box-shadow: none;
+  border-radius: 10px !important;
+  font-family: 'Aspekta' !important;
+}
+
+.flatpickr-month,
+.flatpickr-weekday {
+  color: white !important;
+}
+
+.flatpickr-weekday {
+  opacity: 70%;
+}
+
+.flatpickr-day {
+  color: white !important;
+}
+
+.flatpickr-day:hover {
+  color: black !important;
+  border: 1px solid #774be0 !important;
+  /* background-image: linear-gradient(#fe0ffe, #13d3ee) !important; */
+  background-color: #6234e2 !important;
+}
+
+.flatpickr-day.selected {
+  background-color: #6234e2 !important;
+  color: white !important;
+  border: 1px solid #774be0 !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  opacity: 1;
+}
+
+.flatpickr-current-month
+.flatpickr-monthDropdown-months
+.flatpickr-monthDropdown-month {
+  background-color: #4c2ea4 !important;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  fill: white !important;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+  fill: #774be0 !important;
+}
+
+.flatpickr-months .flatpickr-next-month:hover svg,
+.flatpickr-months .flatpickr-prev-month:hover svg {
+  fill: #9071ee !important;
+}
+
+.error-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.signin-form-container{
+  padding: 30px;
+  width: 55%;
+  max-height: 100vh;
+}
+
+.back-btn{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding:10px 25px;
+  border-radius: 20px;
+  box-shadow: none;
+  background-color: #160c18;
+  color: white;
+  border: 1px solid rgba(236, 109, 255, 0.5);
 }

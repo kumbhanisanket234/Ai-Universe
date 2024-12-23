@@ -1,4 +1,6 @@
+"use client"
 import Image from 'next/image'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 export default function Hero () {
@@ -7,24 +9,27 @@ export default function Hero () {
       <div className='flex mt-[70px] hero'>
         <div className='flex flex-col justify-around max-h-[574px]'>
           <div className='hero-heading w-[520px]'>
-            <button disabled className='text-[#B5B0B7]'>Lightning-fast, free-cost, easy.</button>
+            <button disabled className='text-[#B5B0B7]'>
+              Lightning-fast, free-cost, easy.
+            </button>
             <h1 className='text-[86px] pt-5 leading-[96px]'>
               Your AI <br /> Register Now
             </h1>
           </div>
           <div className='flex flex-col gap-[40px]'>
             <p className='text-[#B5B0B7]'>
-              Register Your ai free and to some step
+              Register your AI for free and follow a few steps.
             </p>
             <div className='flex items-center gap-[17px]'>
               <div className='flex'>
-                <button className='hero-register-btn flex items-center gap-[10px] text-white'>
+                <button className='hero-register-btn flex items-center gap-[10px] text-white' onClick={()=>{redirect('/sign-up')}}>
                   Register Now
                   <Image
                     src='/images/right-arrow.svg'
                     height={7}
                     width={7}
                     alt='right-arrow'
+                    className='register-arrow'
                   />
                 </button>
               </div>
@@ -36,6 +41,7 @@ export default function Hero () {
                     height={7}
                     width={7}
                     alt='right-arrow'
+                    className='guid-arrow'
                   />
                 </button>
               </div>
