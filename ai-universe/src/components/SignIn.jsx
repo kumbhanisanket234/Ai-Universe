@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import React, { useRef, useState } from 'react'
 
 export default function SignIn () {
-    const router=useRouter();
+  const router = useRouter()
   const inputsRef = {
     email: useRef(),
     password: useRef()
@@ -66,7 +66,12 @@ export default function SignIn () {
     <div className='signup-main'>
       <div className='signup flex justify-center'>
         <div className='signup-image-container'>
-          <button className='back-btn' onClick={() => {router.push('/ai-universe')}}>
+          <button
+            className='back-btn'
+            onClick={() => {
+              router.push('/ai-universe')
+            }}
+          >
             Back to home
           </button>
           <Image

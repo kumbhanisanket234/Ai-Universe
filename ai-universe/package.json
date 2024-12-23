@@ -10,10 +10,14 @@
   },
   "dependencies": {
     "ai-universe": "file:",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
     "next": "15.1.0",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.7",
     "react-dom": "^19.0.0",
-    "react-flatpickr": "^3.10.13"
+    "react-flatpickr": "^3.10.13",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "postcss": "^8",

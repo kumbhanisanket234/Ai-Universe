@@ -7,9 +7,10 @@ import 'flatpickr/dist/flatpickr.min.css'
 import countryList from '../utils/countryList.json'
 import { EMAIL_REGEX, FULLNAME_REGEX, PHONE_REGEX } from '@/utils/constant'
 import { useRouter } from 'next/navigation'
+import toast from 'react-hot-toast'
 
 export default function SignUp () {
-  const router = useRouter();
+  const router = useRouter()
   const inputsRef = {
     fullName: useRef(),
     phone: useRef(),
@@ -141,6 +142,7 @@ export default function SignUp () {
 
   const onSubmit = () => {
     console.log(formData)
+    toast.success("Submit Successfully")
     setFormData(prev => ({
       ...prev,
       fullName: '',
@@ -159,7 +161,12 @@ export default function SignUp () {
     <div className='signup-main'>
       <div className='signup flex justify-center'>
         <div className='signup-image-container'>
-          <button className='back-btn' onClick={() => {router.push('/ai-universe')}}>
+          <button
+            className='back-btn'
+            onClick={() => {
+              router.push('/ai-universe')
+            }}
+          >
             Back to home
           </button>
           <Image
