@@ -23,7 +23,7 @@ export default function Navbar () {
               />
             </Link>
             <Link href='#'>About</Link>
-            <Link href='#'>Profile</Link>
+            <Link href='/profile'>Profile</Link>
             <Link href='#'>More</Link>
           </div>
         </div>

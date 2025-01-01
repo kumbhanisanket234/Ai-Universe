@@ -31,91 +31,35 @@ const Footer = () => {
               <li>
                 <a href='#'>About Us</a>
               </li>
-              <li>
-                <a href='#' target='_blank'>
-                  Ecosystem
-                </a>
-              </li>
-              <li>
-                <a href='#'>Mission 369</a>
-              </li>
-              <li>
-                <a href='#'>Purpose</a>
-              </li>
-              <li>
-                <a href='#'>Consensus</a>
-              </li>
-              <li>
-                <a href='#' target='_blank'>
-                  Tokenomics
-                </a>
-              </li>
-              <li>
-                <a href='#' target='_blank'>
-                  Roadmap
-                </a>
-              </li>
             </ul>
           </div>
           <div className='col-lg-2 col-md-4 col-6'>
-            <p className='footer_p'>Tools</p>
+            <p className='footer_p'>QUICK LINKS</p>
             <ul>
               <li>
                 <a href='#' target='_blank'>
-                  Wallet
+                  ...
                 </a>
-              </li>
-              <li>
-                <a href='#' target='_blank'>
-                  Explorer
-                </a>
-              </li>
-              <li>
-                <a href='#'>Bridges</a>
-              </li>
-              <li>
-                <a href='#'>Documentation</a>
-              </li>
-              <li>
-                <a href='#'>Mainnet</a>
-              </li>
-              <li>
-                <a href='#'>Faucets</a>
-              </li>
-              <li>
-                <a href='#'>Launch NFTs</a>
               </li>
             </ul>
           </div>
           <div className='col-lg-3 col-md-4 mt-md-0 mt-3'>
-            <p className='footer_p'>Documentation</p>
+            <p className='footer_p'>CONTACT US</p>
             <ul>
               <li>
                 <a href='#' target='_blank'>
-                  Whitepaper
+                  ...
                 </a>
-              </li>
-              <li>
-                <a href='#'>Brand Kit</a>
-              </li>
-              <li>
-                <a href='#'>News &amp; Updates</a>
-              </li>
-              <li>
-                <a href='#'>Developer Documentation</a>
-              </li>
-              <li>
-                <a href='#'>Dev Forum</a>
               </li>
             </ul>
           </div>
         </div>
         <div className='footer_border' />
-        <div className='d-lg-flex align-items-center justify-content-between'>
+        <div className='d-flex align-items-center flex-wrap justify-content-between'>
           <p className='color_white_opacity_70'>
             @2024 registered Ai-Universe.
           </p>
-          <p className='color_white_opacity_70 mt-lg-0 mt-2'>
+          <p className='color_white_opacity_70 mt-lg-0'>
             Ready to join Ai-Universe now!
           </p>
         </div>

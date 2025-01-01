@@ -1,11 +1,16 @@
 'use client'
-import { EMAIL_REGEX } from '@/utils/constant'
+import { EMAIL_REGEX, ROOT_URL } from '@/utils/constant'
+import { setCookie } from '@/utils/cookies'
+import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useRef, useState } from 'react'
+import toast from 'react-hot-toast'
 
 export default function SignIn () {
+
+  const [loading,setLoading]=useState(false)
   const router = useRouter()
   const inputsRef = {
     email: useRef(),
@@ -54,13 +59,32 @@ export default function SignIn () {
     onSubmit()
   }
 
-  const onSubmit = () => {
-    console.log(formData)
-    setFormData(prev => ({
-      ...prev,
-      email: '',
-      password: ''
-    }))
+  const onSubmit = async () => {
+    try {
+      setLoading(true)
+      const res = await axios.post(
+        `${ROOT_URL}/login`,
+        {},
+        {
+          params: {
+            ...formData
+          }
+        }
+      )
+      if (res?.data?.success) {
+        setCookie('token',res.data?.token)
+        router.push('/ai-universe')
+        toast.success(res?.data?.message)
+        return
+      }
+      toast.error(res?.data?.error || 'Something went wrong')
+
+    } catch (err) {
+      console.log(err)
+      toast.error(err?.data?.message || 'Something went wrong')
+    }finally{
+      setLoading(false)
+    }
   }
   return (
     <div className='signup-main'>
@@ -69,10 +93,10 @@ export default function SignIn () {
           <button
             className='back-btn'
             onClick={() => {
-              router.push('/ai-universe')
+              router.back()
             }}
           >
-            Back to home
+            Back
           </button>
           <Image
             src='/images/signup-robot.png'
@@ -117,7 +141,7 @@ export default function SignIn () {
               )}
             </div>
             <button className='submit-btn' onClick={checkValidations}>
-              Login
+              {loading ? "Loading..." : "Login"}
             </button>
             <div className='flex justify-center items-center mt-5 gap-2'>
               <p>Don’t have an account?</p>
