@@ -18,7 +18,7 @@ import Modal from 'react-bootstrap/Modal'
 
 export default function SignUp () {
   const router = useRouter()
-  const [timer, setTimer] = useState(10)
+  const [timer, setTimer] = useState(60)
   let numberOfDigits = 4
   const [otp, setOtp] = useState(new Array(numberOfDigits).fill(''))
   const otpBoxReference = useRef([])
@@ -70,7 +70,7 @@ export default function SignUp () {
         if (prev <= 1) {
           clearInterval(interval)
           setOtpSent(false)
-          setTimer(10)
+          setTimer(60)
           return 0
         }
         return prev - 1
@@ -262,7 +262,7 @@ export default function SignUp () {
                 router.push('/ai-universe')
               }}
             >
-              Back
+              <i className='fa-solid fa-arrow-left'></i>
             </button>
             <Image
               src='/images/signup-robot.png'
@@ -450,7 +450,6 @@ export default function SignUp () {
                       }
                     : checkValidations
                 }
-                // disabled={otpSent}
               >
                 {loading && !isOpen ? 'Loading...' : 'Create an account'}
               </button>
@@ -471,10 +470,10 @@ export default function SignUp () {
           setIsOpen(false)
         }}
         centered
-        className='popup-modal'
+        className='otp-modal'
       >
         <Modal.Header>
-          <div className='popup-close flex items-center justify-between w-100'>
+          <div className='flex items-center justify-between w-100'>
             <h1>Enter OTP For Verify Email</h1>
             <button
               onClick={() => {

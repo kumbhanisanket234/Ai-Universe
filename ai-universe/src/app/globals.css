@@ -308,8 +308,8 @@ select:-webkit-autofill:focus {
   position: absolute;
   top: 10px;
   left: 10px;
-  padding: 10px 25px;
-  border-radius: 20px;
+  padding: 10px 15px;
+  border-radius: 50%;
   box-shadow: none;
   background-color: #160c18;
   color: white;
@@ -564,16 +564,14 @@ select:-webkit-autofill:focus {
 }
 
 .review-btn {
-  border: 1px solid #af57d4;
+  border: 1px solid white;
   font-weight: 550;
   color: rgb(245, 236, 236);
 }
 
 .review-btn:hover {
-  background-color: #af57d4;
-
+  border: 1px solid white;
   color: white;
-  background-color: #af57d4;
 }
 
 .OTP-boxes {
@@ -587,7 +585,7 @@ select:-webkit-autofill:focus {
   border: 1px solid #af57d4;
 }
 
-.modal-header {
+.otp-modal .modal-header {
   justify-content: end !important;
   padding: 10px 10px !important;
 }
@@ -621,7 +619,7 @@ select:-webkit-autofill:focus {
   box-shadow: none;
 }
 
-.dashboard {
+.profile {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -629,35 +627,35 @@ select:-webkit-autofill:focus {
   padding: 80px 80px 40px 80px;
   gap: 100px;
   background-color: rgba(12, 9, 16, 1);
-  background: linear-gradient(161deg, #06030a 11.19%, #130b13 63.26%);
+  background: linear-gradient(161deg, #2d699b 11.19%, #4b0a5f 63.26%);
 }
 
-.dashboard-container {
+.profile-container {
   display: flex;
   width: 70%;
   max-width: 1400px;
 }
 
-.dashboard-form-heading h2 {
+.profile-form-heading h2 {
   font-size: 40px;
   font-weight: 550;
   color: rgba(255, 255, 255, 1);
 }
 
-.dashboard-form-heading p {
+.profile-form-heading p {
   font-size: 15px;
   font-weight: 500;
   opacity: 70%;
   color: rgba(255, 255, 255, 1);
 }
 
-.dashboard-form {
+.profile-form {
   border-radius: 10px;
   background-color: rgba(25, 23, 34, 1);
   margin-top: 40px;
 }
 
-.dashboard-form-faithid {
+.profile-form-header {
   background: linear-gradient(92.45deg, #70158b -16.4%, #4a95d2 110.02%);
   color: white;
   padding: 10px 15px 10px 15px;
@@ -669,14 +667,14 @@ select:-webkit-autofill:focus {
   border-top-right-radius: 10px;
 }
 
-.dashboard-form-faithid p {
+.profile-form-header p {
   font-size: 15px;
   font-weight: 450;
   line-height: 24px;
   text-align: left;
 }
 
-.dashboard-form-faithid h2 {
+.profile-form-header h2 {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -684,11 +682,11 @@ select:-webkit-autofill:focus {
   margin: 0;
 }
 
-.dashboard-form .form-details {
+.profile-form .form-details {
   padding: 10px 15px 20px 15px;
 }
 
-.dashboard-form .form-details .field-details {
+.profile-form .form-details .field-details {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
@@ -698,7 +696,13 @@ select:-webkit-autofill:focus {
   margin-top: 10px;
 }
 
-.dashboard-form .form-details .wallet-address-container {
+.profile-form .form-details .field-details input[type="password"]::placeholder{
+  font-weight: 450;
+  opacity: 70%;
+  color:rgba(255, 255, 255, 1)
+}
+
+.profile-form .form-details .wallet-address-container {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 14px;
@@ -708,7 +712,7 @@ select:-webkit-autofill:focus {
   gap: 5px;
 }
 
-.dashboard-form .form-details p {
+.profile-form .form-details p {
   font-size: 14px;
   font-weight: 450;
   line-height: 14px;
@@ -717,7 +721,7 @@ select:-webkit-autofill:focus {
   color: rgba(255, 255, 255, 1);
 }
 
-.dashboard-form .form-details h2 {
+.profile-form .form-details h2 {
   font-size: 15px;
   font-weight: 550;
   line-height: 20px;
@@ -727,7 +731,11 @@ select:-webkit-autofill:focus {
   margin: 0;
 }
 
-.dashboard-form .form-details .field-container {
+.change-password-input{
+  text-align: left!important;
+}
+
+.profile-form .form-details .field-container {
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -746,16 +754,34 @@ select:-webkit-autofill:focus {
   border-radius: 50%;
 }
 
-.form-details input {
+.profile-form select{
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  font-size: 14px;
+  color: white;
+}
+
+.profile-form select option{
+  background-color: #191722;
+}
+
+.profile-form select:focus{
+  outline: none;
+  box-shadow: none;
   background-color: transparent;
 }
-.form-details input:focus {
+
+.profile-form .form-details input,.profile-form .form-details select {
+  background-color: transparent;
+  font-size: 14px;
+}
+.profile-form .form-details input:focus {
   background-color: transparent;
   border: none;
   outline: none;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 40px;
   aspect-ratio: 1;
@@ -778,15 +804,65 @@ select:-webkit-autofill:focus {
   animation: l18 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
 }
 
+.change-password{
+  justify-content: unset!important;
+  width: fit-content!important;
+  padding: 10px 14px!important ;
+}
 .change-password-btn {
-  margin: 2px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: transparent;
   color: white;
   opacity: 0.7;
   font-size: 14px;
+  box-shadow: none;
+  outline: none;
+}
+
+.contact-main{
+  background-color: #191722;
+  min-height: 100vh;
+}
+
+.contact-heading h1{
+  font-size: 36px;
+  color: #BA68C8;
+  font-weight: 600;
+}
+
+.contact-heading p{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-form p{
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.contact-form input,.contact-form textarea{
+  border-radius: 10px;
+  border: 2px solid #DCB3E3;
+  width: 100%;
+  padding: 7px;
+  margin-top: 10px;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.contact-form div{
+  margin-top: 20px;
+}
+
+.contact-form input:focus,.contact-form textarea:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.contact-submit-btn{
+  width: 100%;
+  color: white;
+  background-color: #BA68C8;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 @keyframes l18 {
@@ -849,11 +925,11 @@ select:-webkit-autofill:focus {
 }
 
 @media (max-width: 512px) {
-  .dashboard-form-container {
+  .profile-form-container {
     width: 80%;
   }
 
-  .dashboard-form-heading h2 {
+  .profile-form-heading h2 {
     font-size: 20px;
   }
 

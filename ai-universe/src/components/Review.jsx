@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 import { EMAIL_REGEX, FULLNAME_REGEX, ROOT_URL } from '@/utils/constant'
 import axios from 'axios'
+import { Modal } from 'react-bootstrap'
+import Image from 'next/image'
 // import reviewsContainer from '../utils/reviewContainer.json'
 
 function Review () {
@@ -107,7 +109,7 @@ function Review () {
     bodyData.append('image', formData?.img)
     bodyData.append('work', formData?.work)
     bodyData.append('location', formData?.location)
-   
+
     try {
       const res = await axios.post(`${ROOT_URL}/reviews`, bodyData)
       if (res?.data?.error) {
@@ -234,134 +236,127 @@ function Review () {
             Add Review
           </button>
         </div>
-        {showModal && (
-          <>
-            <div
-              className='modal show'
-              tabIndex='-1'
-              role='dialog'
-              style={{ display: 'block' }}
-            >
-              <div className='modal-dialog' role='document'>
-                <div className='modal-content'>
-                  <div className='modal-header justify-between'>
-                    <h5 className='modal-title'>Add Reviews</h5>
-                    <span aria-hidden='true'>
-                      <i
-                        className='fa-solid fa-xmark'
-                        onClick={handleClose}
-                      ></i>
-                    </span>
-                  </div>
 
-                  <div className='modal-body text-start'>
-                    <div>
-                      Name:
-                      <input
-                        type='text'
-                        className='form-control'
-                        name='name'
-                        value={formData.name}
-                        onChange={handleChange}
-                      />
-                      {validations.name && (
-                        <span className='error-message'>Name Required</span>
-                      )}
-                    </div>
-                    <div>
-                      Description:
-                      <input
-                        type='text'
-                        className='form-control'
-                        name='description'
-                        value={formData.description}
-                        onChange={handleChange}
-                      />
-                      {validations.description && (
-                        <span className='error-message'>
-                          Description Required
-                        </span>
-                      )}
-                    </div>
-                    <div>
-                      Work:
-                      <input
-                        type='text'
-                        className='form-control'
-                        name='work'
-                        value={formData.work}
-                        onChange={handleChange}
-                      />
-                      {validations.work && (
-                        <span className='error-message'>Work Required</span>
-                      )}
-                    </div>
-                    <div>
-                      Email:
-                      <input
-                        type='email'
-                        className='form-control'
-                        name='email'
-                        value={formData.email}
-                        onChange={handleChange}
-                      />
-                      {validations.email && (
-                        <span className='error-message'>
-                          {formData.email ? 'Invalid Email' : 'Email Required'}
-                        </span>
-                      )}
-                    </div>
-                    <div>
-                      Image:
-                      <input
-                        type='file'
-                        id='img'
-                        className='form-control'
-                        name='img'
-                        defaultValue={formData.img}
-                        onChange={handleFileChange}
-                      />
-                      {validations.img && (
-                        <span className='error-message'>Image Required</span>
-                      )}
-                    </div>
-                    <div>
-                      Location:
-                      <input
-                        type='text'
-                        className='form-control'
-                        name='location'
-                        value={formData.location}
-                        onChange={handleChange}
-                      />
-                      {validations.location && (
-                        <span className='error-message'>Location Required</span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className='modal-footer'>
-                    <button
-                      className='btn btn-default review-btn'
-                      onClick={checkValidations}
-                    >
-                      Add
-                    </button>
-
-                    <button
-                      type='button'
-                      className='btn btn-secondary'
-                      onClick={handleClose}
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
+        <Modal
+          show={showModal}
+          onHide={() => {
+            setShowModal(false)
+          }}
+          centered
+          className='otp-modal'
+        >
+          <Modal.Header>
+            <div className='flex items-center justify-between w-100'>
+              <h1 className='text-[20px]'>Add Reviews</h1>
+              <button
+                onClick={() => {
+                  setShowModal(false)
+                }}
+              >
+                <Image
+                  src='/images/close.png'
+                  height={30}
+                  width={30}
+                  alt='close'
+                />
+              </button>
+            </div>
+          </Modal.Header>
+          <Modal.Body>
+            <div className='text-start'>
+              <div>
+                Name:
+                <input
+                  type='text'
+                  className='form-control'
+                  name='name'
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {validations.name && (
+                  <span className='error-message'>Name Required</span>
+                )}
+              </div>
+              <div>
+                Description:
+                <input
+                  type='text'
+                  className='form-control'
+                  name='description'
+                  value={formData.description}
+                  onChange={handleChange}
+                />
+                {validations.description && (
+                  <span className='error-message'>Description Required</span>
+                )}
+              </div>
+              <div>
+                Work:
+                <input
+                  type='text'
+                  className='form-control'
+                  name='work'
+                  value={formData.work}
+                  onChange={handleChange}
+                />
+                {validations.work && (
+                  <span className='error-message'>Work Required</span>
+                )}
+              </div>
+              <div>
+                Email:
+                <input
+                  type='email'
+                  className='form-control'
+                  name='email'
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {validations.email && (
+                  <span className='error-message'>
+                    {formData.email ? 'Invalid Email' : 'Email Required'}
+                  </span>
+                )}
+              </div>
+              <div>
+                Image:
+                <input
+                  type='file'
+                  id='img'
+                  className='form-control'
+                  name='img'
+                  defaultValue={formData.img}
+                  onChange={handleFileChange}
+                />
+                {validations.img && (
+                  <span className='error-message'>Image Required</span>
+                )}
+              </div>
+              <div>
+                Location:
+                <input
+                  type='text'
+                  className='form-control'
+                  name='location'
+                  value={formData.location}
+                  onChange={handleChange}
+                />
+                {validations.location && (
+                  <span className='error-message'>Location Required</span>
+                )}
               </div>
             </div>
-            <div className='modal-backdrop show'></div>
-          </>
-        )}
+
+            <div className='w-100 flex justify-center mt-3'>
+              <button
+                className='btn btn-default review-btn'
+                onClick={checkValidations}
+              >
+                Add
+              </button>
+            </div>
+          </Modal.Body>
+        </Modal>
       </div>
     </div>
   )
