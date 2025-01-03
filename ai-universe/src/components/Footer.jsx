@@ -13,15 +13,18 @@ const Footer = () => {
               The Ai-Universe is AI Device Registration Platform stands out as a unique
               ecosystem, designed exclusively to register and manage AI devices.
             </p>
-            <div className='d-flex align-items-center gap-3'>
+            <div className='d-flex align-items-center'>
               <a href='#' target='_blank'>
-                <img src='/images/Instagram.svg' alt='Instagram' />
+                <img src='/images/contact-insta.svg' alt='Instagram' />
               </a>
               <a href='#' target='_blank'>
-                <img src='/images/Facebook.svg' alt='Facebook' />
+                <img src='/images/contact-facebook.svg' alt='Facebook' />
               </a>
               <a href='#' target='_blank'>
-                <img src='/images/telegram.svg' alt='Telegram' />
+                <img src='/images/contact-linkedin.svg' alt='Telegram' />
+              </a>
+              <a href='#' target='_blank'>
+                <img src='/images/contact-twiter.svg' alt='Telegram' />
               </a>
             </div>
           </div>

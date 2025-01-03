@@ -12,7 +12,7 @@ export default function Hero () {
             <button disabled className='text-[#B5B0B7]'>
               Lightning-fast, free-cost, easy.
             </button>
-            <h1 className='text-[86px] pt-5 leading-[96px]'>
+            <h1>
               Your AI <br /> Register Now
             </h1>
           </div>
