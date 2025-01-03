@@ -51,13 +51,11 @@ function Review () {
   }
 
   const handleFileChange = e => {
-    console.log(e.target.files)
     setFormData(pre => ({
       ...pre,
       img: e.target.files[0]
     }))
     setValidations(pre => ({ ...pre, img: false }))
-    console.log(formData.img)
   }
 
   const handleNextBtn = () => {
@@ -112,41 +110,28 @@ function Review () {
 
     try {
       const res = await axios.post(`${ROOT_URL}/reviews`, bodyData)
-      if (res?.data?.error) {
-        toast.error(res?.data?.error)
+      if (res?.data?.success) {
+        toast.error(res?.data?.message)
+        setShowModal(false)
+        setFormData(prev => ({
+          ...prev,
+          name: '',
+          description: '',
+          email: '',
+          img: '',
+          location: '',
+          work: ''
+        }))
+        setAdd(true)
         return
       }
 
-      toast.success(res?.data?.message)
-      setShowModal(false)
-      setFormData(prev => ({
-        ...prev,
-        name: '',
-        description: '',
-        email: '',
-        img: '',
-        location: '',
-        work: ''
-      }))
-      setAdd(true)
+      toast.success(res?.data?.error)
       return
     } catch (err) {
       console.log(err)
       toast.error(err.response?.data?.message || 'Something went wrong')
     }
-  }
-
-  const handleClose = () => {
-    setShowModal(false),
-      setFormData(prev => ({
-        ...prev,
-        name: '',
-        description: '',
-        work: '',
-        email: '',
-        img: '',
-        location: ''
-      }))
   }
 
   return (
@@ -195,7 +180,7 @@ function Review () {
           <div className='col-lg-6 col-md-12'>
             <div className='About-client1'>
               {reviewsContainer?.[newIndex]?.image && (
-                <img src={reviewsContainer?.[newIndex]?.image} alt='profile' />
+                <img src={`data:image/png;base64,${reviewsContainer?.[newIndex]?.image}`} alt='profile' />
               )}
               <div className='About-review'>
                 <div>

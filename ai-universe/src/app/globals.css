@@ -78,13 +78,18 @@ body {
 
 .hero-main {
   background-color: rgba(0, 0, 0, 1);
-  min-height: 100vh;
 }
 
 .hero {
   max-width: 1100px;
 }
 
+.hero-heading h1{
+  font-size: 66px;
+  padding-top: 20px;
+  line-height: 76px;
+  opacity: 70%;
+}
 .hero-register-btn,
 .hero-heading button {
   border-top: 1px solid rgba(236, 109, 255, 0.5);
@@ -626,8 +631,8 @@ select:-webkit-autofill:focus {
   align-items: center;
   padding: 80px 80px 40px 80px;
   gap: 100px;
+  /* background: linear-gradient(161deg, #2d699b 11.19%, #4b0a5f 63.26%); */
   background-color: rgba(12, 9, 16, 1);
-  background: linear-gradient(161deg, #2d699b 11.19%, #4b0a5f 63.26%);
 }
 
 .profile-container {
@@ -782,28 +787,6 @@ select:-webkit-autofill:focus {
   outline: none;
 }
 
-.loader {
-  width: 40px;
-  aspect-ratio: 1;
-  color: #4a95d2;
-  position: relative;
-  background: radial-gradient(10px, currentColor 94%, #0000);
-}
-.loader:before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: radial-gradient(9px at bottom right, #0000 94%, currentColor) top
-      left,
-    radial-gradient(9px at bottom left, #0000 94%, currentColor) top right,
-    radial-gradient(9px at top right, #0000 94%, currentColor) bottom left,
-    radial-gradient(9px at top left, #0000 94%, currentColor) bottom right;
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  animation: l18 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
-}
-
 .change-password{
   justify-content: unset!important;
   width: fit-content!important;
@@ -829,8 +812,9 @@ select:-webkit-autofill:focus {
 }
 
 .contact-heading p{
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 70%;
 }
 
 .contact-form p{
@@ -855,6 +839,7 @@ select:-webkit-autofill:focus {
 .contact-form input:focus,.contact-form textarea:focus{
   box-shadow: none;
   outline: none;
+  border: 2px solid #BA68C8;
 }
 
 .contact-submit-btn{
@@ -863,6 +848,26 @@ select:-webkit-autofill:focus {
   background-color: #BA68C8;
   padding: 10px;
   border-radius: 10px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+
+.contact-details-container div{
+  margin-top: 5px;
+}
+
+.contact-submit-div{
+  margin-top: 70px;
+}
+
+.contact-details-container{
+  margin-left: 70px;
+}
+.contact-details-container p{
+  font-size: 14px;
+  opacity: 70%;
 }
 
 @keyframes l18 {

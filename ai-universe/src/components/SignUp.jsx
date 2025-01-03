@@ -207,7 +207,6 @@ export default function SignUp () {
         }
       )
       if (res?.data?.success) {
-        // toast.success(res.data?.message)
         setOtpSent(true)
         Timer()
         setIsOpen(true)
@@ -240,7 +239,7 @@ export default function SignUp () {
         setIsOpen(false)
         setOtpSent(false)
         setOtp([])
-        router.push('/login')
+        router.push('/sign-in')
         return
       }
       toast.error(res?.data?.error || 'Something went wrong')

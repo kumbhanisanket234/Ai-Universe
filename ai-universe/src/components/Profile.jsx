@@ -9,11 +9,13 @@ import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
 import Flatpickr from 'react-flatpickr'
 import countryList from '../utils/countryList.json'
+import Loader from './Loader'
 
 export default function Profile () {
   const token = getCookie('token')
   const [data, setData] = useState()
   const [isEditable, setIsEditable] = useState(false)
+  const inputFile = useRef(null)
   const [loading, setLoading] = useState({
     pageLoading: false,
     changePasswordLoading: false,
@@ -186,12 +188,29 @@ export default function Profile () {
     setValidations(pre => ({ ...pre, [name]: false }))
   }
 
+  const handleFileChange = async e => {
+    const image = e.target.files[0]
+    const bodyData = new FormData()
+    bodyData.append('image', image)
+    bodyData.append('email', data?.email)
+
+    try {
+      const res = await axios.patch(`${ROOT_URL}/profile_image`, bodyData)
+      if (res?.data?.success) {
+        toast.success(res?.data?.message)
+        fetchData()
+        return
+      }
+      toast.error(res?.data?.error || 'Something went wrong')
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <div className='profile'>
       {loading.pageLoading ? (
-        <div>
-          <div className='loader'></div>{' '}
-        </div>
+        <Loader />
       ) : (
         <div className='profile-container'>
           <div className='profile-details-container w-100'>
@@ -204,11 +223,21 @@ export default function Profile () {
                 <div className='profile-form-header dja'>
                   <div className='flex gap-2'>
                     <Image
-                      src={data?.image || '/images/profile.png'}
-                      className='profile-image'
+                      src={`data:image/png;base64,${data?.image}` || '/images/profile.png'}
+                      className='profile-image cursor-pointer'
                       width={40}
                       height={40}
                       alt='profile'
+                      onClick={() => {
+                        inputFile.current.click()
+                      }}
+                    />
+                    <input
+                      type='file'
+                      id='file'
+                      ref={inputFile}
+                      onChange={handleFileChange}
+                      className='hidden'
                     />
                     <div>
                       <h1 className='font-bold'>{data?.fullName}</h1>
@@ -249,7 +278,7 @@ export default function Profile () {
                       name='fullName'
                       ref={inputsRef.fullName}
                       onChange={handleEditChange}
-                      value={data.fullName}
+                      value={data?.fullName}
                     />
                   )}
                 </div>
