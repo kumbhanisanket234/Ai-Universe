@@ -3,7 +3,8 @@ from shared.db import conn
 from .forms.login import LoginForm
 from .route import user
 from .. import verify_password, sign_token, oauth2_scheme, decode_token
-
+import os
+import base64
 
 @user.post("/login", tags=["Login"])
 async def login(login_form: LoginForm = Depends()) -> dict:
@@ -44,7 +45,19 @@ async def get_user(token: str = Depends(oauth2_scheme)):
 
         for row in user:
             user_data = dict(zip(val, user))
+            print(row)
+            if user_data["image"]:
+                image_path = os.path.join(
+                        f"D:/hitesh/project/Ai-Universe/backend/app/{user_data['image']}"
+                    )
 
+                if os.path.exists(image_path):
+                    with open(image_path, "rb") as img_file:
+                            image = base64.b64encode(img_file.read()).decode("utf-8")
+                            user_data["image"] = image
+                else:
+                    user_data["image"] = None
+                cur.close()
         if not user:
             raise HTTPException(status_code=404, detail="User not found")
         return {"user": user_data, "success": True}
