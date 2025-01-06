@@ -1,0 +1,14 @@
+fastapi==0.65.1
+fastapi-versioning==0.10.0
+fastapi-plugins==0.9.0
+loguru==0.6.0
+uvicorn==0.17.0
+passlib==1.7.4
+pydantic==1.9.0
+PyJWT==2.3.0
+python-multipart==0.0.5
+requests==2.27.1
+sendgrid==6.9.7
+websockets==9.1
+html2text==2020.1.16
+pyodbc==4.0.32

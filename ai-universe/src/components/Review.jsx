@@ -7,7 +7,7 @@ import { Modal } from 'react-bootstrap'
 import Image from 'next/image'
 // import reviewsContainer from '../utils/reviewContainer.json'
 
-function Review () {
+function Review() {
   const [newIndex, setNewIndex] = useState(0)
   const [active, setActive] = useState(false)
   const [reviewsContainer, setReviewsContainer] = useState([])
