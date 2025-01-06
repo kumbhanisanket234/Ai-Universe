@@ -1,10 +1,10 @@
 import random
-from typing import Annotated
+from datetime import datetime
 
 from fastapi import Depends, Body
 from fastapi_mail import MessageSchema, FastMail
 from shared.db import conn
-
+from pydantic import validator
 from .forms.register import *
 from .route import user
 from .. import conf, hash_password
@@ -20,10 +20,27 @@ async def register(register_form: RegisterForm = Depends()):
         cur.close()
         return {"error": "Email already exists" , "success": False}
     cur.execute("SELECT * FROM register WHERE phone = %s", (register_form.phone,))
+
     if cur.fetchall():
         cur.close()
         return {"error": "Phone number already exists" , "success": False}
-    cur.close()
+
+    if register_form.phone.isdigit():
+        if len(register_form.phone) != 10:
+            cur.close()
+            return {"error" : "Phone number must be 10 digits" , "success" : False}
+        else:
+            pass
+    else:
+        cur.close()
+        return {"error": "Phone number must contain only digits"
+            , "success" : False }
+    try:
+        datetime.strptime(register_form.dob, "%Y-%m-%d")
+    except ValueError:
+        cur.close()
+        return {"error": "Date of birth must be in the format YYYY-MM-DD", "success": False}
+
 
     if (not any(c.isupper() for c in register_form.password) or
             not any(c.islower() for c in register_form.password) or
@@ -33,6 +50,17 @@ async def register(register_form: RegisterForm = Depends()):
         return {
             "error": "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character", "success" : False
              }
+
+    for i in register_form.fullName.replace(" ", ""):
+        if not i.isalpha():
+            cur.close()
+            return {"error": "Full Name must contain only letters", "success": False}
+
+    if register_form.gender.lower() not in ["male", "female", "other"]:
+        cur.close()
+        return {"error": "Invalid gender", "success": False}
+    else:
+        pass
 
     try:
         send_otp = random.randint(1000, 9999)
