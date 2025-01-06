@@ -624,134 +624,8 @@ select:-webkit-autofill:focus {
   box-shadow: none;
 }
 
-.profile {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 80px 40px 80px;
-  gap: 100px;
-  /* background: linear-gradient(161deg, #2d699b 11.19%, #4b0a5f 63.26%); */
-  background-color: rgba(12, 9, 16, 1);
-}
-
-.profile-container {
-  display: flex;
-  width: 70%;
-  max-width: 1400px;
-}
-
-.profile-form-heading h2 {
-  font-size: 40px;
-  font-weight: 550;
-  color: rgba(255, 255, 255, 1);
-}
-
-.profile-form-heading p {
-  font-size: 15px;
-  font-weight: 500;
-  opacity: 70%;
-  color: rgba(255, 255, 255, 1);
-}
-
-.profile-form {
-  border-radius: 10px;
-  background-color: rgba(25, 23, 34, 1);
-  margin-top: 40px;
-}
-
-.profile-form-header {
-  background: linear-gradient(92.45deg, #70158b -16.4%, #4a95d2 110.02%);
-  color: white;
-  padding: 10px 15px 10px 15px;
-  gap: 10px;
-  opacity: 0px;
-  display: flex;
-  justify-content: space-between;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.profile-form-header p {
-  font-size: 15px;
-  font-weight: 450;
-  line-height: 24px;
-  text-align: left;
-}
-
-.profile-form-header h2 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  text-align: right;
-  margin: 0;
-}
-
-.profile-form .form-details {
-  padding: 10px 15px 20px 15px;
-}
-
-.profile-form .form-details .field-details {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px;
-  margin-top: 10px;
-}
-
-.profile-form .form-details .field-details input[type="password"]::placeholder{
-  font-weight: 450;
-  opacity: 70%;
-  color:rgba(255, 255, 255, 1)
-}
-
-.profile-form .form-details .wallet-address-container {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 14px;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.profile-form .form-details p {
-  font-size: 14px;
-  font-weight: 450;
-  line-height: 14px;
-  text-align: left;
-  opacity: 70%;
-  color: rgba(255, 255, 255, 1);
-}
-
-.profile-form .form-details h2 {
-  font-size: 15px;
-  font-weight: 550;
-  line-height: 20px;
-  letter-spacing: -0.03em;
-  text-align: right;
-  color: rgba(255, 255, 255, 1);
-  margin: 0;
-}
-
 .change-password-input{
   text-align: left!important;
-}
-
-.profile-form .form-details .field-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.profile-edit-btn {
-  background-color: rgba(25, 23, 34, 1);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 15px;
 }
 
 .profile-image {
@@ -759,45 +633,27 @@ select:-webkit-autofill:focus {
   border-radius: 50%;
 }
 
-.profile-form select{
-  border: none;
-  border-radius: 0;
-  background-color: transparent;
-  font-size: 14px;
-  color: white;
+.profile select,input{
+  opacity: 70%;
+  font-weight: 500;
 }
 
-.profile-form select option{
-  background-color: #191722;
+.profile select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
 }
 
-.profile-form select:focus{
+.profile select:focus,.profile input:focus{
   outline: none;
   box-shadow: none;
   background-color: transparent;
+  opacity: 100%;
 }
 
-.profile-form .form-details input,.profile-form .form-details select {
-  background-color: transparent;
-  font-size: 14px;
-}
-.profile-form .form-details input:focus {
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-.change-password{
-  justify-content: unset!important;
-  width: fit-content!important;
-  padding: 10px 14px!important ;
-}
-.change-password-btn {
-  color: white;
-  opacity: 0.7;
-  font-size: 14px;
-  box-shadow: none;
-  outline: none;
+.profile select option{
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
 .contact-main{
@@ -870,6 +726,38 @@ select:-webkit-autofill:focus {
   opacity: 70%;
 }
 
+.MuiStack-root{
+  padding: 0;
+}
+.MuiStack-root label,fieldset,legend{
+  display: none; 
+}
+
+.MuiStack-root input{
+  color: white;
+  opacity: 70%; 
+}
+
+.MuiStack-root input:focus{
+  opacity: 100%;
+}
+
+.MuiFormControl-root{
+  opacity: 70%;
+}
+
+.MuiFormControl-root:focus-within{
+  opacity: 100%;
+}
+
+.css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input.Mui-disabled{
+  -webkit-text-fill-color:white
+}
+
+.MuiInputAdornment-root button svg{
+  fill: white;
+  opacity: 70%;
+}
 @keyframes l18 {
   33% {
     inset: -10px;
