@@ -10,10 +10,6 @@ from .route import user
 UPLOAD_DIR = Path("uploaded_images")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
-
-
-
-
 @user.post("/reviews" , tags=["Reviews"])
 async def reviews(
         name: Annotated[str, Form(...)],
@@ -59,7 +55,7 @@ async def get_reviews():
                 user_data = dict(zip(val, row))
 
                 image_path = os.path.join(
-                    f"D:/hitesh/project/Ai-Universe/backend/app/{row[5]}"
+                    f"D:/Sem6/project/backend/app/{row[5]}"
                 )
                 print(image_path)
                 if os.path.exists(image_path):

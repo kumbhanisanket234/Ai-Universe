@@ -16,7 +16,7 @@ import toast from 'react-hot-toast'
 import axios from 'axios'
 import Modal from 'react-bootstrap/Modal'
 
-export default function SignUp () {
+export default function SignUp() {
   const router = useRouter()
   const [timer, setTimer] = useState(60)
   let numberOfDigits = 4
@@ -80,7 +80,7 @@ export default function SignUp () {
     }, 1000)
   }
 
-  function handleOTPChange (value, index) {
+  function handleOTPChange(value, index) {
     let newArr = [...otp]
     newArr[index] = value
     setOtp(newArr)
@@ -90,7 +90,7 @@ export default function SignUp () {
     }
   }
 
-  function handleBackspaceAndEnter (e, index) {
+  function handleBackspaceAndEnter(e, index) {
     if (e.key === 'Backspace' && !e.target.value && index > 0) {
       otpBoxReference.current[index - 1].focus()
     }
@@ -252,213 +252,210 @@ export default function SignUp () {
   }
   return (
     <>
-      <div className='signup-main'>
-        <div className='signup flex justify-center'>
-          <div className='signup-image-container'>
-            <button
-              className='back-btn'
-              onClick={() => {
-                router.push('/ai-universe')
-              }}
-            >
-              <i className='fa-solid fa-arrow-left'></i>
-            </button>
-            <Image
-              src='/images/signup-robot.png'
-              height={600}
-              width={883}
-              alt='Register'
-              className='signup-image'
-            />
-          </div>
-          <div className='signup-form-container'>
-            <div className='signup-heading'>
-              <h1 className='text-[25px] font-bold'>Welcome to Ai-Universe</h1>
-              <p className='text-[16px] mt-[46px]'>create your account</p>
+      <div className='contact-main flex items-center justify-center'>
+        <div className='flex justify-center items-center gap-[100px]'>
+          <div>
+            <div className='heading-btn'>
+              <button disabled>Register</button>
             </div>
-            <div className='signup-form mt-[23px]'>
-              <div className='mt-5'>
-                <label htmlFor=''>Full name</label>
-                <input
-                  type='text'
-                  ref={inputsRef.fullName}
-                  name='fullName'
-                  value={formData.fullName}
-                  onChange={handleChange}
-                />
-                {validations.fullName && (
-                  <span className='error-message'>Fullname Required</span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor=''>Phone</label>
-                <input
-                  type='text'
-                  ref={inputsRef.phone}
-                  name='phone'
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-                {validations.phone && (
-                  <span className='error-message'>
-                    {!formData.phone
-                      ? 'Phone number Required'
-                      : 'Invalid Phone'}
-                  </span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor=''>DOB</label>
-                <Flatpickr
-                  options={{
-                    dateFormat: 'Y-m-d'
-                  }}
-                  value={formData.dob}
-                  onChange={handleDate}
-                  className='form-control date-input m-0'
-                  id='dob'
-                  name='dob'
-                  placeholder='Select your birth date'
-                />
-                {validations.dob && (
-                  <span className='error-message'>DOB Required</span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor=''>Email</label>
-                <div className='flex flex-wrap'>
+            <div className='contactus-heading mt-6'>
+              <h1>Welcome to <br />Ai-Universe</h1>
+              <p className='mt-4'>create your account Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.</p>
+            </div>
+            <div className='talk-about mt-[48px]'>
+            <div className='flex items-center mt-2 gap-2'>
+                  <p>Already have an account ?</p>
+                  <Link href='/sign-in' className='signin-link font-semibold'>
+                    Sign in
+                  </Link>
+                </div>
+            </div>
+          </div>
+          <div className='contact-form-container signup-form-container'>
+            <div className='contact-form-heading'>
+              <h1>Welcome to Ai-Universe</h1>
+              <p>create your account</p>
+            </div>
+            <div className='flex flex-col'>
+              <div className='contact-form mt-3'>
+                <div className='mt-2'>
                   <input
-                    type='email'
-                    ref={inputsRef.email}
-                    name='email'
-                    value={formData.email}
+                    type='text'
+                    placeholder='Full Name'
+                    ref={inputsRef.fullName}
+                    name='fullName'
+                    value={formData.fullName}
                     onChange={handleChange}
                   />
+                  {validations.fullName && (
+                    <span className='error-message'>Fullname Required</span>
+                  )}
                 </div>
-                {validations.email && (
-                  <span className='error-message'>
-                    {!formData.email ? 'Email Required' : 'Invalid Email'}
-                  </span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor='gender'>Gender</label>
-                <br />
-                <select
-                  ref={inputsRef.gender}
-                  id='gender'
-                  name='gender'
-                  onChange={handleChange}
-                  value={formData.gender}
-                >
-                  <option value=''>Select your Gender</option>
-                  <option value='male'>Male</option>
-                  <option value='female'>Female</option>
-                  <option value='other'>Other</option>
-                </select>
-                {validations.gender && (
-                  <span className='error-message'>Gender Required</span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor='country'>Country</label>
-                <br />
-                <select
-                  ref={inputsRef.country}
-                  id='country'
-                  name='country'
-                  value={formData.country}
-                  onChange={handleChange}
-                >
-                  <option value=''>Select your country</option>
-                  {countryList.map((list, index) => {
-                    return (
-                      <option key={index} value={list.name}>
-                        {list.name}
-                      </option>
-                    )
-                  })}
-                </select>
-                {validations.country && (
-                  <span className='error-message'>Country Required</span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor=''>Password</label>
-                <input
-                  type='password'
-                  ref={inputsRef.password}
-                  name='password'
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-                {validations.password && (
-                  <span className='error-message'>
-                    {' '}
-                    {!formData.password
-                      ? 'Password Required'
-                      : 'Password must be greater than 8 character'}
-                  </span>
-                )}
-              </div>
-              <div className='mt-5'>
-                <label htmlFor=''>Repeat Password</label>
-                <input
-                  type='password'
-                  ref={inputsRef.confirmPassword}
-                  name='confirmPassword'
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                />
-                {validations.confirmPassword && (
-                  <span className='error-message'>
-                    {!formData.confirmPassword
-                      ? 'Confirm Password Required'
-                      : 'Passwords do not match'}
-                  </span>
-                )}
-              </div>
+                <div className='mt-2'>
+                  <input
+                    type='text'
+                    placeholder='Phone'
+                    ref={inputsRef.phone}
+                    name='phone'
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                  {validations.phone && (
+                    <span className='error-message'>
+                      {!formData.phone
+                        ? 'Phone number Required'
+                        : 'Invalid Phone'}
+                    </span>
+                  )}
+                </div>
+                <div className='mt-3'>
+                  <Flatpickr
+                    options={{
+                      dateFormat: 'Y-m-d'
+                    }}
+                    value={formData.dob}
+                    onChange={handleDate}
+                    className='form-control date-input m-0'
+                    id='dob'
+                    name='dob'
+                    placeholder='Select your birth date'
+                  />
+                  {validations.dob && (
+                    <span className='error-message'>DOB Required</span>
+                  )}
+                </div>
+                <div className='mt-2'>
+                  <div className='flex flex-wrap mt-0'>
+                    <input
+                      type='email'
+                      placeholder='Email'
+                      ref={inputsRef.email}
+                      name='email'
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  {validations.email && (
+                    <span className='error-message'>
+                      {!formData.email ? 'Email Required' : 'Invalid Email'}
+                    </span>
+                  )}
+                </div>
+                <div className='mt-2'>
+                  <select
+                    placeholder="Gender"
+                    ref={inputsRef.gender}
+                    id='gender'
+                    name='gender'
+                    onChange={handleChange}
+                    value={formData.gender}
+                  >
+                    <option value=''>Select your Gender</option>
+                    <option value='male'>Male</option>
+                    <option value='female'>Female</option>
+                    <option value='other'>Other</option>
+                  </select>
+                  {validations.gender && (
+                    <span className='error-message'>Gender Required</span>
+                  )}
+                </div>
+                <div className='mt-2'>
+                  <select
+                    id='country'
+                    placeholder="Country"
+                    ref={inputsRef.country}
+                    name='country'
+                    value={formData.country}
+                    onChange={handleChange}
+                  >
+                    <option value=''>Select your country</option>
+                    {countryList.map((list, index) => {
+                      return (
+                        <option key={index} value={list.name}>
+                          {list.name}
+                        </option>
+                      )
+                    })}
+                  </select>
+                  {validations.country && (
+                    <span className='error-message'>Country Required</span>
+                  )}
+                </div>
+                <div className='mt-2'>
+                  <input
+                    type='password'
+                    placeholder='Password'
+                    ref={inputsRef.password}
+                    name='password'
+                    value={formData.password}
+                    onChange={handleChange}
+                  />
+                  {validations.password && (
+                    <span className='error-message'>
+                      {' '}
+                      {!formData.password
+                        ? 'Password Required'
+                        : 'Password must be greater than 8 character'}
+                    </span>
+                  )}
+                </div>
+                <div className='mt-2'>
+                  <input
+                    type='password'
+                    placeholder='Confirm Password'
+                    ref={inputsRef.confirmPassword}
+                    name='confirmPassword'
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                  />
+                  {validations.confirmPassword && (
+                    <span className='error-message'>
+                      {!formData.confirmPassword
+                        ? 'Confirm Password Required'
+                        : 'Passwords do not match'}
+                    </span>
+                  )}
+                </div>
 
-              <div className='flex items-center mt-5 gap-2'>
-                <input
-                  type='checkbox'
-                  className='checkbox'
-                  id='checkbox'
-                  name='checkbox'
-                  ref={inputsRef.checkbox}
-                  checked={formData.check}
-                  onChange={e => {
-                    setFormData({ ...formData, check: e.target.checked }),
-                      setValidations({ ...validations, check: false })
-                  }}
-                />
-                <label htmlFor='checkbox'>
+                <div className='flex items-center mt-2 gap-2'>
+                  <input
+                    type='checkbox'
+                    className='checkbox mt-0'
+                    id='checkbox'
+                    name='checkbox'
+                    ref={inputsRef.checkbox}
+                    checked={formData.check}
+                    onChange={e => {
+                      setFormData({ ...formData, check: e.target.checked }),
+                        setValidations({ ...validations, check: false })
+                    }}
+                  />
                   I agree <Link href='#'>terms & condition</Link>
-                </label>
-                <br />
-              </div>
-              {validations.check && (
-                <span className='error-message'>Agree Terms And Condition</span>
-              )}
-              <button
-                className='submit-btn'
-                onClick={
-                  otpSent
-                    ? () => {
+                </div>
+                {validations.check && (
+                  <span className='error-message'>Agree Terms And Condition</span>
+                )}
+                <div className='contact-submit-div'>
+                  <button className='contact-submit-btn w-100' onClick={
+                    otpSent
+                      ? () => {
                         setIsOpen(true)
                       }
-                    : checkValidations
-                }
-              >
-                {loading && !isOpen ? 'Loading...' : 'Create an account'}
-              </button>
+                      : checkValidations
+                  }>
+                    {loading && !isOpen ? 'Loading...' : 'Create an account'}
+                  </button>
+                </div>
 
-              <div className='flex justify-center items-center mt-5 gap-2'>
-                <p>Already have an account ?</p>
-                <Link href='/sign-in' className='signin-link font-semibold'>
-                  Sign in
-                </Link>
+                <div className='flex justify-center items-center mt-2 gap-2'>
+                  <p>Already have an account ?</p>
+                  <Link href='/sign-in' className='signin-link font-semibold'>
+                    Sign in
+                  </Link>
+                </div>
+
               </div>
+
             </div>
           </div>
         </div>
@@ -479,12 +476,7 @@ export default function SignUp () {
                 setIsOpen(false)
               }}
             >
-              <Image
-                src='/images/close.png'
-                height={30}
-                width={30}
-                alt='close'
-              />
+              <i className="fa-solid fa-x close"></i>
             </button>
           </div>
         </Modal.Header>
