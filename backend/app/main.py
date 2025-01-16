@@ -45,7 +45,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.add_middleware(SessionMiddleware, secret_key="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")
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000, ws_ping_interval=1, ws_ping_timeout=-1)
