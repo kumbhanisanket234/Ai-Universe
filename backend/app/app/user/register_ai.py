@@ -34,3 +34,29 @@ async def register_ai(register_ai : register_ai_form = Depends()):
 
 
 
+
+
+@user.get("/register_ai" , tags=["Register AI"])
+async def get_register_ai():
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM registerai")
+    register_ai = cur.fetchall()
+    data = []
+    val = []
+    for i in cur.description:
+        val.append(i[0])
+    for row in register_ai:
+        user_data = dict(zip(val, row))
+        image_path = os.path.join(
+            f"D:/hitesh/project/Ai-Universe/backend/app/{row[10]}"
+        )
+        # print(image_path)
+        if os.path.exists(image_path):
+            with open(image_path, "rb") as img_file:
+                image = base64.b64encode(img_file.read()).decode("utf-8")
+                user_data["image"] = image
+        else:
+            user_data["image"] = None
+        data.append(user_data)
+        cur.close()
+    return { "data":data , "success": True}
