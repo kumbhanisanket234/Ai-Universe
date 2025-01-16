@@ -10,8 +10,8 @@ from .forms.contactus import *
 @user.post("/contactus" , tags=["Contactus"])
 async  def contactus(contactus : contactusmodel):
     cur = conn.cursor()
-    cur.execute("insert into contactus (fullname , email , message) values (%s,%s,%s)" ,
-                (contactus.fullname , contactus.email , contactus.message))
+    cur.execute("insert into contactus (fullname , email , subject , message) values (%s,%s,%s)" ,
+                (contactus.fullname , contactus.email , contactus.message , contactus.subject))
 
     message = MessageSchema(
         subject="Contact Us | AI - Universe",

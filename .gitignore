@@ -44,3 +44,4 @@ ai-universe/.vercel
 ai-universe/*.tsbuildinfo
 ai-universe/next-env.d.ts
 backend/app/exchange.log
+backend/app/exchange.log

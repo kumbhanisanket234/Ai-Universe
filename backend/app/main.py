@@ -5,6 +5,8 @@ import os
 import pathlib
 import logging
 import uvicorn
+from starlette.middleware.sessions import SessionMiddleware
+
 from app.user.route import user
 from customized_log import CustomizeLogger
 from fastapi.middleware.cors import CORSMiddleware
@@ -34,13 +36,16 @@ origins = [
     # "http://localhost:8080",
 ]
 
+
 app.add_middleware(
     CORSMiddleware,
+    # SessionMiddleware ,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000, ws_ping_interval=1, ws_ping_timeout=-1)

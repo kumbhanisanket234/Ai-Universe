@@ -9,4 +9,5 @@ class ReviewForm(BaseModel):
     work: Annotated[str, Form(...)]
     email: Annotated[EmailStr, Form(...)]
     location: Annotated[str, Form(...)]
+    rating: Annotated[int, Form(...)]
     image: UploadFile = File(...)

@@ -19,6 +19,15 @@ async def change_password(change_password : Annotated[changepasswordmodel , Body
         if change_password.new_password == change_password.old_password:
             cur.close()
             return {"error" : "New password cannot be same as old password" , "success" : False}
+        if (not any(c.isupper() for c in change_password.new_password) or
+                not any(c.islower() for c in change_password.new_password) or
+                not any(c.isdigit() for c in change_password.new_password) or
+                not any(c in "!@#$%^&*()_+-=[]{};':,.<>?/`~" for c in change_password.new_password)):
+            cur.close()
+            return {
+                "error": "Enter a strong password",
+                "success": False
+            }
         if verify_password(change_password.old_password, user[2]):
             hashed_password = hash_password(change_password.new_password)
             cur = conn.cursor()
