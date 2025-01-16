@@ -170,6 +170,13 @@ body {
   background-color: #1d0125;
 }
 
+#gender option,
+#country option,
+#modelType option {
+  background-color: #29292d !important;
+  color: white;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -202,7 +209,7 @@ select:-webkit-autofill:focus {
   font-weight: 600;
 }
 
-.signup-form-container{
+.signup-form-container {
   max-height: 600px;
   overflow: scroll;
 }
@@ -215,12 +222,15 @@ select:-webkit-autofill:focus {
 .flatpickr-calendar {
   background-color: #191722 !important;
   color: white !important;
-  border: 1px solid rgb(119, 75, 224);
+  border: 1px solid rgb(53, 0, 177);
   box-shadow: none;
   border-radius: 10px !important;
   font-family: 'Aspekta' !important;
 }
 
+.date-input {
+  color: #fff !important;
+}
 .flatpickr-month,
 .flatpickr-weekday {
   color: white !important;
@@ -235,16 +245,13 @@ select:-webkit-autofill:focus {
 }
 
 .flatpickr-day:hover {
-  color: black !important;
-  border: 1px solid #774be0 !important;
-  /* background-image: linear-gradient(#fe0ffe, #13d3ee) !important; */
-  background-color: #6234e2 !important;
+  border: 1px solid #cdff09 !important;
+  background-color: rgba(205, 255, 9, 0.1) !important;
 }
 
 .flatpickr-day.selected {
-  background-color: #6234e2 !important;
-  color: white !important;
-  border: 1px solid #774be0 !important;
+  background-color: rgba(205, 255, 9, 0.1) !important;
+  border: 1px solid #cdff09 !important;
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {
@@ -254,7 +261,7 @@ select:-webkit-autofill:focus {
 .flatpickr-current-month
   .flatpickr-monthDropdown-months
   .flatpickr-monthDropdown-month {
-  background-color: #4c2ea4 !important;
+  background-color: #181620 !important;
 }
 
 .flatpickr-months .flatpickr-prev-month,
@@ -436,15 +443,9 @@ select:-webkit-autofill:focus {
 .modal-header {
   border-bottom: 1px solid #cdff09;
 }
-.modal-header i {
-  padding: 5px 7px;
-  border-radius: 50%;
-}
 
 .modal-header i:hover {
-  padding: 5px 7px;
-  background-color: #cdff09;
-  color: black;
+  color: #cdff09;
 }
 
 .modal-content .form-control {
@@ -469,6 +470,7 @@ select:-webkit-autofill:focus {
   height: 40px;
   border-radius: 4px !important;
   text-align: center;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .otp-modal .modal-header {
@@ -477,13 +479,13 @@ select:-webkit-autofill:focus {
 }
 
 .modal-content {
-  background-color: #292727;
+  background-color: #0c0b0b;
 }
 
 .otp-submit-btn {
   /* background-color: #bfb5c4; */
-  border: 1px solid #bfb5c4;
-  padding: 5px 0px;
+  border: 1px solid #cdff09;
+  padding: 10px 0px;
   width: 70%;
   border-radius: 20px;
   margin-top: 15px;
@@ -491,7 +493,7 @@ select:-webkit-autofill:focus {
 }
 
 .otp-submit-btn:hover {
-  background-color: #bfb5c4;
+  background-color: #cdff09;
   transition: 0.5s;
   color: black;
 }
@@ -503,6 +505,11 @@ select:-webkit-autofill:focus {
   color: white;
   border: none;
   box-shadow: none;
+}
+
+.resend-otp-btn:hover {
+  color: #cdff09;
+  transition: 0.5s;
 }
 
 .change-password-input {
@@ -520,7 +527,8 @@ input {
   font-weight: 500;
 }
 
-.profile select {
+.profile select,
+.contact-form select {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
@@ -552,6 +560,10 @@ input {
   padding: 30px;
 }
 
+.contact-form-heading {
+  border-radius: 25px;
+}
+
 .contact-form-heading h1 {
   font-size: 28px;
   font-weight: 500;
@@ -574,7 +586,7 @@ input {
   width: 100%;
   padding: 15px 20px;
   margin-top: 10px;
-  opacity: 100%;
+  opacity: 70%;
   border: none;
 }
 
@@ -589,8 +601,8 @@ input {
   outline: 1px solid #cdff09;
 }
 
-.contact-form select option{
-  background-color: rgba(179, 27, 27, 0.1)!important;
+.contact-form select option {
+  background: rgba(179, 27, 27, 0.1) !important;
   color: black;
 }
 
@@ -732,7 +744,7 @@ legend {
   max-height: 568px;
 }
 
-.future-main{
+.future-main {
   max-width: 100vw;
   overflow: hidden;
 }
@@ -790,17 +802,26 @@ legend {
   left: 78px;
 }
 
-.future-round{
+.future-round {
   position: absolute;
-  top:0px;
-  right: -50px;
-  overflow:hidden;
+  top: -115px;
+  right: -65px;
+  overflow: hidden;
+  animation: spin 8s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.future-round-2{
+.future-round-2 {
   position: absolute;
   top: 0px;
-  right: 0px
+  right: 0px;
 }
 
 .future-shadow {
@@ -813,18 +834,42 @@ legend {
   flex-shrink: 0;
 }
 
-.future-main .shadow-left{
+.future-main .shadow-left {
   top: 0px;
   left: 119px;
 }
 
-.future-main .shadow-right{
+.future-main .shadow-right {
   bottom: 74px;
   right: 55;
 }
 
 .future {
   max-width: 556px;
+}
+
+.device-card-container {
+  max-width: 1400px;
+}
+
+.device-card {
+  border: 1px solid #a19999;
+  max-width: 330px;
+  border-radius: 20px;
+  /* clip-path: polygon(0% 0, 180% 0%, 0% 160%, 0 0%); */
+}
+
+.device-card:hover {
+  border: 1px solid #cdff09;
+  .device-image-container {
+   padding: 0;
+   transition: 0.5s ease-in-out;
+  }
+}
+
+.device-image-container {
+  height: 250px;
+  padding: 20px;
 }
 
 @media screen and (max-width: 1280px) {

@@ -1,5 +1,5 @@
 'use client'
-import { EMAIL_REGEX, ROOT_URL } from '@/utils/constant'
+import { EMAIL_REGEX, PHONE_REGEX, ROOT_URL } from '@/utils/constant'
 import { setCookie } from '@/utils/cookies'
 import axios from 'axios'
 import Image from 'next/image'
@@ -109,7 +109,6 @@ export default function SignIn() {
         toast.error(res?.data?.error || 'Something went wrong')
         return
       }
-      console.log('hello')
       const res = await axios.post(
         `${ROOT_URL}/login`,
         {},
@@ -163,6 +162,9 @@ export default function SignIn() {
   }
 
   function handleOTPChange(value, index) {
+    if (!PHONE_REGEX.test(value)) {
+      return
+    }
     let newArr = [...otp]
     newArr[index] = value
     setOtp(newArr)
@@ -322,9 +324,7 @@ export default function SignIn() {
                   </button>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
       </div>

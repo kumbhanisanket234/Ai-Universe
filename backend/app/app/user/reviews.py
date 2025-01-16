@@ -17,7 +17,8 @@ async def reviews(
         work: Annotated[str, Form(...)],
         email: Annotated[str, Form(...)],
         location: Annotated[str, Form(...)],
-        image: UploadFile = File(...)
+        rating : Annotated[int , Form(...)],
+        image: UploadFile = File(...),
 ):
     print(type(image))
     cur = conn.cursor()
@@ -31,8 +32,8 @@ async def reviews(
                 f.write(await image.read())
             cur = conn.cursor()
             cur.execute(
-                "INSERT INTO reviews (name, description, work, email, image, location) VALUES (%s, %s, %s, %s, %s, %s)",
-                (name, description, work, email, str(image_path), location)
+                "INSERT INTO reviews (name, description, work, email, image, location ,rating) VALUES (%s,%s, %s, %s, %s, %s, %s)",
+                (name, description, work, email, str(image_path), location, rating)
             )
             conn.commit()
             cur.close()

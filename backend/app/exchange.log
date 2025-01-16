@@ -11056,3 +11056,1973 @@ INFO     2025-01-09 15:16:36.383 request id: app - logging:callHandlers - 127.0.
 INFO     2025-01-09 15:16:39.199 request id: app - logging:callHandlers - 127.0.0.1:49866 - "GET /openapi.json HTTP/1.1" 200
 INFO     2025-01-09 15:18:55.202 request id: app - logging:callHandlers - 192.168.145.128:49983 - "OPTIONS /contactus HTTP/1.1" 200
 INFO     2025-01-09 15:19:01.406 request id: app - logging:callHandlers - 192.168.145.128:49983 - "POST /contactus HTTP/1.1" 200
+INFO     2025-01-13 10:43:01.959 request id: app - logging:callHandlers - Started server process [14228]
+INFO     2025-01-13 10:43:01.959 request id: app - logging:callHandlers - Started server process [14228]
+INFO     2025-01-13 10:43:01.960 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 10:43:01.960 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 10:43:01.961 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 10:43:01.961 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 10:43:01.962 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 10:43:01.963 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 10:44:09.326 request id: app - logging:callHandlers - 192.168.11.179:50974 - "POST /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:45:23.642 request id: app - logging:callHandlers - 192.168.11.179:51030 - "POST /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:45:23.725 request id: app - logging:callHandlers - 192.168.11.179:51030 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:49:28.156 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 10:49:28.157 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 10:49:28.265 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 10:49:28.265 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 10:49:28.266 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 10:49:28.266 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 10:49:28.267 request id: app - logging:callHandlers - Finished server process [14228]
+INFO     2025-01-13 10:49:28.267 request id: app - logging:callHandlers - Finished server process [14228]
+INFO     2025-01-13 10:53:04.030 request id: app - logging:callHandlers - Started server process [3196]
+INFO     2025-01-13 10:53:04.030 request id: app - logging:callHandlers - Started server process [3196]
+INFO     2025-01-13 10:53:04.030 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 10:53:04.031 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 10:53:04.031 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 10:53:04.031 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 10:53:04.032 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 10:53:04.033 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 10:53:19.478 request id: app - logging:callHandlers - 192.168.11.179:51326 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:54:09.363 request id: app - logging:callHandlers - 192.168.11.179:51342 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:54:09.390 request id: app - logging:callHandlers - 192.168.11.179:51343 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:54:28.600 request id: app - logging:callHandlers - 192.168.11.179:51348 - "POST /reviews HTTP/1.1" 200
+INFO     2025-01-13 10:54:28.644 request id: app - logging:callHandlers - 192.168.11.179:51348 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 11:34:21.321 request id: app - logging:callHandlers - 192.168.0.63:50314 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 11:39:15.892 request id: app - logging:callHandlers - 192.168.11.179:52351 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 11:39:30.400 request id: app - logging:callHandlers - 192.168.11.179:52363 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 11:43:53.027 request id: app - logging:callHandlers - 192.168.11.179:52828 - "GET /reviews HTTP/1.1" 500
+ERROR    2025-01-13 11:43:53.029 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 782, in _read_bytes
+    data = self._rfile.read(num_bytes)
+           │    │           └ 4
+           │    └ None
+           └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           │    │               └ <memory at 0x000002181E161540>
+           │    └ None
+           └ <socket.SocketIO object at 0x000002181DFBD270>
+
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F6F20>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F6F20>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E169F90>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F56C0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E16A650>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0F4D60>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F4FE0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0F4D60>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E16A650>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F58A0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_reviews at 0x000002181DFFFB00>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E1102D0>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 49, in get_reviews
+    cur.execute("SELECT * FROM reviews")
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E16B1D0>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM reviews'
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E16B1D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM reviews'
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+    │    │                │    │                             └ False
+    │    │                │    └ <function Connection._read_query_result at 0x000002181DFE0FE0>
+    │    │                └ <pymysql.connections.Connection object at 0x000002181DF39610>
+    │    └ 5
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 825, in _read_query_result
+    result.read()
+    │      └ <function MySQLResult.read at 0x000002181DFE18A0>
+    └ <pymysql.connections.MySQLResult object at 0x000002181E14AC50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   │    └ None
+                   └ <pymysql.connections.MySQLResult object at 0x000002181E14AC50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 744, in _read_packet
+    packet_header = self._read_bytes(4)
+                    │    └ <function Connection._read_bytes at 0x000002181DFE0EA0>
+                    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 788, in _read_bytes
+    raise err.OperationalError(
+          │   └ <class 'pymysql.err.OperationalError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10053] An established connection was aborted by the software in your host machine)')
+ERROR    2025-01-13 11:43:53.896 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 782, in _read_bytes
+    data = self._rfile.read(num_bytes)
+           │    │           └ 4
+           │    └ None
+           └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           │    │               └ <memory at 0x000002181E161540>
+           │    └ None
+           └ <socket.SocketIO object at 0x000002181DFBD270>
+
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E144580>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F6F20>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F6F20>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E169F90>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F56C0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5BC0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E16A650>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0F4D60>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F4FE0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0F4D60>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E16A650>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F58A0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_reviews at 0x000002181DFFFB00>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E1102D0>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 49, in get_reviews
+    cur.execute("SELECT * FROM reviews")
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E16B1D0>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM reviews'
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E16B1D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM reviews'
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+    │    │                │    │                             └ False
+    │    │                │    └ <function Connection._read_query_result at 0x000002181DFE0FE0>
+    │    │                └ <pymysql.connections.Connection object at 0x000002181DF39610>
+    │    └ 5
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 825, in _read_query_result
+    result.read()
+    │      └ <function MySQLResult.read at 0x000002181DFE18A0>
+    └ <pymysql.connections.MySQLResult object at 0x000002181E14AC50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   │    └ None
+                   └ <pymysql.connections.MySQLResult object at 0x000002181E14AC50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 744, in _read_packet
+    packet_header = self._read_bytes(4)
+                    │    └ <function Connection._read_bytes at 0x000002181DFE0EA0>
+                    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 788, in _read_bytes
+    raise err.OperationalError(
+          │   └ <class 'pymysql.err.OperationalError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query ([WinError 10053] An established connection was aborted by the software in your host machine)')
+INFO     2025-01-13 12:01:01.665 request id: app - logging:callHandlers - 192.168.11.179:53333 - "GET /reviews HTTP/1.1" 500
+ERROR    2025-01-13 12:01:01.668 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4860>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4860>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E141410>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F56C0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E142D50>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0DF100>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0DF1A0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0DF100>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E142D50>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F58A0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_reviews at 0x000002181DFFFB00>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E1102D0>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 49, in get_reviews
+    cur.execute("SELECT * FROM reviews")
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E317010>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM reviews'
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E317010>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM reviews'
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b'SELECT * FROM reviews'
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pym...
+    │    └ <function Connection._execute_command at 0x000002181DFE1120>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 843, in _execute_command
+    raise err.InterfaceError(0, "")
+          │   └ <class 'pymysql.err.InterfaceError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.InterfaceError: (0, '')
+ERROR    2025-01-13 12:01:01.748 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103E50>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4860>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4860>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E141410>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F56C0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0F5C60>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E142D50>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0DF100>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E0DF1A0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181E0DF100>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E142D50>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F58A0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_reviews at 0x000002181DFFFB00>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E1102D0>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 49, in get_reviews
+    cur.execute("SELECT * FROM reviews")
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E317010>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM reviews'
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E317010>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM reviews'
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b'SELECT * FROM reviews'
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pym...
+    │    └ <function Connection._execute_command at 0x000002181DFE1120>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 843, in _execute_command
+    raise err.InterfaceError(0, "")
+          │   └ <class 'pymysql.err.InterfaceError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.InterfaceError: (0, '')
+INFO     2025-01-13 12:04:50.940 request id: app - logging:callHandlers - 192.168.11.179:53648 - "GET /reviews HTTP/1.1" 500
+ERROR    2025-01-13 12:04:50.942 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F68E0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F68E0>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E15CC50>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F56C0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E15D490>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181DFE2DE0>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFFC540>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181DFE2DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E15D490>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F58A0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_reviews at 0x000002181DFFFB00>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E1102D0>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 49, in get_reviews
+    cur.execute("SELECT * FROM reviews")
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E15E010>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM reviews'
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E15E010>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM reviews'
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b'SELECT * FROM reviews'
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pym...
+    │    └ <function Connection._execute_command at 0x000002181DFE1120>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 843, in _execute_command
+    raise err.InterfaceError(0, "")
+          │   └ <class 'pymysql.err.InterfaceError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.InterfaceError: (0, '')
+ERROR    2025-01-13 12:04:50.977 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E103160>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F68E0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F68E0>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E15CC50>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F56C0>
+          └ APIRoute(path='/reviews', name='get_reviews', methods=['GET'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFE2D40>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E15D490>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181DFE2DE0>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181DFFC540>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181DFE2DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E15D490>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F58A0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_reviews at 0x000002181DFFFB00>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E1102D0>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 49, in get_reviews
+    cur.execute("SELECT * FROM reviews")
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E15E010>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM reviews'
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E15E010>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM reviews'
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b'SELECT * FROM reviews'
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pym...
+    │    └ <function Connection._execute_command at 0x000002181DFE1120>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 843, in _execute_command
+    raise err.InterfaceError(0, "")
+          │   └ <class 'pymysql.err.InterfaceError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.InterfaceError: (0, '')
+INFO     2025-01-13 12:05:40.104 request id: app - logging:callHandlers - 192.168.11.179:53695 - "POST /reviews HTTP/1.1" 500
+ERROR    2025-01-13 12:05:40.105 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4900>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'content-length': '33951', 'user-agent': 'Mozilla/5.0 (Wi...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4900>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E1436D0>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='reviews', methods=['POST'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F5620>
+          └ APIRoute(path='/reviews', name='reviews', methods=['POST'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E15C790>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181E3500E0>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350220>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181E3500E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E15C790>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F5760>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'name': 'Sanket', 'description': 'AI Universe simplifies AI device registration and management!', 'work': 'Software Develope...
+                 │         └ <function reviews at 0x000002181DFFF2E0>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E10B890>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 25, in reviews
+    cur.execute("SELECT * FROM register WHERE email = %s", (email,))
+    │   │                                                   └ 'kumbhanisanket234@gmail.com'
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E15D4D0>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ "SELECT * FROM register WHERE email = 'kumbhanisanket234@gmail.com'"
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E15D4D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ "SELECT * FROM register WHERE email = 'kumbhanisanket234@gmail.com'"
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b"SELECT * FROM register WHERE email = 'kumbhanisanket234@gmail.com'"
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pym...
+    │    └ <function Connection._execute_command at 0x000002181DFE1120>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 843, in _execute_command
+    raise err.InterfaceError(0, "")
+          │   └ <class 'pymysql.err.InterfaceError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.InterfaceError: (0, '')
+ERROR    2025-01-13 12:05:40.128 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000002181B02CEA0>
+           └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000002181B227E50>
+         │    └ <function Command.invoke at 0x000002181B02DA80>
+         └ <Command main>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000002181B227E50>
+           │   │      │    └ <function main at 0x000002181B222700>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000002181B02C400>
+           └ <click.core.Context object at 0x000002181B227E50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 409, in main
+    run(
+    └ <function run at 0x000002181B076DE0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\main.py", line 575, in run
+    server.run()
+    │      └ <function Server.run at 0x000002181B0D6C00>
+    └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002181B0D6CA0>
+           │       │   └ <uvicorn.server.Server object at 0x000002181AA0A6D0>
+           │       └ <function run at 0x000002181A89ECA0>
+           └ <module 'asyncio' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\asyncio\\__init__.py'>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000002181B17BE20>
+           │      └ <function Runner.run at 0x000002181A94AF20>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-pack...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000002181A948A40>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000002181B237450>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 640, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002181AA10AE0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 607, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002181A94A7A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1922, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002181A87FEC0>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x000002181E1039A0>()>
+> File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 411, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002181DE57410>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002181E...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+          └ <fastapi.applications.FastAPI object at 0x000002181B3FBD50>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4900>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002181DE52690>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.11.179:8001', 'connection': 'keep-alive', 'content-length': '33951', 'user-agent': 'Mozilla/5.0 (Wi...
+          │    │               │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002181E0F4900>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function CORSMiddleware.simple_response at 0x000002181E0C6CA0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 148, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000002181DE53110...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002181E1436D0>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002181E11B550>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002181B4041D0>>
+          └ <fastapi.routing.APIRouter object at 0x000002181B4041D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │     └ <function Route.handle at 0x000002181D4FA8E0>
+          └ APIRoute(path='/reviews', name='reviews', methods=['POST'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │    └ <function request_response.<locals>.app at 0x000002181E0F5620>
+          └ APIRoute(path='/reviews', name='reviews', methods=['POST'])
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350040>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          │                            │    └ <starlette.requests.Request object at 0x000002181E15C790>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002181E3500E0>
+          └ <function wrap_app_handling_exceptions at 0x000002181D4F9260>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002181E350220>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000021...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.4'}, 'http_version': '1.1', 'server': ('192.168.11.179', 8001)...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002181E3500E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+                     │    └ <starlette.requests.Request object at 0x000002181E15C790>
+                     └ <function get_request_handler.<locals>.app at 0x000002181E0F5760>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002181D4FA3E0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'name': 'Sanket', 'description': 'AI Universe simplifies AI device registration and management!', 'work': 'Software Develope...
+                 │         └ <function reviews at 0x000002181DFFF2E0>
+                 └ <fastapi.dependencies.models.Dependant object at 0x000002181E10B890>
+
+  File "D:\Sem6\project\backend\app\app\user\reviews.py", line 25, in reviews
+    cur.execute("SELECT * FROM register WHERE email = %s", (email,))
+    │   │                                                   └ 'kumbhanisanket234@gmail.com'
+    │   └ <function Cursor.execute at 0x000002181DFB4CC0>
+    └ <pymysql.cursors.Cursor object at 0x000002181E15D4D0>
+
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ "SELECT * FROM register WHERE email = 'kumbhanisanket234@gmail.com'"
+             │    └ <function Cursor._query at 0x000002181DFB51C0>
+             └ <pymysql.cursors.Cursor object at 0x000002181E15D4D0>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ "SELECT * FROM register WHERE email = 'kumbhanisanket234@gmail.com'"
+    │    └ <function Connection.query at 0x000002181DFE0860>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b"SELECT * FROM register WHERE email = 'kumbhanisanket234@gmail.com'"
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pym...
+    │    └ <function Connection._execute_command at 0x000002181DFE1120>
+    └ <pymysql.connections.Connection object at 0x000002181DF39610>
+  File "C:\Users\HP\AppData\Local\Programs\Python\Python311\Lib\site-packages\pymysql\connections.py", line 843, in _execute_command
+    raise err.InterfaceError(0, "")
+          │   └ <class 'pymysql.err.InterfaceError'>
+          └ <module 'pymysql.err' from 'C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.InterfaceError: (0, '')
+INFO     2025-01-13 12:06:19.529 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 12:06:19.532 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 12:06:19.657 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 12:06:19.658 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 12:06:19.673 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 12:06:19.674 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 12:06:19.683 request id: app - logging:callHandlers - Finished server process [3196]
+INFO     2025-01-13 12:06:19.684 request id: app - logging:callHandlers - Finished server process [3196]
+INFO     2025-01-13 12:06:24.503 request id: app - logging:callHandlers - Started server process [1484]
+INFO     2025-01-13 12:06:24.503 request id: app - logging:callHandlers - Started server process [1484]
+INFO     2025-01-13 12:06:24.504 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 12:06:24.504 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 12:06:24.504 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 12:06:24.505 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 12:06:24.505 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 12:06:24.506 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 12:06:27.995 request id: app - logging:callHandlers - 192.168.11.179:53750 - "POST /reviews HTTP/1.1" 200
+INFO     2025-01-13 12:06:28.036 request id: app - logging:callHandlers - 192.168.11.179:53750 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 12:09:29.205 request id: app - logging:callHandlers - 192.168.11.179:53930 - "POST /reviews HTTP/1.1" 200
+INFO     2025-01-13 12:09:36.073 request id: app - logging:callHandlers - 192.168.11.179:53945 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 12:14:33.954 request id: app - logging:callHandlers - 192.168.11.179:54249 - "POST /reviews HTTP/1.1" 200
+INFO     2025-01-13 12:14:34.024 request id: app - logging:callHandlers - 192.168.11.179:54249 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 13:02:08.111 request id: app - logging:callHandlers - 192.168.11.179:58537 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 13:02:08.168 request id: app - logging:callHandlers - 192.168.11.179:58538 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 13:02:11.426 request id: app - logging:callHandlers - 192.168.11.179:58538 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:15:43.633 request id: app - logging:callHandlers - 192.168.11.179:58962 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:19:36.113 request id: app - logging:callHandlers - 192.168.11.179:59207 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:19:52.517 request id: app - logging:callHandlers - 192.168.11.179:59231 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:27:01.588 request id: app - logging:callHandlers - 192.168.11.179:59595 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:27:30.290 request id: app - logging:callHandlers - 192.168.11.179:59630 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:29:45.525 request id: app - logging:callHandlers - 192.168.11.179:59721 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:29:45.620 request id: app - logging:callHandlers - 192.168.11.179:59724 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:30:03.927 request id: app - logging:callHandlers - 192.168.11.179:59733 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:30:03.980 request id: app - logging:callHandlers - 192.168.11.179:59734 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:30:16.333 request id: app - logging:callHandlers - 192.168.11.179:59747 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:31:21.547 request id: app - logging:callHandlers - 192.168.11.179:59780 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:31:21.610 request id: app - logging:callHandlers - 192.168.11.179:59781 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:33:25.065 request id: app - logging:callHandlers - 192.168.11.179:59854 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:33:25.257 request id: app - logging:callHandlers - 192.168.11.179:59859 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:34:06.562 request id: app - logging:callHandlers - 192.168.11.179:59879 - "OPTIONS /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 14:34:12.908 request id: app - logging:callHandlers - 192.168.11.179:59879 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 14:34:28.520 request id: app - logging:callHandlers - 192.168.11.179:59880 - "OPTIONS /forgotpassword/resetpassword HTTP/1.1" 200
+INFO     2025-01-13 14:34:28.547 request id: app - logging:callHandlers - 192.168.11.179:59880 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:34:47.529 request id: app - logging:callHandlers - 192.168.11.179:59912 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:35:47.015 request id: app - logging:callHandlers - 192.168.11.179:59976 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 14:35:52.663 request id: app - logging:callHandlers - 192.168.11.179:59995 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:35:58.333 request id: app - logging:callHandlers - 192.168.11.179:60000 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:36:51.481 request id: app - logging:callHandlers - 192.168.11.179:60056 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 14:36:53.440 request id: app - logging:callHandlers - 127.0.0.1:60063 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 14:36:54.313 request id: app - logging:callHandlers - 127.0.0.1:60063 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 14:38:00.743 request id: app - logging:callHandlers - 192.168.11.179:60135 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 14:38:04.884 request id: app - logging:callHandlers - 192.168.11.179:60146 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:53.821 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:55.769 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:56.603 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:56.747 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:56.925 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:57.055 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:57.245 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:57.373 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:57.515 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:57.659 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:38:57.895 request id: app - logging:callHandlers - 192.168.11.179:60195 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:39:10.275 request id: app - logging:callHandlers - 192.168.11.179:60207 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 14:39:12.397 request id: app - logging:callHandlers - 192.168.11.179:60207 - "POST /forgotpassword/resetpassword HTTP/1.1" 400
+INFO     2025-01-13 14:41:07.451 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 14:41:07.453 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 14:41:07.571 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 14:41:07.574 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 14:41:07.584 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 14:41:07.585 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 14:41:07.591 request id: app - logging:callHandlers - Finished server process [1484]
+INFO     2025-01-13 14:41:07.595 request id: app - logging:callHandlers - Finished server process [1484]
+INFO     2025-01-13 14:41:13.267 request id: app - logging:callHandlers - Started server process [17660]
+INFO     2025-01-13 14:41:13.268 request id: app - logging:callHandlers - Started server process [17660]
+INFO     2025-01-13 14:41:13.268 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 14:41:13.268 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 14:41:13.269 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 14:41:13.269 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 14:41:13.271 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 14:41:13.272 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 14:41:16.072 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 14:41:16.075 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 14:41:16.165 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 14:41:16.166 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 14:41:16.167 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 14:41:16.168 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 14:41:16.169 request id: app - logging:callHandlers - Finished server process [17660]
+INFO     2025-01-13 14:41:16.170 request id: app - logging:callHandlers - Finished server process [17660]
+INFO     2025-01-13 14:41:26.823 request id: app - logging:callHandlers - Started server process [16132]
+INFO     2025-01-13 14:41:26.823 request id: app - logging:callHandlers - Started server process [16132]
+INFO     2025-01-13 14:41:26.824 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 14:41:26.824 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 14:41:26.826 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 14:41:26.827 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 14:41:33.534 request id: app - logging:callHandlers - 192.168.11.179:60345 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 14:41:35.999 request id: app - logging:callHandlers - 192.168.11.179:60345 - "POST /forgotpassword/resetpassword HTTP/1.1" 200
+INFO     2025-01-13 16:07:53.855 request id: app - logging:callHandlers - 192.168.0.63:49939 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 16:07:58.179 request id: app - logging:callHandlers - 192.168.0.63:49939 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 16:11:29.802 request id: app - logging:callHandlers - 192.168.11.179:63936 - "OPTIONS /register-ai HTTP/1.1" 200
+INFO     2025-01-13 16:11:29.816 request id: app - logging:callHandlers - 192.168.11.179:63936 - "POST /register-ai HTTP/1.1" 404
+INFO     2025-01-16 16:51:49.440 request id: app - logging:callHandlers - Started server process [5932]
+INFO     2025-01-16 16:51:49.441 request id: app - logging:callHandlers - Started server process [5932]
+INFO     2025-01-16 16:51:49.441 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-16 16:51:49.441 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-16 16:51:49.442 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-16 16:51:49.443 request id: app - logging:callHandlers - Application startup complete.

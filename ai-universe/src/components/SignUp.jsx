@@ -81,6 +81,9 @@ export default function SignUp() {
   }
 
   function handleOTPChange(value, index) {
+    if (!PHONE_REGEX.test(value)) {
+      return
+    }
     let newArr = [...otp]
     newArr[index] = value
     setOtp(newArr)
@@ -260,15 +263,16 @@ export default function SignUp() {
             </div>
             <div className='contactus-heading mt-6'>
               <h1>Welcome to <br />Ai-Universe</h1>
-              <p className='mt-4'>create your account Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.</p>
+              <p className='mt-4'>create your account</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.</p>
             </div>
             <div className='talk-about mt-[48px]'>
-            <div className='flex items-center mt-2 gap-2'>
-                  <p>Already have an account ?</p>
-                  <Link href='/sign-in' className='signin-link font-semibold'>
-                    Sign in
-                  </Link>
-                </div>
+              <div className='flex items-center mt-2 gap-2'>
+                <p>Already have an account ?</p>
+                <Link href='/sign-in' className='signin-link font-semibold'>
+                  Sign in
+                </Link>
+              </div>
             </div>
           </div>
           <div className='contact-form-container signup-form-container'>
@@ -342,41 +346,75 @@ export default function SignUp() {
                   )}
                 </div>
                 <div className='mt-2'>
-                  <select
-                    placeholder="Gender"
-                    ref={inputsRef.gender}
-                    id='gender'
-                    name='gender'
-                    onChange={handleChange}
-                    value={formData.gender}
-                  >
-                    <option value=''>Select your Gender</option>
-                    <option value='male'>Male</option>
-                    <option value='female'>Female</option>
-                    <option value='other'>Other</option>
-                  </select>
+                  <div className='relative m-0'>
+                    <select
+                      ref={inputsRef.gender}
+                      id='gender'
+                      name='gender'
+                      onChange={handleChange}
+                      value={formData.gender}
+                    >
+                      <option value=''>Select your Gender</option>
+                      <option value='male'>Male</option>
+                      <option value='female'>Female</option>
+                      <option value='other'>Other</option>
+                    </select>
+                    <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                      <svg
+                        className='w-5 h-5 text-gray-400'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M19 9l-7 7-7-7'
+                        />
+                      </svg>
+                    </div>
+                  </div>
                   {validations.gender && (
                     <span className='error-message'>Gender Required</span>
                   )}
                 </div>
                 <div className='mt-2'>
-                  <select
-                    id='country'
-                    placeholder="Country"
-                    ref={inputsRef.country}
-                    name='country'
-                    value={formData.country}
-                    onChange={handleChange}
-                  >
-                    <option value=''>Select your country</option>
-                    {countryList.map((list, index) => {
-                      return (
-                        <option key={index} value={list.name}>
-                          {list.name}
-                        </option>
-                      )
-                    })}
-                  </select>
+                  <div className='relative m-0'>
+
+                    <select
+                      id='country'
+                      placeholder="Country"
+                      ref={inputsRef.country}
+                      name='country'
+                      value={formData.country}
+                      onChange={handleChange}
+                    >
+                      <option value=''>Select your country</option>
+                      {countryList.map((list, index) => {
+                        return (
+                          <option key={index} value={list.name}>
+                            {list.name}
+                          </option>
+                        )
+                      })}
+                    </select>
+                    <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                      <svg
+                        className='w-5 h-5 text-gray-400'
+                        fill='none'
+                        stroke='currentColor'
+                        viewBox='0 0 24 24'
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          strokeWidth={2}
+                          d='M19 9l-7 7-7-7'
+                        />
+                      </svg>
+                    </div>
+                  </div>
                   {validations.country && (
                     <span className='error-message'>Country Required</span>
                   )}
@@ -482,9 +520,12 @@ export default function SignUp() {
         </Modal.Header>
         <Modal.Body>
           <div className='text-center'>
-            <h1 className='text-[40px]'>Enter Vetification Code</h1>
+            {/* <h1 className='text-[40px]'>Enter Vetification Code</h1> */}
+            <div className='dja w-100'>
+              <Image src="/images/verified.png" height={80} width={80} alt='verified' />
+            </div>
             <h1 className='opacity-40 mt-3'>
-              We have send a verification code email to
+              We have send a verification code to email
             </h1>
             <h1 className='mt-2'>{formData.email || 'info@gmail.com'}</h1>
           </div>
@@ -497,7 +538,7 @@ export default function SignUp() {
                 onChange={e => handleOTPChange(e.target.value, index)}
                 onKeyUp={e => handleBackspaceAndEnter(e, index)}
                 ref={reference => (otpBoxReference.current[index] = reference)}
-                className={`OTP-boxes border rounded-md block focus:border-2 focus:outline-none appearance-none`}
+                className={`OTP-boxes rounded-md block appearance-none`}
               />
             ))}
           </div>
@@ -514,7 +555,7 @@ export default function SignUp() {
           {otpSent && (
             <>
               <p className='text-center m-0 mt-2'>
-                You can resend OTP after {timer} second
+                You can resend OTP after <span className='text-[#cdff09]'>{timer}</span> second
               </p>
             </>
           )}

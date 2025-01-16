@@ -1,5 +1,5 @@
-export const ROOT_URL = 'http://192.168.0.63:8001'
-// export const ROOT_URL = 'http://192.168.145.128:8001'
+// export const ROOT_URL = 'http://192.168.0.63:8001'
+export const ROOT_URL = 'http://192.168.145.128:8001'
 // export const ROOT_URL = 'http://192.168.11.179:8001'
 
 export const EMAIL_REGEX = /\S+@\S+\.\S+/
