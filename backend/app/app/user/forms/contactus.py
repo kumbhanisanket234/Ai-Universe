@@ -4,5 +4,5 @@ from pydantic import BaseModel, EmailStr
 class contactusmodel(BaseModel):
     fullname: str
     email: EmailStr
-    # subject: str
+    subject: str
     message: str

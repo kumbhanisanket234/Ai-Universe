@@ -8,3 +8,4 @@ from .user.contactus import *
 from .user.update_user import *
 from .user.register_ai import *
 from .user.profile import *
+from .user.google_login import *

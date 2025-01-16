@@ -1,29 +1,29 @@
 import base64
 from pathlib import Path
 from typing import Annotated
-
-from fastapi import Form, UploadFile, File
+from fastapi import Form, UploadFile, File, Depends
+from pydantic import EmailStr
 from shared.db import conn
 import os
 from .route import user
+from .forms import reviews
+import zlib
+
 
 UPLOAD_DIR = Path("uploaded_images")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
-
-
-
-
 @user.post("/reviews" , tags=["Reviews"])
 async def reviews(
-        name: Annotated[str, Form(...)],
-        description: Annotated[str, Form(...)],
-        work: Annotated[str, Form(...)],
-        email: Annotated[str, Form(...)],
-        location: Annotated[str, Form(...)],
-        image: UploadFile = File(...)
+    name: Annotated[str, Form(...)],
+    description: Annotated[str, Form(...)],
+    work: Annotated[str, Form(...)],
+    email: Annotated[EmailStr, Form(...)],
+    location: Annotated[str, Form(...)],
+    rating: Annotated[int, Form(...)],
+    image: UploadFile = File(...)
+
 ):
-    print(type(image))
     cur = conn.cursor()
     cur.execute("SELECT * FROM register WHERE email = %s", (email,))
     user = cur.fetchone()
@@ -35,8 +35,8 @@ async def reviews(
                 f.write(await image.read())
             cur = conn.cursor()
             cur.execute(
-                "INSERT INTO reviews (name, description, work, email, image, location) VALUES (%s, %s, %s, %s, %s, %s)",
-                (name, description, work, email, str(image_path), location)
+                "INSERT INTO reviews (name, description, work, email, image, location , rating ) VALUES (%s, %s, %s, %s, %s, %s , %s)",
+                (name, description, work, email, str(image_path), location , rating)
             )
             conn.commit()
             cur.close()
@@ -57,7 +57,7 @@ async def get_reviews():
                 val.append(i[0])
             for row in reviews:
                 user_data = dict(zip(val, row))
-
+                # add your path
                 image_path = os.path.join(
                     f"D:/hitesh/project/Ai-Universe/backend/app/{row[5]}"
                 )
@@ -72,4 +72,3 @@ async def get_reviews():
                 data.append(user_data)
             cur.close()
             return {"reviews": data}
-

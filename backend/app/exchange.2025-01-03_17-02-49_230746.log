@@ -1,0 +1,1106 @@
+INFO     2025-01-13 17:23:05.715 request id: app - logging:callHandlers - Started server process [2984]
+INFO     2025-01-13 17:23:05.715 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:23:05.715 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:23:05.715 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:23:05.715 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:23:23.744 request id: app - logging:callHandlers - 127.0.0.1:50920 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 17:23:23.954 request id: app - logging:callHandlers - 127.0.0.1:50920 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 17:23:41.718 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:23:41.827 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:23:41.827 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:23:41.827 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:23:41.827 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:23:41.827 request id: app - logging:callHandlers - Finished server process [5192]
+INFO     2025-01-13 17:23:41.827 request id: app - logging:callHandlers - Finished server process [5192]
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Started server process [6472]
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 17:23:45.299 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 17:23:48.140 request id: app - logging:callHandlers - 192.168.11.179:51057 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 17:23:49.451 request id: app - logging:callHandlers - 192.168.11.179:51057 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:23:49.517 request id: app - logging:callHandlers - 192.168.11.179:51064 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:24:53.023 request id: app - logging:callHandlers - 192.168.11.179:51128 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:25:08.417 request id: app - logging:callHandlers - 192.168.11.179:51139 - "OPTIONS /login?email=kumbhanisanket234%40gmail.com&password=12345678 HTTP/1.1" 200
+INFO     2025-01-13 17:25:08.467 request id: app - logging:callHandlers - 192.168.11.179:51140 - "POST /login?email=kumbhanisanket234%40gmail.com&password=12345678 HTTP/1.1" 200
+INFO     2025-01-13 17:25:14.817 request id: app - logging:callHandlers - 192.168.11.179:51144 - "OPTIONS /login?email=kumbhanisanket234%40gmail.com&password=Sanket%4022 HTTP/1.1" 200
+INFO     2025-01-13 17:25:14.833 request id: app - logging:callHandlers - 192.168.11.179:51145 - "POST /login?email=kumbhanisanket234%40gmail.com&password=Sanket%4022 HTTP/1.1" 200
+INFO     2025-01-13 17:25:24.284 request id: app - logging:callHandlers - 192.168.11.179:51150 - "POST /login?email=kumbhanisanket234%40gmail.com&password=Sanket%4022 HTTP/1.1" 200
+INFO     2025-01-13 17:25:29.083 request id: app - logging:callHandlers - 192.168.11.179:51153 - "OPTIONS /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 17:25:29.102 request id: app - logging:callHandlers - 192.168.11.179:51154 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 17:25:33.283 request id: app - logging:callHandlers - 192.168.11.179:51154 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 17:25:35.416 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:25:35.416 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:25:35.526 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:25:35.526 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:25:35.526 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:25:35.526 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:25:35.526 request id: app - logging:callHandlers - Finished server process [2984]
+INFO     2025-01-13 17:25:35.526 request id: app - logging:callHandlers - Finished server process [2984]
+INFO     2025-01-13 17:25:37.722 request id: app - logging:callHandlers - Started server process [4280]
+INFO     2025-01-13 17:25:37.722 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:25:37.723 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:25:37.723 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:25:37.723 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:25:38.075 request id: app - logging:callHandlers - 192.168.11.179:51159 - "POST /forgotpassword?email=kumbhanisanket234%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 17:25:46.226 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:25:46.226 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:25:46.335 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:25:46.335 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:25:46.335 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:25:46.335 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:25:46.335 request id: app - logging:callHandlers - Finished server process [4280]
+INFO     2025-01-13 17:25:46.335 request id: app - logging:callHandlers - Finished server process [4280]
+INFO     2025-01-13 17:25:48.216 request id: app - logging:callHandlers - Started server process [10600]
+INFO     2025-01-13 17:25:48.216 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:25:48.216 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:25:48.216 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:25:48.216 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:26:20.825 request id: app - logging:callHandlers - 192.168.11.179:51185 - "OPTIONS /login?email=kumbhanisanket2522%40gmail.com&password=Sanket%4022 HTTP/1.1" 200
+WARNING  2025-01-13 17:26:20.841 request id: app - logging:callHandlers - (trapped) error reading bcrypt version
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "D:\hitesh\main_env\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x0000022CD1CE54E0>
+           └ <Command main>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x0000022CD1B56510>
+         │    └ <function Command.invoke at 0x0000022CD1CE60C0>
+         └ <Command main>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x0000022CD1B56510>
+           │   │      │    └ <function main at 0x0000022CD1F272E0>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x0000022CD1CE4A40>
+           └ <click.core.Context object at 0x0000022CD1B56510>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\main.py", line 412, in main
+    run(
+    └ <function run at 0x0000022CD1D30EA0>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x0000022CD1D9EDE0>
+    └ <uvicorn.server.Server object at 0x0000022CD1E5C6E0>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x0000022CD1D9EE80>
+           │       │   └ <uvicorn.server.Server object at 0x0000022CD1E5C6E0>
+           │       └ <function run at 0x0000022CD16262A0>
+           └ <module 'asyncio' from 'D:\\paython\\Lib\\asyncio\\__init__.py'>
+  File "D:\paython\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x0000022CD1F03840>
+           │      └ <function Runner.run at 0x0000022CD1639580>
+           └ <asyncio.runners.Runner object at 0x0000022CD1D25520>
+  File "D:\paython\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at D:\hitesh\main_env\Lib\site-packages\uvicorn\server.py:70> wait_f...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x0000022CD16371A0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x0000022CD1D25520>
+  File "D:\paython\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000022CD16F6840>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\paython\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "D:\paython\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000022CD1638F40>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\paython\Lib\asyncio\base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000022CD157F600>
+    └ <Handle Task.task_wakeup(<Future finis...022CD4EC4E60>>)>
+  File "D:\paython\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...022CD4EC4E60>>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...022CD4EC4E60>>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...022CD4EC4E60>>)>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x0000022CCF9ABC80>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022CD4...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+                 │    └ <fastapi.applications.FastAPI object at 0x0000022CD4E13E60>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x0000022CCF9ABC80>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022CD4...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022CD4...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000022CD4E83A70>
+          └ <fastapi.applications.FastAPI object at 0x0000022CD4E13E60>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000022CD4E86480>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.sessions.SessionMiddleware object at 0x0000022CD4E839B0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000022CD4E83A70>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\sessions.py", line 85, in __call__
+    await self.app(scope, receive, send_wrapper)
+          │    │   │      │        └ <function SessionMiddleware.__call__.<locals>.send_wrapper at 0x0000022CD4E863E0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x0000022CD4E83BC0>
+          └ <starlette.middleware.sessions.SessionMiddleware object at 0x0000022CD4E839B0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.0.63:8001', 'connection': 'keep-alive', 'content-length': '2', 'user-agent': 'Mozilla/5.0 (Windows ...
+          │    │               │      │        └ <function SessionMiddleware.__call__.<locals>.send_wrapper at 0x0000022CD4E863E0>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <function CORSMiddleware.simple_response at 0x0000022CD4E40360>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x0000022CD4E83BC0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x0000022CD4E83BC0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000022CD4E83950>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x0000022CD4E83BC0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x0000022CD4E83BC0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │                            │    │    └ <starlette.requests.Request object at 0x0000022CD4EAA630>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x0000022CD4CBC440>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000022CD4E83950>
+          └ <function wrap_app_handling_exceptions at 0x0000022CD2F49DA0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000022CD4E86840>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          └ <fastapi.routing.APIRouter object at 0x0000022CD4CBC440>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000022CD4E86840>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x0000022CD4CBC440>>
+          └ <fastapi.routing.APIRouter object at 0x0000022CD4CBC440>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000022CD4E86840>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │     └ <function Route.handle at 0x0000022CD2F4AF20>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000022CD4E86840>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <function request_response.<locals>.app at 0x0000022CD4E5D1C0>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000022CD4E86840>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │                            │    └ <starlette.requests.Request object at 0x0000022CD4EAA120>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x0000022CD4E86B60>
+          └ <function wrap_app_handling_exceptions at 0x0000022CD2F49DA0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000022CD4F42AC0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000022...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          └ <function request_response.<locals>.app.<locals>.app at 0x0000022CD4E86B60>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x0000022CD4EAA120>
+                     └ <function get_request_handler.<locals>.app at 0x0000022CD4E5D120>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x0000022CD2F496C0>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'login_form': <app.user.forms.login.LoginForm object at 0x0000022CD4EC4E60>}
+                 │         └ <function login at 0x0000022CD4AEE200>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[Dependant(path_p...
+
+  File "D:\hitesh\project\Ai-Universe\backend\app\app\user\login.py", line 20, in login
+    if verify_password(login_form.password, user_data["password"]):
+       │               │          │         └ {'id': 11, 'email': 'kumbhanisanket2522@gmail.com', 'password': '$2b$12$UJ1eh4XLMY306FxKugmIwu5vJbOlotPxqyKJX3KVgat8ahJsFMuBa...
+       │               │          └ 'Sanket@22'
+       │               └ <app.user.forms.login.LoginForm object at 0x0000022CD4EC4E60>
+       └ <function verify_password at 0x0000022CD4993740>
+
+  File "D:\hitesh\project\Ai-Universe\backend\app\app\user\common_function.py", line 24, in verify_password
+    return context.verify(password, hashed_password)
+           │       │      │         └ '$2b$12$UJ1eh4XLMY306FxKugmIwu5vJbOlotPxqyKJX3KVgat8ahJsFMuBa'
+           │       │      └ 'Sanket@22'
+           │       └ <function CryptContext.verify at 0x0000022CD22398A0>
+           └ <CryptContext at 0x22cd453d1c0>
+
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\context.py", line 2347, in verify
+    return record.verify(secret, hash, **kwds)
+           │      │      │       │       └ {}
+           │      │      │       └ '$2b$12$UJ1eh4XLMY306FxKugmIwu5vJbOlotPxqyKJX3KVgat8ahJsFMuBa'
+           │      │      └ 'Sanket@22'
+           │      └ <classmethod(<function GenericHandler.verify at 0x0000022CD220F100>)>
+           └ <class 'passlib.handlers.bcrypt.<customized bcrypt hasher>'>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 792, in verify
+    return consteq(self._calc_checksum(secret), chk)
+           │       │    │              │        └ '5vJbOlotPxqyKJX3KVgat8ahJsFMuBa'
+           │       │    │              └ 'Sanket@22'
+           │       │    └ <function _NoBackend._calc_checksum at 0x0000022CD49922A0>
+           │       └ <passlib.handlers.bcrypt.<customized bcrypt hasher> object at 0x0000022CD4EAAD50>
+           └ <built-in function compare_digest>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\handlers\bcrypt.py", line 591, in _calc_checksum
+    self._stub_requires_backend()
+    │    └ <classmethod(<function BackendMixin._stub_requires_backend at 0x0000022CD222D440>)>
+    └ <passlib.handlers.bcrypt.<customized bcrypt hasher> object at 0x0000022CD4EAAD50>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 2254, in _stub_requires_backend
+    cls.set_backend()
+    │   └ <classmethod(<function BackendMixin.set_backend at 0x0000022CD222D1C0>)>
+    └ <class 'passlib.handlers.bcrypt.<customized bcrypt hasher>'>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 2156, in set_backend
+    return owner.set_backend(name, dryrun=dryrun)
+           │     │           │            └ False
+           │     │           └ 'any'
+           │     └ <classmethod(<function BackendMixin.set_backend at 0x0000022CD222D1C0>)>
+           └ <class 'passlib.handlers.bcrypt.bcrypt'>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 2163, in set_backend
+    return cls.set_backend(name, dryrun=dryrun)
+           │   │           │            └ False
+           │   │           └ 'bcrypt'
+           │   └ <classmethod(<function BackendMixin.set_backend at 0x0000022CD222D1C0>)>
+           └ <class 'passlib.handlers.bcrypt.bcrypt'>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 2188, in set_backend
+    cls._set_backend(name, dryrun)
+    │   │            │     └ False
+    │   │            └ 'bcrypt'
+    │   └ <classmethod(<function SubclassBackendMixin._set_backend at 0x0000022CD222D580>)>
+    └ <class 'passlib.handlers.bcrypt.bcrypt'>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 2311, in _set_backend
+    super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+          │                     │                 │     └ False
+          │                     │                 └ 'bcrypt'
+          │                     └ <class 'passlib.handlers.bcrypt.bcrypt'>
+          └ <class 'passlib.utils.handlers.SubclassBackendMixin'>
+  File "D:\hitesh\main_env\Lib\site-packages\passlib\utils\handlers.py", line 2224, in _set_backend
+    ok = loader(**kwds)
+         │        └ {'name': 'bcrypt', 'dryrun': False}
+         └ <bound method _BcryptBackend._load_backend_mixin of <class 'passlib.handlers.bcrypt._BcryptBackend'>>
+> File "D:\hitesh\main_env\Lib\site-packages\passlib\handlers\bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              └ <module 'bcrypt' from 'D:\\hitesh\\main_env\\Lib\\site-packages\\bcrypt\\__init__.py'>
+
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO     2025-01-13 17:26:21.310 request id: app - logging:callHandlers - 192.168.11.179:51186 - "POST /login?email=kumbhanisanket2522%40gmail.com&password=Sanket%4022 HTTP/1.1" 200
+INFO     2025-01-13 17:26:24.342 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:26:24.342 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:26:24.451 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:26:24.451 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:26:24.451 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:26:24.451 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:26:24.451 request id: app - logging:callHandlers - Finished server process [10600]
+INFO     2025-01-13 17:26:24.451 request id: app - logging:callHandlers - Finished server process [10600]
+INFO     2025-01-13 17:26:26.791 request id: app - logging:callHandlers - Started server process [2088]
+INFO     2025-01-13 17:26:26.791 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:26:26.791 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:26:26.791 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:26:26.791 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:26:27.262 request id: app - logging:callHandlers - 192.168.11.179:51189 - "OPTIONS /login?email=kumbhanisanket2522%40gmail.com&password=12345678 HTTP/1.1" 200
+INFO     2025-01-13 17:26:27.572 request id: app - logging:callHandlers - 192.168.11.179:51190 - "POST /login?email=kumbhanisanket2522%40gmail.com&password=12345678 HTTP/1.1" 200
+INFO     2025-01-13 17:26:29.493 request id: app - logging:callHandlers - 192.168.11.179:51190 - "OPTIONS /forgotpassword?email=kumbhanisanket2522%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 17:26:33.722 request id: app - logging:callHandlers - 192.168.11.179:51189 - "POST /forgotpassword?email=kumbhanisanket2522%40gmail.com HTTP/1.1" 200
+INFO     2025-01-13 17:27:02.025 request id: app - logging:callHandlers - 192.168.11.179:51219 - "OPTIONS /forgotpassword/resetpassword HTTP/1.1" 200
+INFO     2025-01-13 17:27:02.405 request id: app - logging:callHandlers - 192.168.11.179:51220 - "POST /forgotpassword/resetpassword HTTP/1.1" 200
+INFO     2025-01-13 17:27:04.781 request id: app - logging:callHandlers - 127.0.0.1:50953 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 17:27:04.953 request id: app - logging:callHandlers - 127.0.0.1:50953 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 17:27:08.155 request id: app - logging:callHandlers - 192.168.11.179:51224 - "POST /login?email=kumbhanisanket2522%40gmail.com&password=12345678 HTTP/1.1" 200
+INFO     2025-01-13 17:27:08.523 request id: app - logging:callHandlers - 192.168.11.179:51224 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:27:08.642 request id: app - logging:callHandlers - 192.168.11.179:51231 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:27:12.620 request id: app - logging:callHandlers - 127.0.0.1:50954 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 17:28:48.392 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:28:48.392 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:28:48.501 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:28:48.501 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:28:48.501 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:28:48.501 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:28:48.501 request id: app - logging:callHandlers - Finished server process [2088]
+INFO     2025-01-13 17:28:48.501 request id: app - logging:callHandlers - Finished server process [2088]
+INFO     2025-01-13 17:28:50.790 request id: app - logging:callHandlers - Started server process [10916]
+INFO     2025-01-13 17:28:50.791 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:28:50.792 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:28:50.794 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:28:50.794 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:28:51.985 request id: app - logging:callHandlers - 127.0.0.1:50966 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 17:28:52.177 request id: app - logging:callHandlers - 127.0.0.1:50966 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 17:28:55.080 request id: app - logging:callHandlers - 127.0.0.1:50966 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 17:29:32.718 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:29:32.718 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:29:32.832 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:29:32.832 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:29:32.832 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:29:32.832 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:29:32.832 request id: app - logging:callHandlers - Finished server process [10916]
+INFO     2025-01-13 17:29:32.832 request id: app - logging:callHandlers - Finished server process [10916]
+INFO     2025-01-13 17:29:36.379 request id: app - logging:callHandlers - Started server process [11076]
+INFO     2025-01-13 17:29:36.379 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:29:36.379 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:29:36.379 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:29:36.379 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:29:39.937 request id: app - logging:callHandlers - 127.0.0.1:50972 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 17:30:14.014 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:30:14.014 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:30:14.124 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:30:14.124 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:30:14.124 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:30:14.124 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:30:14.124 request id: app - logging:callHandlers - Finished server process [11076]
+INFO     2025-01-13 17:30:14.124 request id: app - logging:callHandlers - Finished server process [11076]
+INFO     2025-01-13 17:30:27.622 request id: app - logging:callHandlers - Started server process [9804]
+INFO     2025-01-13 17:30:27.622 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:30:27.622 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:30:27.622 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:30:27.622 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:30:31.240 request id: app - logging:callHandlers - 127.0.0.1:50981 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 17:30:31.432 request id: app - logging:callHandlers - 127.0.0.1:50981 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 17:30:33.753 request id: app - logging:callHandlers - 127.0.0.1:50981 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 17:33:01.739 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:33:01.739 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:33:01.848 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:33:01.848 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:33:01.848 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:33:01.848 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:33:01.848 request id: app - logging:callHandlers - Finished server process [6472]
+INFO     2025-01-13 17:33:01.848 request id: app - logging:callHandlers - Finished server process [6472]
+INFO     2025-01-13 17:33:05.659 request id: app - logging:callHandlers - Started server process [6792]
+INFO     2025-01-13 17:33:05.659 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:33:05.659 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:33:05.675 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:33:05.675 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:33:05.675 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 17:33:05.675 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Started server process [2088]
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Uvicorn running on http://127.0.0.1:8005 (Press CTRL+C to quit)
+INFO     2025-01-13 17:35:59.416 request id: app - logging:callHandlers - Uvicorn running on http://127.0.0.1:8005 (Press CTRL+C to quit)
+INFO     2025-01-13 17:36:11.471 request id: app - logging:callHandlers - 127.0.0.1:51025 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 17:36:11.669 request id: app - logging:callHandlers - 127.0.0.1:51025 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 17:46:24.249 request id: app - logging:callHandlers - 192.168.11.179:51825 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:46:24.296 request id: app - logging:callHandlers - 192.168.11.179:51832 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:54:47.550 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:54:47.550 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 17:54:47.654 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:54:47.654 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 17:54:47.654 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:54:47.654 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 17:54:47.654 request id: app - logging:callHandlers - Finished server process [6792]
+INFO     2025-01-13 17:54:47.654 request id: app - logging:callHandlers - Finished server process [6792]
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Started server process [3872]
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 17:54:51.502 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 17:59:17.870 request id: app - logging:callHandlers - 192.168.0.63:51213 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:59:17.962 request id: app - logging:callHandlers - 192.168.0.63:51214 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:59:36.458 request id: app - logging:callHandlers - 192.168.0.63:51217 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 17:59:36.571 request id: app - logging:callHandlers - 192.168.0.63:51223 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:07:42.570 request id: app - logging:callHandlers - 192.168.11.179:52697 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:07:44.146 request id: app - logging:callHandlers - 192.168.11.179:52703 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:07:58.346 request id: app - logging:callHandlers - 192.168.11.179:52720 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:09:34.133 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:09:34.133 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:09:34.242 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:09:34.242 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:09:34.242 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:09:34.242 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:09:34.242 request id: app - logging:callHandlers - Finished server process [3872]
+INFO     2025-01-13 18:09:34.242 request id: app - logging:callHandlers - Finished server process [3872]
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Started server process [10972]
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:09:38.149 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:09:38.302 request id: app - logging:callHandlers - 192.168.11.179:52828 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:10:28.209 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:10:28.209 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:10:28.318 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:10:28.318 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:10:28.318 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:10:28.318 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:10:28.318 request id: app - logging:callHandlers - Finished server process [10972]
+INFO     2025-01-13 18:10:28.318 request id: app - logging:callHandlers - Finished server process [10972]
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Started server process [3396]
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:10:32.218 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:10:34.356 request id: app - logging:callHandlers - 192.168.11.179:52892 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:15:33.904 request id: app - logging:callHandlers - 192.168.11.179:53101 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:15:42.125 request id: app - logging:callHandlers - 192.168.0.63:51489 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:16:17.912 request id: app - logging:callHandlers - 192.168.0.63:51501 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:18:01.546 request id: app - logging:callHandlers - 192.168.0.63:51520 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:18:05.962 request id: app - logging:callHandlers - 192.168.11.179:53214 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:19:05.677 request id: app - logging:callHandlers - 127.0.0.1:51534 - "GET /?response_type=code&client_id=717697402306-s4870o88h6n47e1tj3l26hae6151k0fm.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fauth%2Fgoogle%2Fcallback&scope=openid+email+profile&state=RmDL4sQCvCxBFbtRzzYzmVsBhOUXrr&nonce=4SVbULMpbD0cC8Bad3bI HTTP/1.1" 404
+INFO     2025-01-13 18:19:05.769 request id: app - logging:callHandlers - 127.0.0.1:51534 - "GET /favicon.ico HTTP/1.1" 404
+INFO     2025-01-13 18:19:10.482 request id: app - logging:callHandlers - 192.168.11.179:53266 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:19:10.848 request id: app - logging:callHandlers - 192.168.0.63:51543 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:20:45.952 request id: app - logging:callHandlers - 192.168.0.63:51564 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:21:06.361 request id: app - logging:callHandlers - 192.168.0.63:51578 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:24:26.423 request id: app - logging:callHandlers - 192.168.11.179:53442 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:28:29.254 request id: app - logging:callHandlers - 192.168.11.179:53576 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:28:29.925 request id: app - logging:callHandlers - 192.168.0.63:51651 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:29:02.834 request id: app - logging:callHandlers - 192.168.0.63:51661 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:29:02.903 request id: app - logging:callHandlers - 192.168.11.179:53601 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:31:45.212 request id: app - logging:callHandlers - 192.168.11.179:53714 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:32:19.692 request id: app - logging:callHandlers - 192.168.11.179:53740 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:32:27.912 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:32:27.912 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:32:28.037 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:32:28.037 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:32:28.037 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:32:28.037 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:32:28.037 request id: app - logging:callHandlers - Finished server process [3396]
+INFO     2025-01-13 18:32:28.037 request id: app - logging:callHandlers - Finished server process [3396]
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Started server process [6348]
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:32:32.390 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:32:35.499 request id: app - logging:callHandlers - 192.168.11.179:53761 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:33:28.615 request id: app - logging:callHandlers - 192.168.11.179:53798 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:33:30.021 request id: app - logging:callHandlers - 192.168.11.179:53798 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:33:30.083 request id: app - logging:callHandlers - 192.168.11.179:53801 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:35:16.857 request id: app - logging:callHandlers - 127.0.0.1:51730 - "POST /register_ai HTTP/1.1" 422
+INFO     2025-01-13 18:35:44.865 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:35:44.865 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:35:44.980 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:35:44.980 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:35:44.982 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:35:44.983 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:35:44.983 request id: app - logging:callHandlers - Finished server process [2088]
+INFO     2025-01-13 18:35:44.984 request id: app - logging:callHandlers - Finished server process [2088]
+INFO     2025-01-13 18:35:52.372 request id: app - logging:callHandlers - Started server process [9712]
+INFO     2025-01-13 18:35:52.372 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:35:52.373 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:35:52.374 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:35:52.375 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:35:52.377 request id: app - logging:callHandlers - Uvicorn running on http://127.0.0.1:8005 (Press CTRL+C to quit)
+INFO     2025-01-13 18:35:52.378 request id: app - logging:callHandlers - Uvicorn running on http://127.0.0.1:8005 (Press CTRL+C to quit)
+INFO     2025-01-13 18:36:00.605 request id: app - logging:callHandlers - 127.0.0.1:51740 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 18:36:05.671 request id: app - logging:callHandlers - 127.0.0.1:51741 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 18:37:12.410 request id: app - logging:callHandlers - 127.0.0.1:51765 - "POST /register_ai HTTP/1.1" 422
+INFO     2025-01-13 18:37:38.418 request id: app - logging:callHandlers - 192.168.11.179:53974 - "GET /register_ai HTTP/1.1" 500
+ERROR    2025-01-13 18:37:38.419 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 806, in _write_bytes
+    self._sock.sendall(data)
+    │    │             └ b'\x19\x00\x00\x00\x03SELECT * FROM registerai'
+    │    └ None
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "D:\hitesh\main_env\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000001E87F0454E0>
+           └ <Command main>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000001E87C8BBD10>
+         │    └ <function Command.invoke at 0x000001E87F0460C0>
+         └ <Command main>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000001E87C8BBD10>
+           │   │      │    └ <function main at 0x000001E87F2572E0>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000001E87F044A40>
+           └ <click.core.Context object at 0x000001E87C8BBD10>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\main.py", line 412, in main
+    run(
+    └ <function run at 0x000001E87F090EA0>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000001E87F0DEDE0>
+    └ <uvicorn.server.Server object at 0x000001E87EEC46E0>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000001E87F0DEE80>
+           │       │   └ <uvicorn.server.Server object at 0x000001E87EEC46E0>
+           │       └ <function run at 0x000001E87E9962A0>
+           └ <module 'asyncio' from 'D:\\paython\\Lib\\asyncio\\__init__.py'>
+  File "D:\paython\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001E87F237840>
+           │      └ <function Runner.run at 0x000001E87E9A9580>
+           └ <asyncio.runners.Runner object at 0x000001E87EFB5520>
+  File "D:\paython\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at D:\hitesh\main_env\Lib\site-packages\uvicorn\server.py:70> wait_f...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001E87E9A71A0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001E87EFB5520>
+  File "D:\paython\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001E87EA66840>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\paython\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "D:\paython\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001E87E9A8F40>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\paython\Lib\asyncio\base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001E87E8EF600>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+  File "D:\paython\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+> File "D:\hitesh\main_env\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001E801EFD820>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E802...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001E802069910>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001E801EFD820>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E802...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E802...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001E801F572C0>
+          └ <fastapi.applications.FastAPI object at 0x000001E802069910>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001E80222FBA0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.sessions.SessionMiddleware object at 0x000001E8022703B0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001E801F572C0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\sessions.py", line 85, in __call__
+    await self.app(scope, receive, send_wrapper)
+          │    │   │      │        └ <function SessionMiddleware.__call__.<locals>.send_wrapper at 0x000001E802250400>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0>
+          └ <starlette.middleware.sessions.SessionMiddleware object at 0x000001E8022703B0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.0.63:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Ap...
+          │    │               │      │        └ <function SessionMiddleware.__call__.<locals>.send_wrapper at 0x000001E802250400>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <function CORSMiddleware.simple_response at 0x000001E80220C5E0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001E8022704A0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001E802299130>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000001E8020E1700>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001E8022704A0>
+          └ <function wrap_app_handling_exceptions at 0x000001E800329DA0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          └ <fastapi.routing.APIRouter object at 0x000001E8020E1700>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001E8020E1700>>
+          └ <fastapi.routing.APIRouter object at 0x000001E8020E1700>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │     └ <function Route.handle at 0x000001E80032AF20>
+          └ APIRoute(path='/register_ai', name='get_register_ai', methods=['GET'])
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <function request_response.<locals>.app at 0x000001E80222F100>
+          └ APIRoute(path='/register_ai', name='get_register_ai', methods=['GET'])
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │                            │    └ <starlette.requests.Request object at 0x000001E8022992B0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001E802250A40>
+          └ <function wrap_app_handling_exceptions at 0x000001E800329DA0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E802250B80>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001E802250A40>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001E8022992B0>
+                     └ <function get_request_handler.<locals>.app at 0x000001E80222F1A0>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001E8003296C0>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_register_ai at 0x000001E801F3E020>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[], security_requ...
+
+  File "D:\hitesh\project\Ai-Universe\backend\app\app\user\register_ai.py", line 42, in get_register_ai
+    cur.execute("SELECT * FROM registerai")
+    │   └ <function Cursor.execute at 0x000001E801ECEB60>
+    └ <pymysql.cursors.Cursor object at 0x000001E802299520>
+
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM registerai'
+             │    └ <function Cursor._query at 0x000001E801ECF060>
+             └ <pymysql.cursors.Cursor object at 0x000001E802299520>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM registerai'
+    │    └ <function Connection.query at 0x000001E801F0A700>
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b'SELECT * FROM registerai'
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'D:\\hitesh\\main_env\\Lib\\site-packages\\pymysql\\constants\\COMMAND.py'>
+    │    └ <function Connection._execute_command at 0x000001E801F0AFC0>
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 864, in _execute_command
+    self._write_bytes(packet)
+    │    │            └ b'\x19\x00\x00\x00\x03SELECT * FROM registerai'
+    │    └ <function Connection._write_bytes at 0x000001E801F0ADE0>
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+          │   └ <class 'pymysql.err.OperationalError'>
+          └ <module 'pymysql.err' from 'D:\\hitesh\\main_env\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))")
+ERROR    2025-01-13 18:37:38.557 request id: app - logging:callHandlers - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 806, in _write_bytes
+    self._sock.sendall(data)
+    │    │             └ b'\x19\x00\x00\x00\x03SELECT * FROM registerai'
+    │    └ None
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+
+  File "D:\hitesh\main_env\Scripts\uvicorn.exe\__main__.py", line 7, in <module>
+
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1157, in __call__
+    return self.main(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ ()
+           │    └ <function BaseCommand.main at 0x000001E87F0454E0>
+           └ <Command main>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1078, in main
+    rv = self.invoke(ctx)
+         │    │      └ <click.core.Context object at 0x000001E87C8BBD10>
+         │    └ <function Command.invoke at 0x000001E87F0460C0>
+         └ <Command main>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 1434, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           │   │      │    │           │   └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+           │   │      │    │           └ <click.core.Context object at 0x000001E87C8BBD10>
+           │   │      │    └ <function main at 0x000001E87F2572E0>
+           │   │      └ <Command main>
+           │   └ <function Context.invoke at 0x000001E87F044A40>
+           └ <click.core.Context object at 0x000001E87C8BBD10>
+  File "D:\hitesh\main_env\Lib\site-packages\click\core.py", line 783, in invoke
+    return __callback(*args, **kwargs)
+                       │       └ {'host': '0.0.0.0', 'port': 8001, 'app': 'main:app', 'uds': None, 'fd': None, 'reload': False, 'reload_dirs': (), 'reload_inc...
+                       └ ()
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\main.py", line 412, in main
+    run(
+    └ <function run at 0x000001E87F090EA0>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000001E87F0DEDE0>
+    └ <uvicorn.server.Server object at 0x000001E87EEC46E0>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000001E87F0DEE80>
+           │       │   └ <uvicorn.server.Server object at 0x000001E87EEC46E0>
+           │       └ <function run at 0x000001E87E9962A0>
+           └ <module 'asyncio' from 'D:\\paython\\Lib\\asyncio\\__init__.py'>
+  File "D:\paython\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001E87F237840>
+           │      └ <function Runner.run at 0x000001E87E9A9580>
+           └ <asyncio.runners.Runner object at 0x000001E87EFB5520>
+  File "D:\paython\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at D:\hitesh\main_env\Lib\site-packages\uvicorn\server.py:70> wait_f...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001E87E9A71A0>
+           │    └ <ProactorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001E87EFB5520>
+  File "D:\paython\Lib\asyncio\base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001E87EA66840>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\paython\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "D:\paython\Lib\asyncio\base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001E87E9A8F40>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+  File "D:\paython\Lib\asyncio\base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001E87E8EF600>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+  File "D:\paython\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x000001E802298F70>()>
+> File "D:\hitesh\main_env\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001E801EFD820>
+  File "D:\hitesh\main_env\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E802...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001E802069910>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001E801EFD820>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E802...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E802...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001E801F572C0>
+          └ <fastapi.applications.FastAPI object at 0x000001E802069910>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001E80222FBA0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.sessions.SessionMiddleware object at 0x000001E8022703B0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001E801F572C0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\sessions.py", line 85, in __call__
+    await self.app(scope, receive, send_wrapper)
+          │    │   │      │        └ <function SessionMiddleware.__call__.<locals>.send_wrapper at 0x000001E802250400>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0>
+          └ <starlette.middleware.sessions.SessionMiddleware object at 0x000001E8022703B0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '192.168.0.63:8001', 'connection': 'keep-alive', 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Ap...
+          │    │               │      │        └ <function SessionMiddleware.__call__.<locals>.send_wrapper at 0x000001E802250400>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <function CORSMiddleware.simple_response at 0x000001E80220C5E0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001E8022704A0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001E8020376E0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001E802299130>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000001E8020E1700>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001E8022704A0>
+          └ <function wrap_app_handling_exceptions at 0x000001E800329DA0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          └ <fastapi.routing.APIRouter object at 0x000001E8020E1700>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001E8020E1700>>
+          └ <fastapi.routing.APIRouter object at 0x000001E8020E1700>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │     └ <function Route.handle at 0x000001E80032AF20>
+          └ APIRoute(path='/register_ai', name='get_register_ai', methods=['GET'])
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │    └ <function request_response.<locals>.app at 0x000001E80222F100>
+          └ APIRoute(path='/register_ai', name='get_register_ai', methods=['GET'])
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E8022509A0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          │                            │    └ <starlette.requests.Request object at 0x000001E8022992B0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001E802250A40>
+          └ <function wrap_app_handling_exceptions at 0x000001E800329DA0>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001E802250B80>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001E...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('192.168.0.63', 8001), ...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001E802250A40>
+  File "D:\hitesh\main_env\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001E8022992B0>
+                     └ <function get_request_handler.<locals>.app at 0x000001E80222F1A0>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001E8003296C0>
+  File "D:\hitesh\main_env\Lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {}
+                 │         └ <function get_register_ai at 0x000001E801F3E020>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[], security_requ...
+
+  File "D:\hitesh\project\Ai-Universe\backend\app\app\user\register_ai.py", line 42, in get_register_ai
+    cur.execute("SELECT * FROM registerai")
+    │   └ <function Cursor.execute at 0x000001E801ECEB60>
+    └ <pymysql.cursors.Cursor object at 0x000001E802299520>
+
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\cursors.py", line 153, in execute
+    result = self._query(query)
+             │    │      └ 'SELECT * FROM registerai'
+             │    └ <function Cursor._query at 0x000001E801ECF060>
+             └ <pymysql.cursors.Cursor object at 0x000001E802299520>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\cursors.py", line 322, in _query
+    conn.query(q)
+    │    │     └ 'SELECT * FROM registerai'
+    │    └ <function Connection.query at 0x000001E801F0A700>
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 562, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+    │    │                │       │          └ b'SELECT * FROM registerai'
+    │    │                │       └ 3
+    │    │                └ <module 'pymysql.constants.COMMAND' from 'D:\\hitesh\\main_env\\Lib\\site-packages\\pymysql\\constants\\COMMAND.py'>
+    │    └ <function Connection._execute_command at 0x000001E801F0AFC0>
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 864, in _execute_command
+    self._write_bytes(packet)
+    │    │            └ b'\x19\x00\x00\x00\x03SELECT * FROM registerai'
+    │    └ <function Connection._write_bytes at 0x000001E801F0ADE0>
+    └ <pymysql.connections.Connection object at 0x000001E801D7E510>
+  File "D:\hitesh\main_env\Lib\site-packages\pymysql\connections.py", line 809, in _write_bytes
+    raise err.OperationalError(
+          │   └ <class 'pymysql.err.OperationalError'>
+          └ <module 'pymysql.err' from 'D:\\hitesh\\main_env\\Lib\\site-packages\\pymysql\\err.py'>
+
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))")
+INFO     2025-01-13 18:37:51.733 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:37:51.733 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:37:51.850 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:37:51.851 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:37:51.852 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:37:51.853 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:37:51.854 request id: app - logging:callHandlers - Finished server process [6348]
+INFO     2025-01-13 18:37:51.854 request id: app - logging:callHandlers - Finished server process [6348]
+INFO     2025-01-13 18:37:56.279 request id: app - logging:callHandlers - Started server process [5288]
+INFO     2025-01-13 18:37:56.280 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:37:56.281 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:37:56.282 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:37:56.283 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:37:56.284 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:37:56.285 request id: app - logging:callHandlers - Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+INFO     2025-01-13 18:37:59.181 request id: app - logging:callHandlers - 192.168.11.179:53989 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:38:06.436 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:38:06.436 request id: app - logging:callHandlers - Shutting down
+INFO     2025-01-13 18:38:06.545 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:38:06.545 request id: app - logging:callHandlers - Waiting for application shutdown.
+INFO     2025-01-13 18:38:06.545 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:38:06.545 request id: app - logging:callHandlers - Application shutdown complete.
+INFO     2025-01-13 18:38:06.545 request id: app - logging:callHandlers - Finished server process [9712]
+INFO     2025-01-13 18:38:06.545 request id: app - logging:callHandlers - Finished server process [9712]
+INFO     2025-01-13 18:38:13.111 request id: app - logging:callHandlers - Started server process [5908]
+INFO     2025-01-13 18:38:13.111 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:38:13.111 request id: app - logging:callHandlers - Waiting for application startup.
+INFO     2025-01-13 18:38:13.111 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:38:13.111 request id: app - logging:callHandlers - Application startup complete.
+INFO     2025-01-13 18:38:13.127 request id: app - logging:callHandlers - Uvicorn running on http://127.0.0.1:8006 (Press CTRL+C to quit)
+INFO     2025-01-13 18:38:13.127 request id: app - logging:callHandlers - Uvicorn running on http://127.0.0.1:8006 (Press CTRL+C to quit)
+INFO     2025-01-13 18:38:14.338 request id: app - logging:callHandlers - 127.0.0.1:51784 - "GET /docs HTTP/1.1" 200
+INFO     2025-01-13 18:38:14.843 request id: app - logging:callHandlers - 127.0.0.1:51784 - "GET /openapi.json HTTP/1.1" 200
+INFO     2025-01-13 18:39:15.126 request id: app - logging:callHandlers - 127.0.0.1:51785 - "POST /register_ai HTTP/1.1" 422
+INFO     2025-01-13 18:40:20.728 request id: app - logging:callHandlers - 192.168.0.63:51794 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:40:21.281 request id: app - logging:callHandlers - 192.168.0.63:51794 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:40:21.382 request id: app - logging:callHandlers - 192.168.0.63:51801 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:40:37.485 request id: app - logging:callHandlers - 192.168.0.63:51811 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:42:10.849 request id: app - logging:callHandlers - 192.168.0.63:51821 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:42:11.326 request id: app - logging:callHandlers - 192.168.0.63:51821 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:42:11.459 request id: app - logging:callHandlers - 192.168.0.63:51828 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:42:14.887 request id: app - logging:callHandlers - 192.168.0.63:51821 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:45:07.712 request id: app - logging:callHandlers - 192.168.0.63:51835 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:45:07.952 request id: app - logging:callHandlers - 192.168.11.179:54192 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:45:08.276 request id: app - logging:callHandlers - 192.168.0.63:51835 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:45:08.411 request id: app - logging:callHandlers - 192.168.0.63:51842 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:45:18.177 request id: app - logging:callHandlers - 192.168.11.179:54202 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:45:43.539 request id: app - logging:callHandlers - 192.168.0.63:51846 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:45:43.955 request id: app - logging:callHandlers - 192.168.0.63:51846 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:45:44.040 request id: app - logging:callHandlers - 192.168.0.63:51852 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:45:52.542 request id: app - logging:callHandlers - 192.168.0.63:51859 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:46:28.602 request id: app - logging:callHandlers - 192.168.0.63:51868 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:46:29.085 request id: app - logging:callHandlers - 192.168.0.63:51868 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:46:29.220 request id: app - logging:callHandlers - 192.168.0.63:51870 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:46:32.325 request id: app - logging:callHandlers - 192.168.0.63:51868 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:46:53.127 request id: app - logging:callHandlers - 192.168.0.63:51879 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:47:32.923 request id: app - logging:callHandlers - 192.168.0.63:51892 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:47:33.446 request id: app - logging:callHandlers - 192.168.0.63:51892 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:47:33.564 request id: app - logging:callHandlers - 192.168.0.63:51899 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:47:36.689 request id: app - logging:callHandlers - 192.168.0.63:51899 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:48:50.115 request id: app - logging:callHandlers - 192.168.11.179:54351 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:48:51.232 request id: app - logging:callHandlers - 192.168.0.63:51917 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:48:51.858 request id: app - logging:callHandlers - 192.168.0.63:51917 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:48:51.972 request id: app - logging:callHandlers - 192.168.0.63:51923 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:48:56.326 request id: app - logging:callHandlers - 192.168.0.63:51917 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:49:12.159 request id: app - logging:callHandlers - 192.168.0.63:51934 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:49:42.992 request id: app - logging:callHandlers - 192.168.0.63:51936 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:49:43.209 request id: app - logging:callHandlers - 192.168.0.63:51936 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:49:43.331 request id: app - logging:callHandlers - 192.168.0.63:51943 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:49:48.098 request id: app - logging:callHandlers - 192.168.0.63:51943 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:50:35.491 request id: app - logging:callHandlers - 192.168.0.63:51947 - "POST /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:50:35.824 request id: app - logging:callHandlers - 192.168.0.63:51947 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:50:35.947 request id: app - logging:callHandlers - 192.168.0.63:51954 - "GET /reviews HTTP/1.1" 200
+INFO     2025-01-13 18:50:39.477 request id: app - logging:callHandlers - 192.168.0.63:51954 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:51:03.718 request id: app - logging:callHandlers - 192.168.0.63:51964 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:52:58.101 request id: app - logging:callHandlers - 192.168.0.63:51990 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:54:46.613 request id: app - logging:callHandlers - 192.168.11.179:54555 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:57:02.039 request id: app - logging:callHandlers - 192.168.0.63:52024 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:58:06.809 request id: app - logging:callHandlers - 192.168.0.63:52034 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:59:13.962 request id: app - logging:callHandlers - 192.168.0.63:52056 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 18:59:22.365 request id: app - logging:callHandlers - 192.168.0.63:52066 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 19:00:06.018 request id: app - logging:callHandlers - 192.168.0.63:52082 - "GET /register_ai HTTP/1.1" 200
+INFO     2025-01-13 19:07:15.021 request id: app - logging:callHandlers - 192.168.0.63:52168 - "GET /register_ai HTTP/1.1" 200
