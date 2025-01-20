@@ -4,7 +4,7 @@ import { COOKIE_OPTIONS } from '../utils/constant';
 const cookies = new Cookies();
 
 export const setCookie = (key, value) => {
-  cookies.set(key, (value || ''), COOKIE_OPTIONS);
+  cookies.set(key, (value || ''),COOKIE_OPTIONS);
 }
 
 export const getCookie = (key) => {
@@ -12,12 +12,12 @@ export const getCookie = (key) => {
 }
 
 export const removeCookie = (key) => {
-  cookies.remove(key, COOKIE_OPTIONS);
+  cookies.remove(key,COOKIE_OPTIONS);
 }
 
 export const clearCookie = () => {
   const allCookies = cookies.getAll();
   for (const key in allCookies) {
-    cookies.remove(key, COOKIE_OPTIONS);
+    cookies.remove(key,COOKIE_OPTIONS);
   }
 }

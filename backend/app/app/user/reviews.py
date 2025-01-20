@@ -59,7 +59,7 @@ async def get_reviews():
                 user_data = dict(zip(val, row))
                 # add your path
                 image_path = os.path.join(
-                    f"D:/hitesh/project/Ai-Universe/backend/app/{row[5]}"
+                    f"D:/Sem6/project/backend/app/{row[5]}"
                 )
                 print(image_path)
                 if os.path.exists(image_path):

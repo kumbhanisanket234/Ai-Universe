@@ -60,5 +60,5 @@ async def reset_password(
             cur.close()
             return {"error": "Invalid email"}
     else:
-        return JSONResponse(status_code=400, content={"error": "Invalid OTP" , "success": False})
+        return JSONResponse({"error": "Invalid OTP" , "success": False})
 

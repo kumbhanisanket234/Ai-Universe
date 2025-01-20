@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function Navbar () {
+export default function Navbar() {
   return (
     <div className='navbar-main dja'>
       <div className='navbar'>
@@ -26,6 +26,10 @@ export default function Navbar () {
             <Link href='/profile'>Profile</Link>
             <Link href='/contact-us'>Contact Us</Link>
           </div>
+        </div>
+        <div className='flex gap-2'>
+          <button className='signup-btn dja gap-2'><Link href='/sign-up'>Register</Link></button>
+          <button className='signin-btn dja gap-2'><Link href='/sign-in'>Login</Link><Image src="images/right-simple-arrow.svg" height={16} width={16} alt='arrow' /></button>
         </div>
       </div>
     </div>

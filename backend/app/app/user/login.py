@@ -48,7 +48,7 @@ async def get_user(token: str = Depends(oauth2_scheme)):
             print(row)
             if user_data["image"]:
                 image_path = os.path.join(
-                        f"D:/hitesh/project/Ai-Universe/backend/app/{user_data['image']}"
+                        f"D:/Sem6/project/backend/app/{user_data['image']}"
                     )
 
                 if os.path.exists(image_path):

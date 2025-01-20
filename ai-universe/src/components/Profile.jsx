@@ -1,5 +1,5 @@
 'use client'
-import { ROOT_URL } from '@/utils/constant'
+import { convert, ROOT_URL } from '@/utils/constant'
 import { getCookie } from '@/utils/cookies'
 import axios from 'axios'
 import React, { useEffect, useRef, useState } from 'react'
@@ -10,10 +10,14 @@ import toast from 'react-hot-toast'
 import Flatpickr from 'react-flatpickr'
 import countryList from '../utils/countryList.json'
 import Loader from './Loader'
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker'
+import dayjs from 'dayjs'
 
 export default function Profile () {
   const token = getCookie('token')
-  const [data, setData] = useState()
   const [isEditable, setIsEditable] = useState(false)
   const inputFile = useRef(null)
   const [loading, setLoading] = useState({
@@ -21,12 +25,12 @@ export default function Profile () {
     changePasswordLoading: false,
     editProfileLoading: false
   })
-  const [changePassword, setChangePassword] = useState(false)
-  const [oldNewPass, setOldNewPass] = useState({
-    oldpassword: '',
-    newpassword: ''
+  const [data, setData] = useState({
+    fullName: '',
+    dob: '',
+    gender: '',
+    country: ''
   })
-
   const [validations, setValidations] = useState({
     fullName: false,
     dob: false,
@@ -43,6 +47,12 @@ export default function Profile () {
     country: useRef(),
     newpassword: useRef()
   }
+  
+  const [changePassword, setChangePassword] = useState(false)
+  const [oldNewPass, setOldNewPass] = useState({
+    oldpassword: '',
+    newpassword: ''
+  })
 
   const fetchData = async () => {
     try {
@@ -112,9 +122,10 @@ export default function Profile () {
   }
 
   const handleDate = selectedDates => {
+    console.log(selectedDates)
     setData(pre => ({
       ...pre,
-      dob: selectedDates[0]?.toISOString().split('T')[0] || ''
+      dob: convert(selectedDates?.$d) || ''
     }))
   }
 
@@ -134,21 +145,19 @@ export default function Profile () {
       return
     }
 
-    if (!data.dob) {
-      setValidations(pre => ({ ...pre, dob: true }))
-      handleError('dob')
-      return
-    }
-
     if (!data.gender) {
       setValidations(pre => ({ ...pre, gender: true }))
       handleError('gender')
       return
     }
-
     if (!data.country) {
       setValidations(pre => ({ ...pre, country: true }))
       handleError('country')
+      return
+    }
+    if (!data.dob) {
+      setValidations(pre => ({ ...pre, dob: true }))
+      handleError('dob')
       return
     }
 
@@ -156,6 +165,7 @@ export default function Profile () {
   }
 
   const handleEdit = async () => {
+    setLoading(prev => ({ ...prev, editProfileLoading: true }))
     try {
       const res = await axios.patch(
         `${ROOT_URL}/update_user`,
@@ -179,6 +189,8 @@ export default function Profile () {
     } catch (err) {
       console.log(err)
       toast.error(err.response?.data?.message || 'Something went wrong')
+    } finally {
+      setLoading(prev => ({ ...prev, editProfileLoading: false }))
     }
   }
 
@@ -207,245 +219,267 @@ export default function Profile () {
     }
   }
 
-  return (
-    <div className='profile'>
-      {loading.pageLoading ? (
-        <Loader />
-      ) : (
-        <div className='profile-container'>
-          <div className='profile-details-container w-100'>
-            <div className='profile-form-heading'>
-              <h2>PROFILE DETAILS</h2>
-              <p>Register your all AI-devices with AI-Universe.</p>
-            </div>
-            <div className='profile-form'>
-              <div className='profile-header-container'>
-                <div className='profile-form-header dja'>
-                  <div className='flex gap-2'>
-                    <Image
-                      src={`data:image/png;base64,${data?.image}` || '/images/profile.png'}
-                      className='profile-image cursor-pointer'
-                      width={40}
-                      height={40}
-                      alt='profile'
-                      onClick={() => {
-                        inputFile.current.click()
-                      }}
-                    />
-                    <input
-                      type='file'
-                      id='file'
-                      ref={inputFile}
-                      onChange={handleFileChange}
-                      className='hidden'
-                    />
-                    <div>
-                      <h1 className='font-bold'>{data?.fullName}</h1>
-                      <h1 className='text-[14px] opacity-70'>{data?.email}</h1>
-                    </div>
-                  </div>
-                  <div className='profile-edit-btn gap-2 flex'>
-                    {isEditable ? (
-                      <button
-                        onClick={() => {
-                          setIsEditable(false)
-                        }}
-                      >
-                        <i className='fa-solid fa-x text-[14px] opacity-70'></i>
-                      </button>
-                    ) : (
-                      <button
-                        className='font-bold'
-                        onClick={() => {
-                          setIsEditable(true)
-                        }}
-                      >
-                        Edit
-                      </button>
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className='form-details'>
-                <div className='field-details'>
-                  <p>Full Name</p>
-                  {!isEditable ? (
-                    <h2>{data?.fullName}</h2>
-                  ) : (
-                    <input
-                      type='text'
-                      className='text-right'
-                      name='fullName'
-                      ref={inputsRef.fullName}
-                      onChange={handleEditChange}
-                      value={data?.fullName}
-                    />
-                  )}
-                </div>
-                {validations.fullName && (
-                  <span className='error-message'>Fullname Required</span>
-                )}
-                <div className='field-container'>
-                  <div className='field-details w-100'>
-                    {!isEditable ? (
-                      <>
-                        <p>Gender</p>
-                        <h2>{data?.gender}</h2>
-                      </>
-                    ) : (
-                      <>
-                        <select
-                          className='w-100'
-                          id='gender'
-                          name='gender'
-                          ref={inputsRef.gender}
-                          onChange={handleEditChange}
-                          value={data?.gender}
-                        >
-                          <option value=''>Select your Gender</option>
-                          <option value='male'>Male</option>
-                          <option value='female'>Female</option>
-                          <option value='other'>Other</option>
-                        </select>
-                      </>
-                    )}
-                  </div>
-
-                  <div className='field-details w-100'>
-                    {!isEditable ? (
-                      <>
-                        <p>Date of Birth</p>
-                        <h2>{dateFormat(data?.dob, 'd mmm, yyyy')}</h2>
-                      </>
-                    ) : (
-                      <div className='flex justify-between w-100'>
-                        <label htmlFor=''>DOB</label>
-                        <input
-                          type='date'
-                          name='dob'
-                          ref={inputsRef.dob}
-                          value={data.dob}
-                          onChange={handleEditChange}
-                        />
-                      </div>
-                    )}
-                  </div>
-                </div>
-                {validations.dob && (
-                  <span className='error-message'>Dob Required</span>
-                )}
-                {validations.gender && (
-                  <span className='error-message'>Gender Required</span>
-                )}
-
-                <div className='field-details'>
-                  <p>Email</p>
-                  <h2>{data?.email}</h2>
-                </div>
-                <div className='field-details'>
-                  <p>Phone</p>
-                  <h2>{data?.phone}</h2>
-                </div>
-                <div className='field-details'>
-                  {!isEditable ? (
-                    <>
-                      <p>Country</p>
-                      <h2>{data?.country}</h2>
-                    </>
-                  ) : (
-                    <div className='flex justify-between w-100'>
-                      <select
-                        id='country'
-                        className='w-100'
-                        name='country'
-                        ref={inputsRef.country}
-                        value={data.country}
-                        onChange={handleEditChange}
-                      >
-                        <option value=''>Select Your Country</option>
-                        {countryList.map((list, index) => {
-                          return (
-                            <option key={index} value={list.name}>
-                              {list.name}
-                            </option>
-                          )
-                        })}
-                      </select>
-                    </div>
-                  )}
-                </div>
-                {validations.country && (
-                  <span className='error-message'>Country Required</span>
-                )}
-
-                {changePassword && (
-                  <>
-                    <div className='field-details'>
-                      <input
-                        type='password'
-                        className='w-100 change-password-input'
-                        placeholder='Old Password'
-                        name='oldpassword'
-                        value={oldNewPass.oldpassword}
-                        onChange={handlePassChange}
-                      />
-                    </div>
-                    {validations.oldpassword && (
-                      <span className='error-message'>
-                        Old Password Required
-                      </span>
-                    )}
-                    <div className='field-details'>
-                      <input
-                        type='password'
-                        className='w-100 change-password-input'
-                        placeholder='New Password'
-                        name='newpassword'
-                        value={oldNewPass.newpassword}
-                        onChange={handlePassChange}
-                      />
-                    </div>
-                    {validations.newpassword && (
-                      <span className='error-message'>
-                        New Password Required
-                      </span>
-                    )}
-                  </>
-                )}
-                <div className='field-details change-password gap-2'>
-                  <button
-                    className='change-password-btn'
-                    onClick={handleChangePassword}
-                  >
-                    {loading.pageLoading ? 'Loading...' : 'Change Password'}
-                  </button>
-                  {changePassword && (
-                    <button
-                      onClick={() => {
-                        setChangePassword(false)
-                      }}
-                    >
-                      <i className='fa-solid fa-x text-[14px] opacity-70'></i>
-                    </button>
-                  )}
-                </div>
-                {isEditable && (
-                  <div className='w-100 flex justify-center m-0'>
-                    <div className='field-details change-password gap-2'>
-                      <button
-                        className='change-password-btn'
-                        onClick={checkValidations}
-                      >
-                        {loading.editProfileLoading ? 'Loading...' : 'Submit'}
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
+  return loading.pageLoading ? (
+    <Loader />
+  ) : (
+    <div className='profile min-h-screen bg-gray-900 py-12 px-4 sm:px-6 lg:px-8'>
+      <div className='w-100 bg-gray-800 rounded-xl shadow-lg p-8'>
+        <div className='flex items-center justify-between space-x-4 mb-8'>
+          <div className='relative flex items-center gap-3 w-24 h-24'>
+            <Image
+              src={
+                `data:image/png;base64,${data?.image}` || '/images/profile.png'
+              }
+              alt='Profile'
+              width={96}
+              height={96}
+              className='rounded-full object-cover cursor-pointer'
+              onClick={() => {
+                inputFile.current.click()
+              }}
+            />
+            <input
+              type='file'
+              id='file'
+              ref={inputFile}
+              onChange={handleFileChange}
+              disabled={!isEditable}
+              className='hidden'
+            />
+            <div>
+              <h1 className='text-xl font-semibold text-white'>
+                {data?.fullName || 'John Deo'}
+              </h1>
+              <p className='text-gray-400'>{data?.email || 'demo@gmail.com'}</p>
             </div>
           </div>
+
+          {isEditable ? (
+            <button
+              onClick={() => {
+                setIsEditable(false)
+                setValidations(prev => ({
+                  ...prev,
+                  fullName: false,
+                  dob: false,
+                  gender: false,
+                  country: false
+                }))
+              }}
+            >
+              <i className='fa-solid fa-x text-[14px] opacity-70'></i>
+            </button>
+          ) : (
+            <button
+              className='ml-auto bg-blue-500 text-white px-4 py-2 rounded-lg'
+              onClick={() => {
+                setIsEditable(true)
+              }}
+            >
+              Edit
+            </button>
+          )}
         </div>
-      )}
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          <div className='mb-6'>
+            <input
+              type='text'
+              placeholder='Full Name'
+              className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+              disabled={!isEditable}
+              name='fullName'
+              ref={inputsRef.fullName}
+              value={data?.fullName}
+              onChange={handleEditChange}
+            />
+            {validations.fullName && (
+              <span className='error-message'>Fullname Required</span>
+            )}
+          </div>
+          <div className='mb-6'>
+            <div className='relative'>
+              <select
+                id='gender'
+                className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                disabled={!isEditable}
+                name='gender'
+                ref={inputsRef.gender}
+                value={data?.gender}
+                onChange={handleEditChange}
+              >
+                <option value=''>Select Your gender</option>
+                <option value='male'>Male</option>
+                <option value='female'>Female</option>
+                <option value='other'>Other</option>
+              </select>
+              <div className='absolute right-3 top-1/2 transform -translate-y-1/2'>
+                <svg
+                  className='w-5 h-5 text-gray-400'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M19 9l-7 7-7-7'
+                  />
+                </svg>
+              </div>
+            </div>
+            {validations.gender && (
+              <span className='error-message'>Gender Required</span>
+            )}
+          </div>
+          <div className='mb-6'>
+            <input
+              type='text'
+              placeholder='Phone'
+              disabled
+              name='phone'
+              value={data?.phone}
+              className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+            />
+          </div>
+          <div className='mb-6'>
+            <input
+              type='text'
+              placeholder='Email'
+              name='email'
+              value={data?.email}
+              disabled
+              className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+            />
+          </div>
+          <div className='mb-6'>
+            <div className='relative'>
+              <select
+                id='country'
+                className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                disabled={!isEditable}
+                name='country'
+                ref={inputsRef.country}
+                value={data?.country}
+                onChange={handleEditChange}
+              >
+                <option value=''>Select Your Country</option>
+                {countryList.map((list, index) => {
+                  return (
+                    <option key={index} value={list.name}>
+                      {list.name}
+                    </option>
+                  )
+                })}
+              </select>
+              <div className='absolute right-3 top-1/2 transform -translate-y-1/2'>
+                <svg
+                  className='w-5 h-5 text-gray-400'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth={2}
+                    d='M19 9l-7 7-7-7'
+                  />
+                </svg>
+              </div>
+            </div>
+            {validations.country && (
+              <span className='error-message'>Country Required</span>
+            )}
+          </div>
+          <div className='mb-6'>
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DemoContainer components={['DatePicker']}>
+                <DatePicker
+                  className='w-full bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                  disabled={!isEditable}
+                  name='dob'
+                  defaultValue={dayjs(data?.dob)}
+                  onChange={handleDate}
+                />
+              </DemoContainer>
+            </LocalizationProvider>
+            {validations.dob && (
+              <span className='error-message'>Dob Required</span>
+            )}
+          </div>
+
+          {changePassword && (
+            <>
+              <div className='mb-6'>
+                <input
+                  type='password'
+                  placeholder='Old Password'
+                  name='oldpassword'
+                  value={oldNewPass?.oldpassword}
+                  onChange={handlePassChange}
+                  className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                />
+                {validations.oldpassword && (
+                  <span className='error-message'>Old Password Required</span>
+                )}
+              </div>
+              <div className='field-details'>
+                <input
+                  type='password'
+                  placeholder='New Password'
+                  name='newpassword'
+                  value={oldNewPass.newpassword}
+                  onChange={handlePassChange}
+                  className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                />
+                {validations.newpassword && (
+                  <span className='error-message'>New Password Required</span>
+                )}
+              </div>
+            </>
+          )}
+          <div className='mb-6'>
+            <div className='relative'>
+              <button
+                className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                onClick={handleChangePassword}
+              >
+                {loading.pageLoading ? 'Loading...' : 'Change Password'}
+              </button>
+              {changePassword && (
+                <button
+                  onClick={() => {
+                    setChangePassword(false)
+                    setValidations(prev => ({
+                      ...prev,
+                      oldpassword: false,
+                      newpassword: false
+                    }))
+                  }}
+                >
+                  <div className='absolute right-3 top-1/2 transform -translate-y-1/2'>
+                    <i className='fa-solid fa-x text-[14px] opacity-70'></i>
+                  </div>
+                </button>
+              )}
+            </div>
+          </div>
+          {isEditable && (
+            <div className='mb-6'>
+              <div className='relative'>
+                <button
+                  className='w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-100'
+                  onClick={checkValidations}
+                >
+                  {loading.editProfileLoading ? 'Loading...' : 'Save Changes'}
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
