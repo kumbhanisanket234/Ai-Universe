@@ -162,7 +162,7 @@ export default function RegisterAi() {
         try {
             setLoading(true)
             const res = await axios.post(
-                `${ROOT_URL}/register_ai`,bodyData
+                `${ROOT_URL}/register_ai`, bodyData
             )
             if (res?.data?.success) {
                 router.push('/ai-universe')
@@ -183,7 +183,7 @@ export default function RegisterAi() {
             <div className='flex justify-center items-center gap-[100px]'>
                 <div>
                     <div className='heading-btn'>
-                        <button onClick={()=>{router.back()}}>Back</button>
+                        <button onClick={() => { router.back() }}>Back</button>
                     </div>
                     <div className='contactus-heading mt-6'>
                         <h1>Welcome to <br />Ai-Universe</h1>
@@ -377,7 +377,7 @@ export default function RegisterAi() {
                                         id='file'
                                         ref={inputsRef.image}
                                         onChange={handleFileChange}
-                                        className='m-0' 
+                                        className='m-0'
                                     />
                                     {validations.image && (
                                         <span className='error-message'>Image Required</span>

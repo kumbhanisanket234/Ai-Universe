@@ -1,3 +1,4 @@
+import random
 from pathlib import Path
 import base64
 import os
@@ -11,29 +12,28 @@ UPLOAD_DIR = Path("upload_ai_images")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
+
 @user.post("/register_ai" , tags=["Register AI"])
-async def register_ai(register_ai : Annotated[registerai_form , Form(...)]  ):
-
+async def register_ai_details(register_ai : Annotated[registerai_form , Form(...)]):
     image_path = UPLOAD_DIR / register_ai.image.filename
-    try:
-        cur = conn.cursor()
-        with open(image_path, "wb") as f:
-            f.write(await register_ai.image.read())
-        cur.execute(
-            "INSERT INTO registerai (email , owner , modelName , modelType, modelVersion , modelHeight , modelWeight , manufactureName , feature , summary , image) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-            (
-                register_ai.email, register_ai.owner, register_ai.modelName, register_ai.modelType, register_ai.modelVersion,
-                register_ai.modelHeight,register_ai.modelWeight, register_ai.manufactureName, register_ai.feature,
-                register_ai.summary, str(image_path)
-            ))
-
-        conn.commit()
-        cur.close()
-        return {"message": "AI registered successfully", "success": True}
-
-    except Exception as e:
-        return {"error": f"Failed to save image. Error: {str(e)}", "success": False}
-
+    # try:
+    cur = conn.cursor()
+    with open(image_path, "wb") as f:
+        f.write(await register_ai.image.read())
+    cur.execute(
+        "INSERT INTO registerai (email , owner , modelName , modelType, modelVersion , modelHeight , modelWeight , manufactureName , feature , summary , image , modelId) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+        (
+            register_ai.email, register_ai.owner, register_ai.modelName, register_ai.modelType, register_ai.modelVersion,
+            register_ai.modelHeight,register_ai.modelWeight, register_ai.manufactureName, register_ai.feature,
+            register_ai.summary, str(image_path) , register_ai.modelId
+        ))
+    conn.commit()
+    cur.close()
+    return {"message": "AI registered successfully", "success": True}
+    #
+    # except Exception as e:
+    #     return {"error": f"Failed to save image. Error: {str(e)}", "success": False}
+    #
 
 
 @user.get("/register_ai" , tags=["Register AI"])

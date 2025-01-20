@@ -862,8 +862,8 @@ legend {
 .device-card:hover {
   border: 1px solid #cdff09;
   .device-image-container {
-   padding: 0;
-   transition: 0.5s ease-in-out;
+    padding: 0;
+    transition: 0.5s ease-in-out;
   }
 }
 

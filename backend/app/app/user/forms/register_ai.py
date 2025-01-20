@@ -16,4 +16,5 @@ class registerai_form(BaseModel):
     feature : str
     summary : str
     image : UploadFile = File(...)
+    modelId : str
 

@@ -19,6 +19,7 @@ async def register(register_form: RegisterForm = Depends()):
     if cur.fetchall():
         cur.close()
         return {"error": "Email already exists" , "success": False}
+
     cur.execute("SELECT * FROM register WHERE phone = %s", (register_form.phone,))
 
     if cur.fetchall():
@@ -35,6 +36,7 @@ async def register(register_form: RegisterForm = Depends()):
         cur.close()
         return {"error": "Phone number must contain only digits"
             , "success" : False }
+
     try:
         datetime.strptime(register_form.dob, "%Y-%m-%d")
     except ValueError:
