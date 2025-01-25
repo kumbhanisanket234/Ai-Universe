@@ -187,15 +187,15 @@ export default function RegisterAi() {
                     </div>
                     <div className='contactus-heading mt-6'>
                         <h1>Welcome to <br />Ai-Universe</h1>
-                        <p className='mt-4'>create your account </p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.
+                        <p className='mt-4'>Register Your Ai  </p>
+                        <p>Easily register your AI devices, integrate essential tools, and start managing your AI-powered devices securely. AI Universe simplifies the process, ensuring seamless device registration, real-time monitoring, and complete ownership verification.
                         </p>
                     </div>
                 </div>
                 <div className='contact-form-container signup-form-container'>
                     <div className='contact-form-heading'>
                         <h1>Welcome to Ai-Universe</h1>
-                        <p>Login your account</p>
+                        <p>Register Your Ai</p>
                     </div>
                     <div className='flex flex-col'>
                         <div className='contact-form mt-3'>

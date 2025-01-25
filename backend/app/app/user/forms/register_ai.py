@@ -1,11 +1,11 @@
 from typing import Annotated
 from fastapi import UploadFile , File , Form
-from pydantic import BaseModel
+from pydantic import BaseModel , EmailStr
 
 
 
 class registerai_form(BaseModel):
-    email : str
+    email : EmailStr
     owner : str
     modelName : str
     modelType : str
@@ -17,4 +17,5 @@ class registerai_form(BaseModel):
     summary : str
     image : UploadFile = File(...)
     modelId : str
+
 

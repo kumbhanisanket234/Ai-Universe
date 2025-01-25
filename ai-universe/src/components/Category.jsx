@@ -11,8 +11,8 @@ export default function Category() {
                             <button disabled>Category</button>
                         </div>
                         <div className='contactus-heading category-top-heading mt-6 text-center w-100'>
-                            <h1>Discover Our Full Suite of Aidy</h1>
-                            <p className='mt-4'>The next-level chatbot assistant you need</p>
+                            <h1>Discover Our Full Suite of AI Universe</h1>
+                            <p className='mt-4'>The next-level AI device management platform you need</p>
                         </div>
                     </div>
                 </div>
@@ -24,8 +24,8 @@ export default function Category() {
                                     <Image src="/images/category1.svg" className='category-image' height={50} width={50} alt='prompt' />
                                 </div>
                                 <div className='category-heading'>
-                                    <h1>Prompt Collection</h1>
-                                    <p>Spark creativity with a vast collection of prompts designed to ignite your imagination.</p>
+                                    <h1>Device Registry</h1>
+                                    <p>Explore a comprehensive collection of features designed to simplify and secure your AI device management.</p>
                                 </div>
                             </div>
                             <div className='dja gap-[50px]'>
@@ -33,8 +33,8 @@ export default function Category() {
                                     <Image src="/images/category2.svg" className='category-image' height={40} width={40} alt='prompt' />
                                 </div>
                                 <div className='category-heading'>
-                                    <h1>Instant response</h1>
-                                    <p>Get real-time suggestions to keep the conversation going smoothly.</p>
+                                    <h1>Device Details</h1>
+                                    <p>View in-depth information and specifications for each AI device, ensuring complete transparency.</p>
                                 </div>
                             </div>
                         </div>
@@ -44,8 +44,8 @@ export default function Category() {
                                     <Image src="/images/category3.svg" className='category-image' height={50} width={50} alt='prompt' />
                                 </div>
                                 <div className='category-heading'>
-                                    <h1>Flexible Outputs</h1>
-                                    <p>Customize outputs by adjusting parameters, providing feedback, and refining the content.</p>
+                                    <h1>Device Overview</h1>
+                                    <p>Get a comprehensive summary of all registered AI devices, including their specifications, history, and performance.</p>
                                 </div>
                             </div>
                             <div className='dja gap-[50px]'>
@@ -53,8 +53,8 @@ export default function Category() {
                                     <Image src="/images/category4.svg" className='category-image' height={50} width={50} alt='prompt' />
                                 </div>
                                 <div className='category-heading'>
-                                    <h1>Browser Extension</h1>
-                                    <p>Manage conversations, summarize web pages, and engage with pdfs effortlessly.</p>
+                                    <h1>User Access & Permissions</h1>
+                                    <p>Manages different levels of access and user roles for AI device owners and administrators.</p>
                                 </div>
                             </div>
                         </div>

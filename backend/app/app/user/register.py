@@ -34,8 +34,7 @@ async def register(register_form: RegisterForm = Depends()):
             pass
     else:
         cur.close()
-        return {"error": "Phone number must contain only digits"
-            , "success" : False }
+        return {"error": "Phone number must contain only digits", "success" : False }
 
     try:
         datetime.strptime(register_form.dob, "%Y-%m-%d")

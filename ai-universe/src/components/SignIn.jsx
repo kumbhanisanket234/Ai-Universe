@@ -208,7 +208,7 @@ export default function SignIn() {
           </div>
           <div className='contactus-heading mt-6'>
             <h1>Welcome to <br />Ai-Universe</h1>
-            <p className='mt-4'>create your account Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.</p>
+            <p className='mt-4'>Access all your registered AI devices, monitor their performance in real-time, and manage your device ownership securely. With AI Universe, keep track of your devices and ensure compliance with ease.</p>
           </div>
           <div className='talk-about mt-[48px]'>
             <div className='flex items-center mt-5 gap-2'>
