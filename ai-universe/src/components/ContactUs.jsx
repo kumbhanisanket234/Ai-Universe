@@ -11,12 +11,16 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
-    message: ''
+    subject: '',
+    message: '',
+
   })
   const [validations, setValidations] = useState({
     fullname: false,
     email: false,
-    message: false
+    subject: false,
+    message: false,
+
   })
   const handleChange = e => {
     const { name, value } = e.target
@@ -25,7 +29,7 @@ export default function ContactUs() {
   }
 
   const checkValidations = () => {
-    const { fullname, email, message } = formData
+    const { fullname, email, message, subject } = formData
     if (!fullname) {
       setValidations(prev => ({ ...prev, fullname: true }))
       return
@@ -33,6 +37,10 @@ export default function ContactUs() {
 
     if (!email || !EMAIL_REGEX.test(email)) {
       setValidations(prev => ({ ...prev, email: true }))
+      return
+    }
+    if (!subject) {
+      setValidations(prev => ({ ...prev, subject: true }))
       return
     }
 
@@ -53,6 +61,7 @@ export default function ContactUs() {
         setFormData({
           fullname: '',
           email: '',
+          subject: '',
           message: ''
         })
         return
@@ -79,15 +88,15 @@ export default function ContactUs() {
           <div className='talk-about mt-[48px]'>
             <h1>Let's Talk About:</h1>
             <div className='talk-about-details dja mt-[24px]'>
-              <div className='right-arrow dja'><Image src="/images/phone2.svg" height={16} width={16} alt='right-arrow'/></div>
+              <div className='right-arrow dja'><Image src="/images/phone2.svg" height={16} width={16} alt='right-arrow' /></div>
               <p>+91XXXXXXXXXX</p>
             </div>
             <div className='talk-about-details dja mt-[16px]'>
-              <div className='right-arrow dja'><Image src="/images/mail.svg" height={16} width={16} alt='right-arrow'/></div>
+              <div className='right-arrow dja'><Image src="/images/mail.svg" height={16} width={16} alt='right-arrow' /></div>
               <p>support@aiuniverse.com</p>
             </div>
             <div className='talk-about-details dja mt-[16px]'>
-              <div className='right-arrow dja'><Image src="/images/location-2.svg" height={16} width={16} alt='right-arrow'/></div>
+              <div className='right-arrow dja'><Image src="/images/location-2.svg" height={16} width={16} alt='right-arrow' /></div>
               <p>234 Preston Rd. Surat, Gujarat-395010</p>
             </div>
           </div>
@@ -130,14 +139,14 @@ export default function ContactUs() {
                   type='subject'
                   placeholder='Subject'
                   name='subject'
-                  // onChange={handleChange}
-                  // value={formData.subject}
+                  onChange={handleChange}
+                  value={formData.subject}
                 />
-                {/* {validations.subject && (
+                {validations.subject && (
                   <span className='error-message'>
                     {!formData.subject ? 'subject Required' : 'Invalid subject'}
                   </span>
-                )} */}
+                )}
               </div>
               <div>
                 <textarea

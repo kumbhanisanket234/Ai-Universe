@@ -13,15 +13,15 @@ import React from 'react'
 export default function page() {
   return (
     <>
-      {/* <Navbar />
-        <Hero />
-        <Features/>
-        <Category/>
-        <Review />
-        <Faq/>
-        <Future/>
-        <Footer /> */}
-      <Aicard />
+      <Navbar />
+      <Hero />
+      <Features />
+      <Category />
+      <Review />
+      <Faq />
+      <Future />
+      <Footer />
+      {/* <Aicard /> */}
     </>
   )
 }

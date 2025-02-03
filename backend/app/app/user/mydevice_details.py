@@ -19,6 +19,7 @@ async def mydevices_detils(email : str):
     if user:
         cur.execute("select * from registerai where email = %s" , email)
         register_ai = cur.fetchall()
+        cwd = os.getcwd()
         data = []
         val = []
         for i in cur.description:
@@ -26,7 +27,7 @@ async def mydevices_detils(email : str):
         for row in register_ai:
             user_data = dict(zip(val, row))
             image_path = os.path.join(
-                f"D:/hitesh/project/Ai-Universe/backend/app/{row[10]}"
+                f"{cwd}/{row[10]}"
             )
             # print(image_path)
             if os.path.exists(image_path):
@@ -47,7 +48,7 @@ async def update_mydevice(update_device : update_device_model = Depends()):
     cur = conn.cursor()
     cur.execute("select * from registerai where modelId = %s",update_device.modelId)
     device = cur.fetchone()
-    print(device)
+
 
     if device:
 
@@ -56,31 +57,31 @@ async def update_mydevice(update_device : update_device_model = Depends()):
         image = device[10]
 
 
-        if update_device.owner is None:
+        if update_device.owner is None or not update_device.owner.isalpha():
             update_device.owner = device[2]
 
-        if update_device.modelName is None:
+        if update_device.modelName is None or not update_device.modelName.isalpha():
             update_device.modelName = device[3]
 
-        if update_device.modelVersion is None:
+        if update_device.modelVersion is None or not update_device.modelVersion == "":
             update_device.modelVersion = device[4]
 
-        if update_device.modelHeight is None:
+        if update_device.modelHeight is None or not update_device.modelHeight.isnumeric():
             update_device.modelHeight = device[5]
 
-        if update_device.manufactureName is None:
+        if update_device.manufactureName is None or not update_device.manufactureName.isalpha():
             update_device.manufactureName = device[6]
 
-        if update_device.modelType is None:
+        if update_device.modelType is None or not update_device.modelType.isalpha():
             update_device.modelType = device[7]
 
-        if update_device.feature is None:
+        if update_device.feature is None or not update_device.feature.isalpha():
             update_device.feature = device[8]
 
-        if update_device.summary is None:
+        if update_device.summary is None or update_device.summary == " ":
             update_device.summary = device[9]
 
-        if update_device.modelWeight is None:
+        if update_device.modelWeight is None or not update_device.modelWeight.isnumeric():
             update_device.modelWeight = device[11]
 
         lastupdate = datetime.date.today()

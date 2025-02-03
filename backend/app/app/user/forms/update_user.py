@@ -7,9 +7,3 @@ class update_user_form(BaseModel):
     dob : str | None = None
     country : str | None = None
     gender : str | None = None
-
-
-
-
-
-

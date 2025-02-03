@@ -8,7 +8,8 @@ import os
 from .route import user
 from .forms import reviews
 import zlib
-
+from fastapi import HTTPException
+from .. import oauth2_scheme, decode_token
 
 UPLOAD_DIR = Path("uploaded_images")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -21,10 +22,17 @@ async def reviews(
     email: Annotated[EmailStr, Form(...)],
     location: Annotated[str, Form(...)],
     rating: Annotated[int, Form(...)],
-    image: UploadFile = File(...)
-
-):
+    image: UploadFile = File(...) ,
+    token : str = Depends(oauth2_scheme)
+    ):
     cur = conn.cursor()
+
+    payload = decode_token(token)
+    access_token = payload("sub")
+
+    if not access_token:
+        raise HTTPException(status_code=401 , detail=" Token Expired ")
+
     cur.execute("SELECT * FROM register WHERE email = %s", (email,))
     user = cur.fetchone()
     if user:
@@ -74,14 +82,16 @@ async def get_reviews():
             reviews = cur.fetchall()
             data = []
             val = []
+            cwd = os.getcwd()
             for i in cur.description:
                 val.append(i[0])
             for row in reviews:
                 user_data = dict(zip(val, row))
                 # add your path
                 image_path = os.path.join(
-                    f"D:/hitesh/project/Ai-Universe/backend/app/{row[5]}"
+                    f"{cwd}/{row[5]}"
                 )
+
                 print(image_path)
                 if os.path.exists(image_path):
                     with open(image_path, "rb") as img_file:

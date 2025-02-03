@@ -1,11 +1,13 @@
 import base64
 import os
+from fastapi import HTTPException
 from pathlib import Path
 from datetime import date
+from fastapi.params import Depends
 from shared.db import conn
-
 from .forms.register_ai import *
 from .route import *
+from .. import oauth2_scheme, decode_token
 
 UPLOAD_DIR = Path("upload_ai_images")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -13,7 +15,13 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 
 @user.post("/register_ai" , tags=["Register AI"])
-async def register_ai_details(register_ai : Annotated[registerai_form , Form(...)]):
+async def register_ai_details(register_ai : Annotated[registerai_form , Form(...)] , token : str = Depends(oauth2_scheme)):
+    payload = decode_token(token)
+    access_token:str = payload.get("sub")
+
+    if not access_token:
+         raise HTTPException(status_code=401 , detail="Invalid token ")
+         # return {"error" : "Invalid Token or expire token "}
     image_path = UPLOAD_DIR / register_ai.image.filename
     try:
         cur = conn.cursor()
@@ -160,6 +168,7 @@ async def register_ai_details(register_ai : Annotated[registerai_form , Form(...
 async def get_register_ai():
     cur = conn.cursor()
     cur.execute("SELECT * FROM registerai")
+    cwd = os.getcwd()
     register_ai = cur.fetchall()
     data = []
     val = []
@@ -168,7 +177,7 @@ async def get_register_ai():
     for row in register_ai:
         user_data = dict(zip(val, row))
         image_path = os.path.join(
-            f"D:/hitesh/project/Ai-Universe/backend/app/{row[10]}"
+            f"{cwd}/{row[10]}"
         )
         # print(image_path)
         if os.path.exists(image_path):
@@ -179,5 +188,5 @@ async def get_register_ai():
             user_data["image"] = None
         data.append(user_data)
         cur.close()
-    return { "data":data , "success": True}
+    return {"data":data , "success": True}
 

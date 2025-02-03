@@ -46,9 +46,11 @@ async def get_user(token: str = Depends(oauth2_scheme)):
         for row in user:
             user_data = dict(zip(val, user))
             print(row)
+            cwd = os.getcwd()
             if user_data["image"]:
+
                 image_path = os.path.join(
-                        f"D:/Sem6/project/backend/app/{user_data['image']}"
+                         f"{cwd}/{user_data["image"]}"
                     )
 
                 if os.path.exists(image_path):

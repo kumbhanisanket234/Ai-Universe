@@ -1,6 +1,7 @@
 import random
 from datetime import datetime
-
+from fastapi import HTTPException
+import pymysql
 from fastapi import Depends, Body
 from fastapi_mail import MessageSchema, FastMail
 from shared.db import conn
@@ -15,16 +16,18 @@ otp_storage = {}
 async def register(register_form: RegisterForm = Depends()):
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM register WHERE email = %s", (register_form.email,))
-    if cur.fetchall():
-        cur.close()
-        return {"error": "Email already exists" , "success": False}
+    # cur.execute("select * from register where email = %s " , register_form.email,)
 
-    cur.execute("SELECT * FROM register WHERE phone = %s", (register_form.phone,))
+    try:
+        cur.callproc("check_user" , (register_form.email, register_form.phone ,))
+    except  pymysql.MySQLError as e:
+        raise HTTPException(status_code=400, detail=str(e))
 
-    if cur.fetchall():
-        cur.close()
-        return {"error": "Phone number already exists" , "success": False}
+    # data = cur.fetchall()
+    # if data:
+    #     print(data)
+    #     cur.close()
+    #     return {"error" : "Email already Exist " , "success" : False}
 
     if register_form.phone.isdigit():
         if len(register_form.phone) != 10:
@@ -110,8 +113,8 @@ async def verify_user(email: Annotated[str, Body()], otp: Annotated[int, Body()]
 
         # Hash password and insert user data into the database
         
-        
-    
+
+
         hashed_password = hash_password(form_data.password)
     
         cur.execute(
