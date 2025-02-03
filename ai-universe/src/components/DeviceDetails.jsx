@@ -6,6 +6,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {colorCode} from '@/utils/colorCode'
 
 export default function DeviceDetails() {
 
@@ -32,45 +33,49 @@ export default function DeviceDetails() {
 
     return (
         <div>
-            <div className="review-container">
+            <div className="review-container md:px-5 px-4">
                 <div className="review-heading">
                     <div className='contactus-heading dja mt-6'>
                         <h1>Explore All Registered Devices</h1>
                     </div>
                 </div>
 
-                <div className='dja'>
+                <div className='dja '>
 
-                    <div className="Plans-boxes gap-3 mt-[56px] flex flex-wrap justify-center device-card-container">
+                    <div className="Plans-boxes gap-3 mt-[56px] grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center w-full device-card-container">
                         {
 
-                            data || [...Array(8)]?.map((items, index) => {
+                            data?.map((items, index) => {
                                 return (
-                                    <div className="bg-[#18181D] text-white shadow-lg text-left device-card" key={index}>
-                                        <div className='device-image-container flex justify-center'>
+                                    <div className="bg-[#11151d] text-white shadow-lg text-left device-card" key={index}>
+                                        <div className={`device-image-container flex justify-center `} style={{backgroundColor:`${colorCode[index]}`}}>
                                             <Image
                                                 src={
-                                                    // `data:image/png;base64,${items?.image}` || 
-                                                    '/images/feature.png'
+                                                    `data:image/png;base64,${items?.image}`
+                                                    // '/images/feature.png'
                                                 }
-                                                alt='device'
+                                                alt='device'    
                                                 width={200}
                                                 height={200}
                                                 style={{ objectFit: 'contain' }}
                                             />
                                         </div>
-                                        <div className='bg-[#000] flex justify-between w-100 p-3'>
-                                            <p>{items?.modelName} Robot</p>
-                                            <p>{items?.modelId} #000</p>
+                                        <div className='bg-[#1c242f] flex justify-between w-100 p-3'>
+                                            <p>{items?.modelName}</p>
+                                            <p>{items?.modelId} #001</p>
                                         </div>
                                         <div className='p-3 flex justify-between items-center'>
-                                            <p>{items?.owner} John Deo</p>
+                                            <p>{items?.owner}</p>
                                             <p className='text-[10px] opacity-70'>| CREATOR</p>
                                         </div>
-                                        <div className='p-3'>
-                                            <p>{items?.feature} Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolore eius magnam laboriosam obcaecati dicta quis ea sequi itaque?</p>
+                                        <div className='p-3 flex justify-between items-center'>
+                                            <p>{items?.modelTyper}</p>
+                                            <button>More Details</button>
                                         </div>
-                                        
+                                        <div className='p-3'>
+                                            <p>{items?.feature}</p>
+                                        </div>
+
                                     </div>
                                 )
                             })
