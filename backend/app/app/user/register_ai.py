@@ -1,11 +1,13 @@
 import base64
 import os
+from fastapi import HTTPException
 from pathlib import Path
 from datetime import date
+from fastapi.params import Depends
 from shared.db import conn
-
 from .forms.register_ai import *
 from .route import *
+from .. import oauth2_scheme, decode_token
 
 UPLOAD_DIR = Path("upload_ai_images")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -175,25 +177,29 @@ async def register_ai(
 
 @user.get("/register_ai", tags=["Register AI"])
 async def get_register_ai():
-    try:
-        with conn.cursor() as cur:
-            cur.execute("SELECT * FROM registerai")
-            register_ai = cur.fetchall()
-            data = []
-            val = [i[0] for i in cur.description]
-            for row in register_ai:
-                user_data = dict(zip(val, row))
-                image_path = os.path.join(
-                    f"D:/Sem6/project/backend/app/{row[11]}"
-                )
-                if os.path.exists(image_path):
-                    with open(image_path, "rb") as img_file:
-                        image = base64.b64encode(img_file.read()).decode("utf-8")
-                        user_data["image"] = image
-                else:
-                    user_data["image"] = None
-                data.append(user_data)
-        return {"data": data, "success": True}
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM registerai")
+    cwd = os.getcwd()
+    register_ai = cur.fetchall()
+    data = []
+    val = []
+    for i in cur.description:
+        val.append(i[0])
+    for row in register_ai:
+        user_data = dict(zip(val, row))
+        image_path = os.path.join(
+            f"{cwd}/{row[10]}"
+        )
+        # print(image_path)
+        if os.path.exists(image_path):
+            with open(image_path, "rb") as img_file:
+                image = base64.b64encode(img_file.read()).decode("utf-8")
+                user_data["image"] = image
+        else:
+            user_data["image"] = None
+        data.append(user_data)
+        cur.close()
+    return {"data":data , "success": True}
 
     except Exception as e:
         return {"error": f"Failed to save image. Error: {str(e)}", "success": False}

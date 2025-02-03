@@ -49,3 +49,4 @@ ai-universe/next-env.d.ts
 backend/app/exchange.log
 backend/app/exchange.log
 *.log
+backend/app/exchange.log

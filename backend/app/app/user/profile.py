@@ -4,6 +4,7 @@ from .route import *
 from .forms.register import *
 from shared.db import conn
 from fastapi import UploadFile , File , Form
+import base64
 
 
 UPLOAD_DIR = Path("profile_images")
