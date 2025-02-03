@@ -1,10 +1,11 @@
 'use client'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 export default function Faq() {
 
     const [openIndex, setOpenIndex] = useState(null);
+    const contentRef = useRef(null);
     const handleFaq = (index) => {
         if (openIndex === index) {
             setOpenIndex(null);
@@ -54,11 +55,16 @@ export default function Faq() {
                                             <h1 className={`${isSelected ? `text-[#000]` : `text-[#a0a4ad]`}`}>{items.que}</h1>
                                             <Image src={`${isSelected ? `/images/minus-icon.svg` : `/images/plus-icon.svg`}`} height={26} width={26} alt='plus' />
                                         </div>
-                                        {
-                                            isSelected && (
-                                                <p>{items.ans}</p>
-                                            )
-                                        }
+                                        <div
+                                            ref={contentRef}
+                                            className="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+                                            style={{
+                                                maxHeight: isSelected ? `${contentRef.current?.scrollHeight}px` : "0px",
+                                            }}
+                                        >
+                                            <p>{items.ans}</p>
+                                        </div>
+
                                     </div>
                                 </div>
                             )
