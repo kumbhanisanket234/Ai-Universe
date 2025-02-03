@@ -156,10 +156,10 @@ export default function Review() {
           <div className="review-container">
             <div className="review-heading">
               <div className='heading-btn dja'>
-                <button disabled>Customer Reviews</button>
+                <button disabled>User Reviews</button>
               </div>
               <div className='contactus-heading dja mt-6'>
-                <h1>What Our Client Say</h1>
+                <h1>What Our User Say</h1>
               </div>
             </div>
 

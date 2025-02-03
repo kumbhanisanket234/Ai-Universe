@@ -10,21 +10,22 @@ export default function Features() {
                         <button disabled>Feature</button>
                     </div>
                     <div className='contactus-heading mt-6'>
-                        <h1>Clean and Efficient<br /> Code Generation</h1>
-                        <p className='mt-4'>Boost your development speed with Aidy's clean and efficient code generation.</p>
+                        <h1>Secure and Transparent
+                            <br /> Device Registration</h1>
+                        <p className='mt-4'>Enhance your device management with AI Universe's secure and transparent registration.</p>
                     </div>
                     <div className='mt-[48px]'>
                         <div className='flex  mt-[24px] gap-[12px]'>
                             <Image src="/images/true.svg" height={24} width={24} alt='right-arrow' />
-                            <p>Multi-Language Support</p>
+                            <p>Free Device Registration</p>
                         </div>
                         <div className='flex  mt-[16px] gap-[12px]'>
                             <Image src="/images/true.svg" height={24} width={24} alt='right-arrow' />
-                            <p>Code Optimization and Refactoring</p>
+                            <p>Ownership Verification System </p>
                         </div>
                         <div className='flex  mt-[16px] gap-[12px]'>
                             <Image src="/images/true.svg" height={24} width={24} alt='right-arrow' />
-                            <p>Code Testing and Validation</p>
+                            <p>Secure Data Encryption</p>
                         </div>
                     </div>
                 </div>
@@ -35,7 +36,7 @@ export default function Features() {
 
             </div>
 
-           
+
         </div>
     )
 }

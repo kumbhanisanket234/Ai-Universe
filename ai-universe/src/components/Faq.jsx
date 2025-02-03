@@ -14,11 +14,11 @@ export default function Faq() {
     }
 
     const FAQ = [
-        { que: 'What is Ai Universe?', ans: "Aidy is an AI-powered chatbot designed to help you achieve your goals and improve your productivity. It offers personalized information, reminders, and encouragement tailored to your specific needs." },
-        { que: 'How does Ai Universe work?', ans: "Aidy uses advanced AI to understand your tasks, set reminders, and give you advice based on your goals and productivity patterns." },
+        { que: 'What is Ai Universe?', ans: "AI Universe is an advanced platform designed to simplify and secure the registration and management of AI-powered devices. By integrating cutting-edge technologies like blockchain, it ensures transparent, tamper-proof device records and ownership verification." },
+        { que: 'How does Ai Universe work?', ans: "AI Universe is an innovative platform designed for secure and efficient registration, management, and monitoring of AI-powered devices. By leveraging blockchain technology, it ensures transparent, tamper-proof records and reliable ownership verification." },
         { que: 'Can I integrate Ai Universe with other tools?', ans: "Yes, Ai Universe is designed to integrate with various productivity tools and apps to streamline your tasks." },
-        { que: 'Is Ai Universe free to use?', ans: "Aidy offers both free and premium plans depending on the level of features and support you need." },
-        { que: 'How do I get started with Ai Universe?', ans: "Simply sign up on the website, connect your preferred tools, and start setting up your tasks and goals." },
+        { que: 'Is Ai Universe free to use?', ans: "Ai Universe offers both free and premium plans depending on the level of features and support you need." },
+        { que: 'How do I get started with Ai Universe?', ans: "Simply sign up on AI Universe, register your AI devices, integrate your preferred tools, and start managing, monitoring, and securing your devices effortlessly." },
     ]
 
     return (

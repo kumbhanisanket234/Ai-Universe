@@ -162,7 +162,7 @@ export default function RegisterAi() {
         try {
             setLoading(true)
             const res = await axios.post(
-                `${ROOT_URL}/register_ai`,bodyData
+                `${ROOT_URL}/register_ai`, bodyData
             )
             if (res?.data?.success) {
                 router.push('/ai-universe')
@@ -183,19 +183,19 @@ export default function RegisterAi() {
             <div className='flex justify-center items-center gap-[100px]'>
                 <div>
                     <div className='heading-btn'>
-                        <button onClick={()=>{router.back()}}>Back</button>
+                        <button onClick={() => { router.back() }}>Back</button>
                     </div>
                     <div className='contactus-heading mt-6'>
                         <h1>Welcome to <br />Ai-Universe</h1>
-                        <p className='mt-4'>create your account </p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.
+                        <p className='mt-4'>Register Your Ai  </p>
+                        <p>Easily register your AI devices, integrate essential tools, and start managing your AI-powered devices securely. AI Universe simplifies the process, ensuring seamless device registration, real-time monitoring, and complete ownership verification.
                         </p>
                     </div>
                 </div>
                 <div className='contact-form-container signup-form-container'>
                     <div className='contact-form-heading'>
                         <h1>Welcome to Ai-Universe</h1>
-                        <p>Login your account</p>
+                        <p>Register Your Ai</p>
                     </div>
                     <div className='flex flex-col'>
                         <div className='contact-form mt-3'>
@@ -377,7 +377,7 @@ export default function RegisterAi() {
                                         id='file'
                                         ref={inputsRef.image}
                                         onChange={handleFileChange}
-                                        className='m-0' 
+                                        className='m-0'
                                     />
                                     {validations.image && (
                                         <span className='error-message'>Image Required</span>

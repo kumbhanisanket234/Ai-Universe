@@ -264,7 +264,7 @@ export default function SignUp() {
             <div className='contactus-heading mt-6'>
               <h1>Welcome to <br />Ai-Universe</h1>
               <p className='mt-4'>create your account</p>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.</p>
+              <p>Join AI Universe today to easily register, manage, and monitor your AI devices in a secure, blockchain-powered ecosystem.</p>
             </div>
             <div className='talk-about mt-[48px]'>
               <div className='flex items-center mt-2 gap-2'>

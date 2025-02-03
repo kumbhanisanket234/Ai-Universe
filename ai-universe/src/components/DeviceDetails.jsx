@@ -60,17 +60,13 @@ export default function DeviceDetails() {
                                                 style={{ objectFit: 'contain' }}
                                             />
                                         </div>
-                                        <div className='bg-[#1c242f] flex justify-between w-100 p-3'>
+                                        <div className='bg-[#000] flex justify-between w-100 p-3'>
                                             <p>{items?.modelName}</p>
-                                            <p>{items?.modelId} #001</p>
+                                            <p>{items?.modelId}</p>
                                         </div>
                                         <div className='p-3 flex justify-between items-center'>
-                                            <p>{items?.owner}</p>
-                                            <p className='text-[10px] opacity-70'>| CREATOR</p>
-                                        </div>
-                                        <div className='p-3 flex justify-between items-center'>
-                                            <p>{items?.modelTyper}</p>
-                                            <button>More Details</button>
+                                            <p>{items?.owner} </p>
+                                            <p className='text-[10px] opacity-70'></p>
                                         </div>
                                         <div className='p-3'>
                                             <p>{items?.feature}</p>
