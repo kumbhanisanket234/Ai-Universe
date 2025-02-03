@@ -204,7 +204,7 @@ export default function SignIn() {
       <div className='flex justify-center items-center gap-[100px]'>
         <div>
           <div className='heading-btn'>
-            <button disabled>Login</button>
+            <button onClick={()=>{router.back()}}>Back</button>
           </div>
           <div className='contactus-heading mt-6'>
             <h1>Welcome to <br />Ai-Universe</h1>

@@ -17,7 +17,7 @@ export default function Future() {
                 <p className='mt-[24px]'>Join millions and upgrade to Ai-Universe today to feel the difference!</p>
                 <div>
                     <div className='gap-2 w-100 dja mt-[56px]'>
-                        <button className='signin-btn dja gap-2'>Register Ai<Image src="images/right-simple-arrow.svg" height={16} width={16} alt='arrow' /></button>
+                        <button className='signin-btn dja gap-2'  onClick={() => { router.push('/register-ai') }}>Register Ai<Image src="images/right-simple-arrow.svg" height={16} width={16} alt='arrow' /></button>
                         <button className='signup-btn dja gap-2' onClick={()=>{router.push('/registered-device-details')}}>See All Devices</button>
                     </div>
                 </div>
