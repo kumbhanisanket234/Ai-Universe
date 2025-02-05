@@ -32,6 +32,7 @@ async def login(login_form: LoginForm = Depends()) -> dict:
 async def get_user(token: str = Depends(oauth2_scheme)):
     payload = decode_token(token)
     email: str = payload.get("sub")
+
     if not email:
         raise HTTPException(status_code=401, detail="Invalid token")
 

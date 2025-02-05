@@ -12,15 +12,18 @@ from .. import oauth2_scheme, decode_token
 async def update_user_data(update_user : update_user_form = Depends() , token : str = Depends(oauth2_scheme)):
 
     payload = decode_token(token)
-    access_token = payload("sub")
+    access_token = payload["sub"]
 
     if not access_token:
         raise HTTPException(status_code=401 , detail=" Token Expired ")
+
     cur = conn.cursor()
     cur.execute("SELECT * FROM register WHERE email = %s", (update_user.email,))
     user = cur.fetchone()
+
     if not user:
         return {"error": "User not found" , "success" : False}
+
     else:
         if update_user.fullName is None :
             update_user.fullName = user[4]

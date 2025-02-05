@@ -2,16 +2,25 @@ import base64
 import os
 import datetime
 from fastapi.params import Depends
-from markdown_it.rules_inline import image
 
 from .forms.update_device import *
 from shared.db import conn
 from .route import user
-from .. import register
+from .. import register, oauth2_scheme, decode_token
+from fastapi import HTTPException
+
+@user.get("/mydevices" , tags=["Register AI"])
+async def mydevices_detils(token : str = Depends(oauth2_scheme)):
+
+    payload = decode_token(token)
+    print(payload)
+
+    email : str  = payload["sub"]
+
+    if not email:
+        raise HTTPException(status_code=401 , detail=" Token Expired ")
 
 
-@user.post("/mydevices" , tags=["Register AI"])
-async def mydevices_detils(email : str):
     cur = conn.cursor()
     cur.execute("Select * from register where email = %s" , email)
     user = cur.fetchone()
@@ -19,12 +28,14 @@ async def mydevices_detils(email : str):
     if user:
         cur.execute("select * from registerai where email = %s" , email)
         register_ai = cur.fetchall()
+
         cwd = os.getcwd()
         data = []
         val = []
         for i in cur.description:
             val.append(i[0])
         for row in register_ai:
+
             user_data = dict(zip(val, row))
             image_path = os.path.join(
                 f"{cwd}/{row[10]}"
@@ -38,7 +49,7 @@ async def mydevices_detils(email : str):
                 user_data["image"] = None
             data.append(user_data)
             cur.close()
-        return {"data": data, "success": True}
+        return {"data": data,  "success": True}
     else:
         return {"error" : "User Not Found" , "success" : False}
 
