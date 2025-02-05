@@ -18,9 +18,6 @@ async def register_ai(
 ):
         image_path = UPLOAD_DIR / register_ai.image.filename
 
-
-        image_path = UPLOAD_DIR / image.filename
-
         cur = conn.cursor()
         cur.execute("select * from register where email = %s " , register_ai.email )
         user = cur.fetchone()
