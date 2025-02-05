@@ -19,6 +19,8 @@ async def register_ai(
         image_path = UPLOAD_DIR / register_ai.image.filename
 
 
+        image_path = UPLOAD_DIR / image.filename
+
         cur = conn.cursor()
         cur.execute("select * from register where email = %s " , register_ai.email )
         user = cur.fetchone()
@@ -143,6 +145,11 @@ async def register_ai(
             conn.commit()
             cur.close()
             return {"message": "AI registered successfully", "success": True}
+
+        else:
+            return {"error" : "Email Not register " , "success" : False }
+
+    
 
         else:
             return {"error" : "Email Not register " , "success" : False }
@@ -292,7 +299,7 @@ async def get_register_ai():
             user_data["image"] = None
         data.append(user_data)
         cur.close()
-        
+
     return {"data":data , "success": True}
 
     
