@@ -51,15 +51,15 @@ async def get_user(token: str = Depends(oauth2_scheme)):
             if user_data["image"]:
 
                 image_path = os.path.join(
-                         f"{cwd}/{user_data["image"]}"
+                         f"{cwd}/{user_data[8]}"
                     )
 
                 if os.path.exists(image_path):
                     with open(image_path, "rb") as img_file:
                             image = base64.b64encode(img_file.read()).decode("utf-8")
-                            user_data["image"] = image
+                            user_data[8] = image
                 else:
-                    user_data["image"] = None
+                    user_data[8] = None
                 cur.close()
         if not user:
             raise HTTPException(status_code=404, detail="User not found")

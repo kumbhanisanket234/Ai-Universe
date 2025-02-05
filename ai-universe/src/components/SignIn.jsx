@@ -289,7 +289,7 @@ export default function SignIn() {
                         </span>
                       )}
                     </div>
-                    <div className='d-flex justify-content-center align-items-center gap-4 mt-4'>
+                    <div className='flex justify-center items-center gap-4 mt-4'>
                       {otp.map((digit, index) => (
                         <input
                           key={index}

@@ -20,6 +20,7 @@ export default function Profile () {
   const token = getCookie('token')
   const [isEditable, setIsEditable] = useState(false)
   const inputFile = useRef(null)
+  
   const [loading, setLoading] = useState({
     pageLoading: false,
     changePasswordLoading: false,

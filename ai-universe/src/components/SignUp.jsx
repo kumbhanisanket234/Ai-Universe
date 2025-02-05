@@ -507,7 +507,7 @@ export default function SignUp() {
         className='otp-modal'
       >
         <Modal.Header>
-          <div className='flex items-center justify-between w-100'>
+          <div className='flex items-center justify-between w-full'>
             <h1>Enter OTP For Verify Email</h1>
             <button
               onClick={() => {
@@ -521,7 +521,7 @@ export default function SignUp() {
         <Modal.Body>
           <div className='text-center'>
             {/* <h1 className='text-[40px]'>Enter Vetification Code</h1> */}
-            <div className='dja w-100'>
+            <div className='dja w-full'>
               <Image src="/images/verified.png" height={80} width={80} alt='verified' />
             </div>
             <h1 className='opacity-40 mt-3'>
@@ -529,7 +529,7 @@ export default function SignUp() {
             </h1>
             <h1 className='mt-2'>{formData.email || 'info@gmail.com'}</h1>
           </div>
-          <div className='d-flex justify-content-center align-items-center gap-4 mt-4'>
+          <div className='flex justify-center items-center gap-4 mt-4'>
             {otp.map((digit, index) => (
               <input
                 key={index}

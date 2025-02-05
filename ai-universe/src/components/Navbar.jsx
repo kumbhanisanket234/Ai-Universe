@@ -5,7 +5,7 @@ import React from 'react'
 export default function Navbar() {
   return (
     <div className='navbar-main dja'>
-      <div className='navbar'>
+      <div className='navbar p-4'>
         <div className='dja'>
           <Image src='/images/logo.svg' height={46} width={135} alt='logo' />
         </div>

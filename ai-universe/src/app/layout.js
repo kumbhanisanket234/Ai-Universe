@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import localFont from 'next/font/local'
 import { Toaster } from 'react-hot-toast'
-import 'bootstrap/dist/css/bootstrap.min.css'
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin']
