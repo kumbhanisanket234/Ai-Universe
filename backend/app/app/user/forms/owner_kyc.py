@@ -9,19 +9,9 @@ class user_kyc_model(BaseModel):
     businessAddress : str
     panNumber : str
     aadharNumber : str
-    isVerify : bool
+    # isVerify : bool
     panImage : UploadFile
     aadharImage : UploadFile
-
-
-class device_kyc_model(BaseModel):
-    deviceName : str
-    modelNumber : str
-    manufacturer : str
-    deviceImage : str
-    ownership : str
-    manufacturerCertificate : str
-    isVerify : bool
 
 
 
