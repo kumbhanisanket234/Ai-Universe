@@ -1,3 +1,4 @@
+import Aicard from '@/components/Aicard'
 import Category from '@/components/Category'
 import ContactUs from '@/components/ContactUs'
 import Faq from '@/components/Faq'
@@ -9,17 +10,18 @@ import Navbar from '@/components/Navbar'
 import Review from '@/components/Review'
 import React from 'react'
 
-export default function page () {
+export default function page() {
   return (
     <>
-        <Navbar />
-        <Hero />
-        <Features/>
-        <Category/>
-        <Review />
-        <Faq/>
-        <Future/>
-        <Footer />
+      <Navbar />
+      <Hero />
+      <Features />
+      <Category />
+      <Review />
+      <Faq />
+      <Future />
+      <Footer />
+      {/* <Aicard /> */}
     </>
   )
 }

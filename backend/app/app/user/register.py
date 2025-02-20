@@ -1,6 +1,7 @@
 import random
 from datetime import datetime
-
+from fastapi import HTTPException
+import pymysql
 from fastapi import Depends, Body
 from fastapi_mail import MessageSchema, FastMail
 from shared.db import conn
@@ -15,15 +16,18 @@ otp_storage = {}
 async def register(register_form: RegisterForm = Depends()):
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM register WHERE email = %s", (register_form.email,))
-    if cur.fetchall():
-        cur.close()
-        return {"error": "Email already exists" , "success": False}
-    cur.execute("SELECT * FROM register WHERE phone = %s", (register_form.phone,))
+    # cur.execute("select * from register where email = %s " , register_form.email,)
 
-    if cur.fetchall():
-        cur.close()
-        return {"error": "Phone number already exists" , "success": False}
+    try:
+        cur.callproc("check_user" , (register_form.email, register_form.phone ,))
+    except  pymysql.MySQLError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+    # data = cur.fetchall()
+    # if data:
+    #     print(data)
+    #     cur.close()
+    #     return {"error" : "Email already Exist " , "success" : False}
 
     if register_form.phone.isdigit():
         if len(register_form.phone) != 10:
@@ -33,8 +37,8 @@ async def register(register_form: RegisterForm = Depends()):
             pass
     else:
         cur.close()
-        return {"error": "Phone number must contain only digits"
-            , "success" : False }
+        return {"error": "Phone number must contain only digits", "success" : False }
+
     try:
         datetime.strptime(register_form.dob, "%Y-%m-%d")
     except ValueError:
@@ -77,6 +81,7 @@ async def register(register_form: RegisterForm = Depends()):
             subtype="html",
         )
 
+        print(otp_storage)
         # Send email
         fm = FastMail(conf)
         await fm.send_message(message , template_name="email.html")
@@ -109,10 +114,11 @@ async def verify_user(email: Annotated[str, Body()], otp: Annotated[int, Body()]
 
         # Hash password and insert user data into the database
         
-        
-    
+
+
         hashed_password = hash_password(form_data.password)
-    
+
+
         cur.execute(
             "INSERT INTO register (email, password, phone, fullName, dob, country, gender) "
             "VALUES (%s, %s, %s, %s, %s, %s, %s)",

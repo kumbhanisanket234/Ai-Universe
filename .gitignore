@@ -1,3 +1,6 @@
+
+*.log
+
 ai-universe/node_modules/
 ai-universe/.next/
 ai-universe/.env
@@ -43,4 +46,7 @@ ai-universe/.vercel
 # typescript
 ai-universe/*.tsbuildinfo
 ai-universe/next-env.d.ts
+backend/app/exchange.log
+backend/app/exchange.log
+*.log
 backend/app/exchange.log

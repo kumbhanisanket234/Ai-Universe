@@ -7,8 +7,6 @@ import { Modal } from 'react-bootstrap'
 import Image from 'next/image'
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import 'swiper/css/pagination';
-// import { Pagination } from 'swiper/modules';
 
 export default function Review() {
   const [active, setActive] = useState(false)
@@ -22,7 +20,7 @@ export default function Review() {
     description: '',
     work: '',
     email: '',
-    img: '',
+    img: null,
     location: '',
     rating: null
   })
@@ -122,8 +120,7 @@ export default function Review() {
     bodyData.append('image', formData?.img)
     bodyData.append('work', formData?.work)
     bodyData.append('location', formData?.location)
-    // bodyData.append('rating', formData?.rating)
-
+    bodyData.append('rating', formData?.rating)
 
     try {
       const res = await axios.post(`${ROOT_URL}/reviews`, bodyData)
@@ -159,10 +156,10 @@ export default function Review() {
           <div className="review-container">
             <div className="review-heading">
               <div className='heading-btn dja'>
-                <button disabled>Customer Reviews</button>
+                <button disabled>User Reviews</button>
               </div>
               <div className='contactus-heading dja mt-6'>
-                <h1>What Our Client Say</h1>
+                <h1>What Our User Say</h1>
               </div>
             </div>
 
@@ -190,7 +187,7 @@ export default function Review() {
                             {items.description}
                           </p>
                           <div className="flex items-center mb-4">
-                            {[...Array(5)].map((_, i) => (
+                            {[...Array(items.rating)].map((_, i) => (
                               <svg
                                 key={i}
                                 className="w-6 h-6 text-yellow-400"
@@ -202,22 +199,24 @@ export default function Review() {
                               </svg>
                             ))}
                           </div>
-                          <div className='dja'>
-                            {/* <Image
-                              src={
-                                `data:image/png;base64,${data?.image}` || '/images/profile.png'
-                              }
-                              alt='Profile'
-                              width={96}
-                              height={96}
-                              className='rounded-full object-cover cursor-pointer'
-                            /> */}
+                          <div className='flex gap-4'>
+                            <div className='flex rounded h-[50px] w-[50px]'>
+                              <Image
+                                src={
+                                  `data:image/png;base64,${items?.image}` || '/images/profile.png'
+                                }
+                                alt='Profile'
+                                width={50}
+                                height={50}
+                                className='rounded-full object-cover'
+                              />
+                            </div>
                             <div>
                               <h3 className="text-lg font-semibold">{items.name}</h3>
                               <p className="text-sm text-gray-400">{items.work}</p>
+                              <p className="text-sm text-gray-400">{items.location}</p>
                             </div>
                           </div>
-                          <p className="text-sm text-gray-400">{items.location}</p>
 
                         </div>
                       </SwiperSlide>

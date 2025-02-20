@@ -34,13 +34,16 @@ origins = [
     # "http://localhost:8080",
 ]
 
+
 app.add_middleware(
     CORSMiddleware,
+    # SessionMiddleware ,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 if __name__ == "__main__":
     uvicorn.run(app, port=8000, ws_ping_interval=1, ws_ping_timeout=-1)

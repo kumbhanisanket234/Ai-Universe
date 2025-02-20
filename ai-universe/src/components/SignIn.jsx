@@ -1,5 +1,5 @@
 'use client'
-import { EMAIL_REGEX, ROOT_URL } from '@/utils/constant'
+import { EMAIL_REGEX, PHONE_REGEX, ROOT_URL } from '@/utils/constant'
 import { setCookie } from '@/utils/cookies'
 import axios from 'axios'
 import Image from 'next/image'
@@ -109,7 +109,6 @@ export default function SignIn() {
         toast.error(res?.data?.error || 'Something went wrong')
         return
       }
-      console.log('hello')
       const res = await axios.post(
         `${ROOT_URL}/login`,
         {},
@@ -163,6 +162,9 @@ export default function SignIn() {
   }
 
   function handleOTPChange(value, index) {
+    if (!PHONE_REGEX.test(value)) {
+      return
+    }
     let newArr = [...otp]
     newArr[index] = value
     setOtp(newArr)
@@ -202,11 +204,11 @@ export default function SignIn() {
       <div className='flex justify-center items-center gap-[100px]'>
         <div>
           <div className='heading-btn'>
-            <button disabled>Login</button>
+            <button onClick={()=>{router.back()}}>Back</button>
           </div>
           <div className='contactus-heading mt-6'>
             <h1>Welcome to <br />Ai-Universe</h1>
-            <p className='mt-4'>create your account Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio eos saepe eum nobis fugiat debitis laboriosam harum consequatur sapiente sed.</p>
+            <p className='mt-4'>Access all your registered AI devices, monitor their performance in real-time, and manage your device ownership securely. With AI Universe, keep track of your devices and ensure compliance with ease.</p>
           </div>
           <div className='talk-about mt-[48px]'>
             <div className='flex items-center mt-5 gap-2'>
@@ -322,9 +324,7 @@ export default function SignIn() {
                   </button>
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
       </div>
