@@ -1,6 +1,6 @@
 'use client'
 import { EMAIL_REGEX, PHONE_REGEX, ROOT_URL } from '@/utils/constant'
-import { setCookie } from '@/utils/cookies'
+import { getCookie, setCookie } from '@/utils/cookies'
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,9 +11,9 @@ import toast from 'react-hot-toast'
 export default function RegisterAi() {
     const [loading, setLoading] = useState(false)
     const router = useRouter()
+    const token = getCookie("token");
 
     const inputsRef = {
-        email: useRef(),
         owner: useRef(),
         modelName: useRef(),
         modelType: useRef(),
@@ -27,7 +27,6 @@ export default function RegisterAi() {
     }
 
     const [formData, setFormData] = useState({
-        email: '',
         owner: '',
         modelName: '',
         modelType: '',
@@ -41,7 +40,6 @@ export default function RegisterAi() {
     })
 
     const [validations, setValidations] = useState({
-        email: false,
         owner: false,
         modelName: false,
         modelType: false,
@@ -62,12 +60,16 @@ export default function RegisterAi() {
     }
 
     const handleFileChange = e => {
+        if ([...e.target.files].filter(file => file.type === "image/png") == "") {
+            setValidations(pre => ({ ...pre, image: true }))
+        }
+        else{
+            setValidations((prev) => ({ ...prev, image: false }))
+        }
         setFormData((prev) => ({ ...prev, image: e.target.files[0] }))
-        setValidations((prev) => ({ ...prev, image: false }))
     }
 
     const bodyData = new FormData()
-    bodyData.append('email', formData?.email)
     bodyData.append('owner', formData?.owner)
     bodyData.append('modelName', formData?.modelName)
     bodyData.append('modelType', formData?.modelType)
@@ -87,12 +89,6 @@ export default function RegisterAi() {
                 block: 'center'
             })
             inputsRef[key].current?.focus()
-        }
-
-        if (!formData.email.trim() || !EMAIL_REGEX.test(formData.email)) {
-            setValidations(pre => ({ ...pre, email: true }))
-            handleError('email')
-            return
         }
 
         if (!formData.owner.trim()) {
@@ -149,11 +145,12 @@ export default function RegisterAi() {
             return
         }
 
-        if (!formData.image) {
+        if (!formData.image || validations.image) {
             setValidations(pre => ({ ...pre, image: true }))
             handleError('image')
             return
         }
+        
         onSubmit()
     }
 
@@ -162,7 +159,12 @@ export default function RegisterAi() {
         try {
             setLoading(true)
             const res = await axios.post(
-                `${ROOT_URL}/register_ai`, bodyData
+                `${ROOT_URL}/register_ai`, bodyData,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                }
             )
             if (res?.data?.success) {
                 router.push('/ai-universe')
@@ -183,7 +185,7 @@ export default function RegisterAi() {
             <div className='flex justify-center items-center gap-[100px]'>
                 <div>
                     <div className='heading-btn'>
-                        <button onClick={() => { router.back() }}>Back</button>
+                        <button className='hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
                     </div>
                     <div className='contactus-heading mt-6'>
                         <h1>Welcome to <br />Ai-Universe</h1>
@@ -200,21 +202,6 @@ export default function RegisterAi() {
                     <div className='flex flex-col'>
                         <div className='contact-form mt-3'>
                             <div className='mt-2'>
-                                <div className='mt-2'>
-                                    <input
-                                        type='email'
-                                        placeholder='Email'
-                                        ref={inputsRef.email}
-                                        name='email'
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                    />
-                                    {validations.email && (
-                                        <span className='error-message'>
-                                            {!formData.email ? 'Email Required' : 'Invalid Email'}
-                                        </span>
-                                    )}
-                                </div>
                                 <div className='mt-2'>
                                     <input
                                         type='text'
@@ -256,7 +243,7 @@ export default function RegisterAi() {
                                             <option value='autocar'>Auto Car</option>
                                             <option value='other'>Other</option>
                                         </select>
-                                        <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                                        <div className='absolute right-3 top-[30%] transform -translate-y-1/2 mt-1'>
                                             <svg
                                                 className='w-5 h-5 text-gray-400'
                                                 fill='none'
@@ -292,8 +279,8 @@ export default function RegisterAi() {
                                     )}
                                 </div>
 
-                                <div className='mt-2'>
-                                    <div className='relative m-0'>
+                                <div className='mt-2 '>
+                                    <div className='m-0 relative'>
                                         <input
                                             type='text'
                                             placeholder='Model Height'
@@ -302,7 +289,7 @@ export default function RegisterAi() {
                                             value={formData.modelHeight}
                                             onChange={handleChange}
                                         />
-                                        <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                                        <div className='absolute right-3 top-[30%] transform -translate-y-1/2 mt-1'>
                                             <p className='opacity-70'>cm</p>
                                         </div>
                                     </div>
@@ -320,7 +307,7 @@ export default function RegisterAi() {
                                             value={formData.modelWeight}
                                             onChange={handleChange}
                                         />
-                                        <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                                        <div className='absolute right-3 top-[30%] transform -translate-y-1/2 mt-1'>
                                             <p className='opacity-70'>kg</p>
                                         </div>
                                     </div>
@@ -374,13 +361,14 @@ export default function RegisterAi() {
                                 <div className='mt-2'>
                                     <input
                                         type='file'
+                                        accept='image/png'
                                         id='file'
                                         ref={inputsRef.image}
                                         onChange={handleFileChange}
                                         className='m-0'
                                     />
                                     {validations.image && (
-                                        <span className='error-message'>Image Required</span>
+                                        <span className='error-message'>{formData.image ? "Image type must be png" :"Image Required"}</span>
                                     )}
                                 </div>
                                 <div className='contact-submit-div'>

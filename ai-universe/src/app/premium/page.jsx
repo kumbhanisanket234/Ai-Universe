@@ -1,8 +1,8 @@
-import ProfilePage from '@/components/ProfilePage'
+import Premium from '@/components/Premium'
 import React from 'react'
 
 export default function page() {
   return (
-    <ProfilePage />
+    <Premium/>
   )
 }

@@ -1,14 +1,15 @@
-// export const ROOT_URL = 'http://192.168.0.63:8001'
+export const ROOT_URL = 'http://192.168.0.63:8002'
 // export const ROOT_URL = 'http://192.168.145.128:8001'
-// export const ROOT_URL = 'http://192.168.11.179:8001'
+// export const ROOT_URL = 'http://192.168.11.144:8001'
 // export const ROOT_URL = 'http://192.168.137.195:8001'
-export const ROOT_URL='http://192.168.155.128:8001'
 
 
 export const EMAIL_REGEX = /\S+@\S+\.\S+/
 export const FULLNAME_REGEX = /^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$|^$/
 export const PHONE_REGEX = /^[0-9]|^$/
 export const SPACE_REGEX = /^\S*$/
+export const STRING_REGEX= /^[a-zA-Z]+$/
+
 
 export function convert(str) {
   var date = new Date(str),

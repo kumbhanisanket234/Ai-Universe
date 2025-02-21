@@ -1,19 +1,20 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
-import { EMAIL_REGEX, FULLNAME_REGEX, ROOT_URL } from '@/utils/constant'
+import { FULLNAME_REGEX, ROOT_URL } from '@/utils/constant'
 import axios from 'axios'
 import { Modal } from 'react-bootstrap'
 import Image from 'next/image'
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
+import { getCookie } from '@/utils/cookies'
 
 
 export default function Review() {
   const [active, setActive] = useState(false)
   const [reviewsContainer, setReviewsContainer] = useState([])
-
+  const token = getCookie('token');
   const [open, setOpen] = useState(false)
   const [add, setAdd] = useState(false)
 
@@ -31,7 +32,6 @@ export default function Review() {
     name: false,
     description: false,
     work: false,
-    email: false,
     img: false,
     location: false,
     rating: false
@@ -50,12 +50,21 @@ export default function Review() {
 
   };
 
+  const fetchReviews = async () => {
+    try {
+      const res = await axios.get(`${ROOT_URL}/reviews`)
+      if (res?.data?.success) {
+        setReviewsContainer(res?.data?.reviews)
+      }
+    } catch (err) {
+      console.log(err)
+    }
+
+  }
+
   useEffect(() => {
-    axios
-      .get(`${ROOT_URL}/reviews`)
-      .then(res => setReviewsContainer(res.data.reviews))
-      .catch(err => console.log(err))
-  }, [add])
+    fetchReviews()
+  }, [])
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -80,7 +89,7 @@ export default function Review() {
   }
 
   const checkValidations = () => {
-    const { name, description, work, email, img, location, rating } = formData
+    const { name, description, work, img, location, rating } = formData
 
     if (!name) {
       setValidations(pre => ({ ...pre, name: true }))
@@ -92,10 +101,6 @@ export default function Review() {
     }
     if (!work) {
       setValidations(pre => ({ ...pre, work: true }))
-      return
-    }
-    if (!email.trim() || !EMAIL_REGEX.test(formData.email)) {
-      setValidations(pre => ({ ...pre, email: true }))
       return
     }
     if (!img) {
@@ -117,7 +122,6 @@ export default function Review() {
   const onSubmit = async () => {
     const bodyData = new FormData()
     bodyData.append('name', formData?.name)
-    bodyData.append('email', formData?.email)
     bodyData.append('description', formData?.description)
     bodyData.append('image', formData?.img)
     bodyData.append('work', formData?.work)
@@ -125,21 +129,27 @@ export default function Review() {
     bodyData.append('rating', formData?.rating)
 
     try {
-      const res = await axios.post(`${ROOT_URL}/reviews`, bodyData)
+      const res = await axios.post(`${ROOT_URL}/reviews`,
+        bodyData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      )
       if (res?.data?.success) {
         toast.success(res?.data?.message)
-        setShowModal(false)
-        setFormData(prev => ({
-          ...prev,
-          name: '',
-          description: '',
-          email: '',
-          img: '',
-          work: '',
-          location: '',
-          rating: 0
-        }))
-        setAdd(true)
+        setOpen(false)
+        // setFormData(prev => ({
+        //   ...prev,
+        //   name: '',
+        //   description: '',
+        //   img: '',
+        //   work: '',
+        //   location: '',
+        //   rating: 0
+        // }))
+        fetchReviews()
         return
       }
 
@@ -252,6 +262,7 @@ export default function Review() {
                   transition
                   className="relative transform overflow-hidden p-5 sm:p-7 rounded-[20px] bg-[#000] text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
                 >
+                  <h1 className='text-[30px] text-[#cdff09] text-center'>Add Your Review</h1>
                   <div className='text-start contact-form'>
                     <div>
                       <input
@@ -290,21 +301,6 @@ export default function Review() {
                       />
                       {validations.work && (
                         <span className='error-message'>Work Required</span>
-                      )}
-                    </div>
-                    <div>
-                      <input
-                        type='email'
-                        className='form-control'
-                        name='email'
-                        placeholder='Email'
-                        value={formData.email}
-                        onChange={handleChange}
-                      />
-                      {validations.email && (
-                        <span className='error-message'>
-                          {formData.email ? 'Invalid Email' : 'Email Required'}
-                        </span>
                       )}
                     </div>
                     <div>

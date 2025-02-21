@@ -3,13 +3,14 @@ import Image from 'next/image'
 import { redirect, useRouter } from 'next/navigation'
 import React from 'react'
 import Navbar from './Navbar'
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 
 export default function Hero() {
   const router = useRouter();
   return (
     <>
-      <div className='hero-main dja'>
-        <div className='shadow shadow-left'>
+      <div className='hero-main dja min-h-screen'>
+        <div className='shadow shadow-left hidden md:block'>
 
         </div>
         <div className='hero'>
@@ -22,7 +23,8 @@ export default function Hero() {
             <button className='signup-btn dja gap-2' onClick={() => { router.push('/registered-device-details') }}>See All Devices</button>
           </div>
         </div>
-        <div className='shadow shadow-right'>
+
+        <div className='shadow shadow-right hidden md:block'>
 
         </div>
       </div>

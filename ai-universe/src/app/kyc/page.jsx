@@ -1,8 +1,8 @@
-import ProfilePage from '@/components/ProfilePage'
+import KYCPage from '@/components/KYC/KYCPage'
 import React from 'react'
 
 export default function page() {
   return (
-    <ProfilePage />
+   <KYCPage/>
   )
 }

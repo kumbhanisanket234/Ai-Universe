@@ -15,6 +15,7 @@ import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
 import axios from 'axios'
 import Modal from 'react-bootstrap/Modal'
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 
 export default function SignUp() {
   const router = useRouter()
@@ -23,7 +24,7 @@ export default function SignUp() {
   const [otp, setOtp] = useState(new Array(numberOfDigits).fill(''))
   const otpBoxReference = useRef([])
   const [otpSent, setOtpSent] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
+  const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [verifyLoading, setVerifyLoading] = useState(false)
 
@@ -212,7 +213,7 @@ export default function SignUp() {
       if (res?.data?.success) {
         setOtpSent(true)
         Timer()
-        setIsOpen(true)
+        setOpen(true)
         return
       }
       toast.error(res?.data?.error || 'Something went wrong')
@@ -239,7 +240,7 @@ export default function SignUp() {
 
       if (res?.data?.success) {
         toast.success(res?.data?.message)
-        setIsOpen(false)
+        setOpen(false)
         setOtpSent(false)
         setOtp([])
         router.push('/sign-in')
@@ -259,7 +260,7 @@ export default function SignUp() {
         <div className='flex justify-center items-center gap-[100px]'>
           <div>
             <div className='heading-btn'>
-              <button onClick={()=>{router.back()}}>Back</button>
+              <button  className='hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
             </div>
             <div className='contactus-heading mt-6'>
               <h1>Welcome to <br />Ai-Universe</h1>
@@ -359,7 +360,7 @@ export default function SignUp() {
                       <option value='female'>Female</option>
                       <option value='other'>Other</option>
                     </select>
-                    <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                    <div className='absolute right-3 top-[30%] transform -translate-y-1/2 mt-1'>
                       <svg
                         className='w-5 h-5 text-gray-400'
                         fill='none'
@@ -399,7 +400,7 @@ export default function SignUp() {
                         )
                       })}
                     </select>
-                    <div className='absolute right-3 top-1/2 transform -translate-y-1/2 mt-1'>
+                    <div className='absolute right-3 top-[30%] transform -translate-y-1/2 mt-1'>
                       <svg
                         className='w-5 h-5 text-gray-400'
                         fill='none'
@@ -467,6 +468,7 @@ export default function SignUp() {
                       setFormData({ ...formData, check: e.target.checked }),
                         setValidations({ ...validations, check: false })
                     }}
+                    style={{ margin: '0' }}
                   />
                   I agree <Link href='#'>terms & condition</Link>
                 </div>
@@ -474,14 +476,14 @@ export default function SignUp() {
                   <span className='error-message'>Agree Terms And Condition</span>
                 )}
                 <div className='contact-submit-div'>
-                  <button className='contact-submit-btn w-100' onClick={
+                  <button className='py-3 w-full bg-[#cdff09] rounded-lg text-[#000] font-semibold' onClick={
                     otpSent
                       ? () => {
-                        setIsOpen(true)
+                        setOpen(true)
                       }
                       : checkValidations
                   }>
-                    {loading && !isOpen ? 'Loading...' : 'Create an account'}
+                    {loading && !open ? 'Loading...' : 'Create an account'}
                   </button>
                 </div>
 
@@ -498,78 +500,70 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      <Modal
-        show={isOpen}
-        onHide={() => {
-          setIsOpen(false)
-        }}
-        centered
-        className='otp-modal'
-      >
-        <Modal.Header>
-          <div className='flex items-center justify-between w-full'>
-            <h1>Enter OTP For Verify Email</h1>
-            <button
-              onClick={() => {
-                setIsOpen(false)
-              }}
+      <Dialog open={open} onClose={setOpen} className="relative z-10">
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-[#1A1A1A66] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+        />
+
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+            <DialogPanel
+              transition
+              className="relative transform overflow-hidden p-5 sm:p-7 rounded-[20px] bg-[#000] text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
             >
-              <i className="fa-solid fa-x close"></i>
-            </button>
+              <div className='text-center'>
+                <div className='dja w-full'>
+                  <Image src="/images/verified.png" height={80} width={80} alt='verified' />
+                </div>
+                <h1 className='opacity-40 mt-3'>
+                  We have send a verification code to email
+                </h1>
+                <h1 className='mt-2'>{formData.email || 'info@gmail.com'}</h1>
+              </div>
+              <div className='flex justify-center items-center gap-4 mt-4'>
+                {otp.map((digit, index) => (
+                  <input
+                    key={index}
+                    value={digit}
+                    maxLength={1}
+                    onChange={e => handleOTPChange(e.target.value, index)}
+                    onKeyUp={e => handleBackspaceAndEnter(e, index)}
+                    ref={reference => (otpBoxReference.current[index] = reference)}
+                    className={`OTP-boxes rounded-md block appearance-none`}
+                  />
+                ))}
+              </div>
+              {validations.otp && (
+                <div className='error-message flex justify-center w-100'>
+                  OTP Required
+                </div>
+              )}
+              <div className='flex justify-center mt-2 w-100'>
+                <button className='otp-submit-btn' onClick={handleVerifyEmail}>
+                  {verifyLoading ? 'Loading...' : 'Submit'}
+                </button>
+              </div>
+              {otpSent && (
+                <>
+                  <p className='text-center m-0 mt-2'>
+                    You can resend OTP after <span className='text-[#cdff09]'>{timer}</span> second
+                  </p>
+                </>
+              )}
+              <div className='dja mt-2'>
+                <button
+                  className='btn btn-default resend-otp-btn'
+                  onClick={checkValidations}
+                  disabled={otpSent}
+                >
+                  {loading && open ? 'Sending...' : ' Resend OTP'}
+                </button>
+              </div>
+            </DialogPanel>
           </div>
-        </Modal.Header>
-        <Modal.Body>
-          <div className='text-center'>
-            {/* <h1 className='text-[40px]'>Enter Vetification Code</h1> */}
-            <div className='dja w-full'>
-              <Image src="/images/verified.png" height={80} width={80} alt='verified' />
-            </div>
-            <h1 className='opacity-40 mt-3'>
-              We have send a verification code to email
-            </h1>
-            <h1 className='mt-2'>{formData.email || 'info@gmail.com'}</h1>
-          </div>
-          <div className='flex justify-center items-center gap-4 mt-4'>
-            {otp.map((digit, index) => (
-              <input
-                key={index}
-                value={digit}
-                maxLength={1}
-                onChange={e => handleOTPChange(e.target.value, index)}
-                onKeyUp={e => handleBackspaceAndEnter(e, index)}
-                ref={reference => (otpBoxReference.current[index] = reference)}
-                className={`OTP-boxes rounded-md block appearance-none`}
-              />
-            ))}
-          </div>
-          {validations.otp && (
-            <div className='error-message flex justify-center w-100'>
-              OTP Required
-            </div>
-          )}
-          <div className='flex justify-center mt-2 w-100'>
-            <button className='otp-submit-btn' onClick={handleVerifyEmail}>
-              {verifyLoading ? 'Loading...' : 'Submit'}
-            </button>
-          </div>
-          {otpSent && (
-            <>
-              <p className='text-center m-0 mt-2'>
-                You can resend OTP after <span className='text-[#cdff09]'>{timer}</span> second
-              </p>
-            </>
-          )}
-          <div className='dja'>
-            <button
-              className='btn btn-default resend-otp-btn'
-              onClick={checkValidations}
-              disabled={otpSent}
-            >
-              {loading && isOpen ? 'Sending...' : ' Resend OTP'}
-            </button>
-          </div>
-        </Modal.Body>
-      </Modal>
+        </div>
+      </Dialog >
     </>
   )
 }

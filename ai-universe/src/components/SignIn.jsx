@@ -18,6 +18,7 @@ export default function SignIn() {
   const [otpSent, setOtpSent] = useState(false)
   const [newPassword, setNewPassword] = useState('')
   const [timer, setTimer] = useState(60)
+  const [hidePassword, setHidePassword] = useState(true)
 
   const inputsRef = {
     email: useRef(),
@@ -120,8 +121,9 @@ export default function SignIn() {
       )
       if (res?.data?.success) {
         setCookie('token', res.data?.token)
-        router.push('/ai-universe')
         toast.success(res?.data?.message)
+      
+        router.push('/ai-universe')
         return
       }
       toast.error(res?.data?.error || 'Something went wrong')
@@ -204,7 +206,7 @@ export default function SignIn() {
       <div className='flex justify-center items-center gap-[100px]'>
         <div>
           <div className='heading-btn'>
-            <button onClick={()=>{router.back()}}>Back</button>
+            <button  className='hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
           </div>
           <div className='contactus-heading mt-6'>
             <h1>Welcome to <br />Ai-Universe</h1>
@@ -244,14 +246,24 @@ export default function SignIn() {
                 </div>
                 {!otpSent && (
                   <div className='mt-2'>
-                    <input
-                      type='password'
-                      placeholder='Password'
-                      ref={inputsRef.password}
-                      name='password'
-                      value={formData.password}
-                      onChange={handleChange}
-                    />
+                    <div className='relative'>
+                      <input
+                        type={hidePassword ? 'password' : 'text'}
+                        placeholder='Password'
+                        ref={inputsRef.password}
+                        name='password'
+                        value={formData.password}
+                        onChange={handleChange}
+                      />
+                      <Image
+                        src={hidePassword ? "images/eye-off-line.svg" : 'images/eye.svg'}
+                        height={20}
+                        width={20}
+                        className='absolute right-3 top-[60%] transform -translate-y-1/2'
+                        alt='show'
+                        onClick={() => { setHidePassword(!hidePassword) }}
+                      />
+                    </div>
                     {validations.password && (
                       <span className='error-message'>Password Required</span>
                     )}
@@ -297,6 +309,7 @@ export default function SignIn() {
                           maxLength={1}
                           onChange={e => handleOTPChange(e.target.value, index)}
                           onKeyUp={e => handleBackspaceAndEnter(e, index)}
+                          style={{ padding: '0' }}
                           ref={reference =>
                             (otpBoxReference.current[index] = reference)
                           }
@@ -305,7 +318,7 @@ export default function SignIn() {
                       ))}
                     </div>
                     {validations.otp && (
-                      <div className='error-message flex justify-center w-100'>
+                      <div className='error-message flex justify-center w-full'>
                         OTP Required
                       </div>
                     )}
@@ -319,7 +332,7 @@ export default function SignIn() {
                   </>
                 )}
                 <div className='contact-submit-div'>
-                  <button className='contact-submit-btn w-100' onClick={checkValidations}>
+                  <button className='bg-[#cdff09] py-3 text-[#000]  rounded-[20px] w-full font-semibold' onClick={checkValidations}>
                     {loading ? 'Loading...' : otpSent ? 'Submit' : 'Login'}
                   </button>
                 </div>

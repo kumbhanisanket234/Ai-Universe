@@ -1,4 +1,3 @@
-import Aicard from '@/components/Aicard'
 import Category from '@/components/Category'
 import ContactUs from '@/components/ContactUs'
 import Faq from '@/components/Faq'
@@ -21,7 +20,6 @@ export default function page() {
       <Faq />
       <Future />
       <Footer />
-      {/* <Aicard /> */}
     </>
   )
 }
