@@ -10,3 +10,7 @@ from .user.register_ai import *
 from .user.profile import *
 from .user.update_review import *
 from .user.mydevice_details import *
+from .user.premium_user import *
+from .user.logined_user_detils import *
+from .user.auth import *
+from .user.owner_kyc import *

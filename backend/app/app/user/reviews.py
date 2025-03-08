@@ -19,7 +19,7 @@ async def reviews(
     name: Annotated[str, None,  Form()],
     description: Annotated[str, Form(...)],
     work: Annotated[str, Form(...)],
-    email: Annotated[EmailStr, Form(...)],
+    # email: Annotated[EmailStr, Form(...)],
     location: Annotated[str, Form(...)],
     rating: Annotated[int, Form(...)],
     image: UploadFile = File(...) ,
@@ -28,52 +28,97 @@ async def reviews(
     cur = conn.cursor()
 
     payload = decode_token(token)
-    access_token = payload("sub")
+    print(payload)
+    email : str  = payload["sub"]
 
-    if not access_token:
+    if not email:
         raise HTTPException(status_code=401 , detail=" Token Expired ")
 
-    cur.execute("SELECT * FROM register WHERE email = %s", (email,))
+    # cur.execute("SELECT * FROM register WHERE email = %s", (email,))
+    cur.callproc("reviews", (email,))
+
     user = cur.fetchone()
+
     if user:
         image_path = UPLOAD_DIR / image.filename
-
         with open(image_path, "wb") as f:
             f.write(await image.read())
             cur = conn.cursor()
 
-            if not name.strip():
-                return {"success": False, "error": "Name is required"}
-            elif not name.isalpha():
-                return {"success": False, "error": "Enter valid name"}
+        # cur.execute("select * from reviews where email = %s " , (email,))
+        cur.callproc("reviews" , (email,))
+        review_data = cur.fetchone()
+        # print("-----------------------------",review_data)
 
-            if not description.strip():
-                return {"success": False, "error": "Description is required"}
+        if review_data:
+            if name is None:
+                name = review_data[1]
 
-            if not work.strip():
-                return {"success": False, "error": "Work is required"}
-            elif not work.isalpha():
-                return {"success": False, "error": "Enter valid work"}
+            if description is None:
+                description = user[2]
 
-            if not location.strip():
-                return {"success": False, "error": "Location is required"}
-            elif not location.isalpha():
-                return {"success": False, "error": "Enter valid location"}
+            if work is None:
+                work = user[3]
 
-            if rating == " " or None:
-                return {"error" : "Rating is required" , "success" : False}
-            elif rating < 1 or rating > 5:
-                return {"error" : "Invalid rating" , "success" : False}
+            if location is None:
+                location = user[6]
 
-            cur.execute(
-                    "INSERT INTO reviews (name, description, work, email, image, location , rating ) VALUES (%s, %s, %s, %s, %s, %s , %s)",
-                    (name, description, work, email, str(image_path), location , rating)
-            )
+            if rating is None:
+                rating = user[7]
+
+            cur.execute("UPDATE reviews SET name = %s , description = %s , work = %s , location = %s , rating = %s where email = %s " ,
+                        (name, description, work, location,
+                        rating , email))
             conn.commit()
-            cur.close()
-            return {"success": True, "message": "Review submitted successfully"}
+
+            return {"message": "Review Update Successfully", "success": True}
+
+        else:
+                if not name.strip():
+                    return {"success": False, "error": "Name is required"}
+
+                for i in name:
+
+                    if i.isalpha() or i.isspace():
+                        pass
+                    else:
+                        return {"success": False, "error": "Enter valid name"}
+
+                if not description.strip():
+                    return {"success": False, "error": "Description is required"}
+
+                if not work.strip():
+                    return {"success": False, "error": "Work is required"}
+                for i in work:
+                    if i.isalpha() or  i.isspace():
+                        pass
+                    else:
+                        return {"success": True, "error": "Enter valid work"}
+
+                if not location.strip():
+                    return {"success": False, "error": "Location is required"}
+
+                for i in location:
+                    if i.isalpha() or i.isspace() or i == ",":
+                        pass
+                    else:
+                        return {"success": False, "error": "Enter valid location"}
+
+                if rating == " " or None:
+                    return {"error" : "Rating is required" , "success" : False}
+                elif rating < 1 or rating > 5:
+                    return {"error" : "Invalid rating" , "success" : False}
+
+                cur.execute(
+                        "INSERT INTO reviews (name, description, work, email, image, location , rating ) VALUES (%s, %s, %s, %s, %s, %s , %s)",
+                        (name, description, work, email, str(image_path), location , rating)
+                )
+                conn.commit()
+                cur.close()
+                return {"success": True, "message": "Review submitted successfully"}
     else:
         return {"success": False, "error": "User not found"}
+
 
 @user.get("/reviews", tags=["Reviews"])
 async def get_reviews():
@@ -102,4 +147,6 @@ async def get_reviews():
 
                 data.append(user_data)
             cur.close()
-            return {"reviews": data}
+            return {"reviews": data , "success" : True}
+
+

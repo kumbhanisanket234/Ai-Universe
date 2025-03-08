@@ -12,7 +12,7 @@ class update_device_model(BaseModel):
     feature : str | None = None
     # lastupdate : str | None = None
     summary : str | None = None
-    modelId : int
+    modelId : int | None = None
 
 
 

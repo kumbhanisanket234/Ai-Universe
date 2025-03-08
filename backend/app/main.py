@@ -5,8 +5,6 @@ import os
 import pathlib
 import logging
 import uvicorn
-from starlette.middleware.sessions import SessionMiddleware
-
 from app.user.route import user
 from customized_log import CustomizeLogger
 from fastapi.middleware.cors import CORSMiddleware
