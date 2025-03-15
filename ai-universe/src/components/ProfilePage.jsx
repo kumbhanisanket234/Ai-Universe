@@ -25,11 +25,7 @@ export default function ProfilePage() {
     const [myDevices, setMyDevices] = useState()
     const [recentlyLogin, setRecentlyLogin] = useState()
     const router = useRouter()
-    
     const [isOnTwoFA, setIsOnTwoFA] = useState(false)
-    const handleTwoFAChange = () => {
-        setIsOnTwoFA(!isOnTwoFA)
-    }
 
     const [deviceUpdate, setDeviceUpdate] = useState({
         modelId: null,
@@ -103,7 +99,7 @@ export default function ProfilePage() {
         newpassword: ''
     })
 
-    const fetchData = async () => {
+    const fetchProfileData = async () => {
         try {
             setLoading(prev => ({ ...prev, pageLoading: true }))
             const res = await axios.get(`${ROOT_URL}/login/getuser`, {
@@ -161,7 +157,7 @@ export default function ProfilePage() {
         }
     }
     useEffect(() => {
-        fetchData()
+        fetchProfileData()
         fetchMydevices()
         fetchRecentLogin()
     }, [])
@@ -302,7 +298,7 @@ export default function ProfilePage() {
             const res = await axios.patch(`${ROOT_URL}/profile_image`, bodyData)
             if (res?.data?.success) {
                 toast.success(res?.data?.message)
-                fetchData()
+                fetchProfileData()
                 return
             }
             toast.error(res?.data?.error || 'Something went wrong')
@@ -368,7 +364,6 @@ export default function ProfilePage() {
                         image: undefined
                     }
                 })
-            console.log("Updated Device-------->", res)
             if (res?.data?.success) {
                 toast.success(res?.data?.message)
                 fetchMydevices()
@@ -384,6 +379,26 @@ export default function ProfilePage() {
             setLoading((prev) => ({ ...prev, deviceUpdateLoading: false }))
         }
     }
+
+    const handleTwoFAChange = async (e) => {
+        setIsOnTwoFA(!isOnTwoFA)
+        const { checked } = e.target
+        if (checked) {
+            try {
+                const res = await axios.post(`${ROOT_URL}/enable_2FA`, { email: data?.email })
+                if (res?.data?.success) {
+                    toast.success(res?.data?.message)
+                    return
+                }
+                toast.error(res?.data?.error || 'Something went wrong')
+                console.log("Enable 2FA---->", res)
+            } catch (err) {
+                console.log(err)
+                toast.error(err.response?.data?.message || 'Something went wrong')
+            }
+        }
+    }
+
     return (
         <div className='p-5 dja hero-main'>
             <div className='shadow shadow-left hidden md:block'>
@@ -450,7 +465,7 @@ export default function ProfilePage() {
                                                 <div className='relative'>
                                                     <input
                                                         type='checkbox'
-                                                        checked={isOnTwoFA}
+                                                        // checked={isOnTwoFA}
                                                         onChange={handleTwoFAChange}
                                                         className='sr-only'
                                                     />
@@ -713,7 +728,7 @@ export default function ProfilePage() {
                                 </div>
 
                             </div>
-                            <div className='border border-[#cdff09] p-5 rounded-lg w-full sm:max-w-[400px] h-fit max-h-[900px] overflow-auto bg-[#000]'>
+                            <div className='border border-[#cdff09] p-5 rounded-lg w-full sm:max-w-[400px] h-fit max-h-[900px] overflow-auto bg-[#000] relative z-10'>
                                 <div>
                                     <h1 className='text-[#cdff09] text-[25px] font-medium'>Recently Added Devices</h1>
                                 </div>
@@ -1017,7 +1032,7 @@ export default function ProfilePage() {
                                                 <X className="h-7 w-7" />
                                             </button>
                                         </div>
-                                        <TwoFAVarification setIsOnTwoFA={setIsOnTwoFA} />
+                                        <TwoFAVarification setIsOnTwoFA={setIsOnTwoFA} email={data?.email} />
                                     </DialogPanel>
                                 </div>
                             </div>
