@@ -4,17 +4,14 @@ import toast from 'react-hot-toast'
 import axios from 'axios'
 import { PHONE_REGEX, ROOT_URL } from '@/utils/constant'
 import Image from 'next/image'
-import { setCookie } from '@/utils/cookies'
-import { useRouter } from 'next/navigation'
 
-export default function Verify2FA({ twoFAOpen, setTwoFAOpen, email }) {
+export default function Disable2Fa({ twoFAOpen, setTwoFAOpen, email }) {
 
     let numberOfDigits = 6
     const [otp, setOtp] = useState(new Array(numberOfDigits).fill(''))
     const otpBoxReference = useRef([])
     const [loading, setLoading] = useState(false)
     const [otpValidation, setOtpValidation] = useState(false)
-    const router = useRouter()
 
     function handleOTPChange(value, index) {
         if (!PHONE_REGEX.test(value)) {
@@ -38,7 +35,7 @@ export default function Verify2FA({ twoFAOpen, setTwoFAOpen, email }) {
         }
     }
 
-    const handleVerify2FA = async () => {
+    const handelDisable2FA = async () => {
         if (loading) return
         const otpValue = otp.join('')
         if (!otpValue) {
@@ -46,23 +43,17 @@ export default function Verify2FA({ twoFAOpen, setTwoFAOpen, email }) {
             return
         }
         try {
-            setLoading(true)
-            const res = await axios.post(`${ROOT_URL}/login/verify_2fa`, { otp: otpValue, email: email })
-            console.log("2FA-verify-login--------->", res)
+            const res = await axios.post(`${ROOT_URL}/disable_2fa`, { otp: otpValue, email: email })
             if (res?.data?.success) {
                 toast.success(res?.data?.message)
-                if (res?.data?.token) {
-                    setCookie("token",res?.data?.token)
-                    router.push('/ai-universe')
-                }
                 setTwoFAOpen(false)
-                setOtp(new Array(numberOfDigits).fill(''))
+                console.log("Enable 2FA---->", res)
                 return
             }
             toast.error(res?.data?.error || 'Something went wrong')
         } catch (err) {
             console.log(err)
-            toast.error(err?.data?.message || 'Something went wrong')
+            toast.error(err.response?.data?.message || 'Something went wrong')
         } finally {
             setLoading(false)
         }
@@ -111,7 +102,7 @@ export default function Verify2FA({ twoFAOpen, setTwoFAOpen, email }) {
                             </div>
                         )}
                         <div className='flex justify-center mt-2 w-100'>
-                            <button className='otp-submit-btn' onClick={handleVerify2FA}>
+                            <button className='otp-submit-btn' onClick={handelDisable2FA}>
                                 {loading ? 'Loading...' : 'Submit'}
                             </button>
                         </div>

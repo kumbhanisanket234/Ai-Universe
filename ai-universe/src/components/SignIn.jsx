@@ -5,7 +5,7 @@ import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import React, { use, useRef, useState } from 'react'
+import React, { use, useEffect, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
 import Verify2FA from './Modals/Verify2FA'
 
@@ -121,10 +121,13 @@ export default function SignIn() {
           }
         }
       )
+      if (res?.data?.is_2fa) {
+        setTwoFAOpen(true)
+        return
+      }
       if (res?.data?.success) {
         setCookie('token', res.data?.token)
         toast.success(res?.data?.message)
-
         router.push('/ai-universe')
         return
       }
@@ -343,7 +346,7 @@ export default function SignIn() {
           </div>
         </div>
       </div>
-      <Verify2FA twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={formData?.email}/>
+      <Verify2FA twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={formData?.email} />
     </div>
 
   )

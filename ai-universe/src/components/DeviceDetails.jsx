@@ -19,6 +19,7 @@ export default function DeviceDetails() {
     const [openMoreDetails, setOpenMoreDetails] = useState(false)
     const [moreDetails, setMoreDetails] = useState()
     const router = useRouter();
+    const [premiumUser, setPremiumUser] = useState()
 
     const fetchData = async () => {
         setLoading(true)
@@ -34,13 +35,36 @@ export default function DeviceDetails() {
         }
     }
 
+    const fetchPremiumUser = async () => {
+        try {
+            const res = await axios.get(`${ROOT_URL}/premium_user`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+
+            if (res?.data?.success) {
+                setPremiumUser(true)
+            }
+
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
     useEffect(() => {
+        fetchPremiumUser()
         fetchData();
     }, [])
 
     const handleMoreDetails = (items) => {
-        setMoreDetails(items)
-        setOpenMoreDetails(true)
+        if (premiumUser) {
+            setMoreDetails(items)
+            setOpenMoreDetails(true)
+        }else{
+            toast.error("Get Premium For Access More Details")
+            router.push("/premium")
+        }
     }
 
     return (

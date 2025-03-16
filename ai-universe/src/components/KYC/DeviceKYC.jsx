@@ -7,8 +7,9 @@ export default function DeviceKYC({ setKycType, deviceData, setDeviceData, valid
 
 
   useEffect(() => {
-    setKycType({ deviceData: true })
+    setKycType({ device: true })
   }, [])
+  
   const handleChange = (e) => {
     const { name, value } = e.target
     if (name === "modelNumber" && !NUMBER_REGEX.test(value)) return

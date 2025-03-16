@@ -76,7 +76,7 @@ export default function KYCPage() {
       })
       console.log("vendor KYC----->", res)
       if (res?.data?.success) {
-        toast.success(res?.data?.message)
+        // toast.success(res?.data?.message)
         setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1))
         return
       }
@@ -106,7 +106,7 @@ export default function KYCPage() {
       })
       console.log("device KYC----->", res)
       if (res?.data?.success) {
-        toast.success(res?.data?.message)
+        // toast.success(res?.data?.message)
         setCurrentStep((prev) => Math.min(prev + 1, steps.length - 1))
         return
       }
@@ -189,14 +189,14 @@ export default function KYCPage() {
     if (kycType.vendor) {
       checkVendorValidations()
     }
-    if (kycType.deviceData) {
+    if (kycType.device) {
       checkDeviceValidations()
     }
   }
 
-  const prevStep = () => {
-    setCurrentStep((prev) => Math.max(prev - 1, 0))
-  }
+  // const prevStep = () => {
+  //   setCurrentStep((prev) => Math.max(prev - 1, 0))
+  // }
 
   return (
     <div className="min-h-screen gradient-bg p-8 flex items-center justify-center">
@@ -250,10 +250,10 @@ export default function KYCPage() {
                   setValidations={setValidations}
                 />
               }
-              {currentStep === 0 &&
+              {currentStep === 1 &&
                 <DeviceKYC
                   setKycType={setKycType}
-                  deviceData={deviceData} 
+                  deviceData={deviceData}
                   setDeviceData={setDeviceData}
                   validations={validations}
                   setValidations={setValidations}
@@ -261,10 +261,10 @@ export default function KYCPage() {
               {currentStep === 2 && <ReviewKYC />}
             </motion.div>
 
-            <div className="mt-8 flex justify-between">
-              <button className="dja border border-[#cdff09] p-2 px-5 rounded-lg hover:text-[#000] hover:bg-[#cdff09] transition-all duration-300 font-bold" onClick={prevStep} disabled={currentStep === 0} variant="outline">
+            <div className="mt-8 flex justify-end">
+              {/* <button className="dja border border-[#cdff09] p-2 px-5 rounded-lg hover:text-[#000] hover:bg-[#cdff09] transition-all duration-300 font-bold" onClick={prevStep} disabled={currentStep === 0} variant="outline">
                 <ChevronLeft className="mr-2 h-4 w-4" /> Previous
-              </button>
+              </button> */}
               <button className="dja border border-[#cdff09] p-2 px-5 rounded-lg hover:text-[#000] hover:bg-[#cdff09] transition-all duration-300 font-bold" onClick={nextStep} disabled={currentStep === steps.length - 1}>
                 {currentStep === steps.length - 1 ? "Submit" : "Next"} <ChevronRight className="ml-2 h-4 w-4" />
               </button>

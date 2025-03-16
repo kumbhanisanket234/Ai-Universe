@@ -16,6 +16,7 @@ import { useRouter } from 'next/navigation'
 import Loader from './Loader'
 import TwoFAVarification from './Modals/TwoFAVerification'
 import { X } from 'lucide-react'
+import Disable2Fa from './Modals/Disable2Fa'
 
 export default function ProfilePage() {
     const token = getCookie('token')
@@ -26,6 +27,10 @@ export default function ProfilePage() {
     const [recentlyLogin, setRecentlyLogin] = useState()
     const router = useRouter()
     const [isOnTwoFA, setIsOnTwoFA] = useState(false)
+    const [backupCode, setBackupCode] = useState("")
+    const [twoFaLink, setTwoFaLink] = useState("")
+    const [twoFAOpen, setTwoFAOpen] = useState(false)
+
 
     const [deviceUpdate, setDeviceUpdate] = useState({
         modelId: null,
@@ -105,7 +110,7 @@ export default function ProfilePage() {
             const res = await axios.get(`${ROOT_URL}/login/getuser`, {
                 headers: { Authorization: `Bearer ${token}` }
             })
-
+            console.log("res-------->", res)
             if (res?.data?.success) {
                 setData(res?.data?.user)
             }
@@ -160,7 +165,7 @@ export default function ProfilePage() {
         fetchProfileData()
         fetchMydevices()
         fetchRecentLogin()
-    }, [])
+    }, [twoFAOpen,isOnTwoFA])
 
     const handlePassChange = e => {
         const { name, value } = e.target
@@ -381,21 +386,26 @@ export default function ProfilePage() {
     }
 
     const handleTwoFAChange = async (e) => {
-        setIsOnTwoFA(!isOnTwoFA)
         const { checked } = e.target
         if (checked) {
+            setIsOnTwoFA(true)
             try {
                 const res = await axios.post(`${ROOT_URL}/enable_2FA`, { email: data?.email })
                 if (res?.data?.success) {
-                    toast.success(res?.data?.message)
+                    // toast.success(res?.data?.message)
+                    console.log("Enable 2FA---->", res)
+                    setTwoFaLink(res?.data?.otp_uri)
+                    setBackupCode(res?.data?.secret)
                     return
                 }
                 toast.error(res?.data?.error || 'Something went wrong')
-                console.log("Enable 2FA---->", res)
             } catch (err) {
                 console.log(err)
                 toast.error(err.response?.data?.message || 'Something went wrong')
             }
+        }
+        if (!checked) {
+            setTwoFAOpen(true)
         }
     }
 
@@ -465,15 +475,15 @@ export default function ProfilePage() {
                                                 <div className='relative'>
                                                     <input
                                                         type='checkbox'
-                                                        // checked={isOnTwoFA}
+                                                        checked={data?.is_2fa === 1}
                                                         onChange={handleTwoFAChange}
                                                         className='sr-only'
                                                     />
                                                     <div
-                                                        className={`box block h-7 w-12 rounded-full ${isOnTwoFA ? 'bg-[#7c8f30]' : 'bg-[#3d4131]'}`}
+                                                        className={`box block h-7 w-12 rounded-full ${data?.is_2fa === 1 ? 'bg-[#7c8f30]' : 'bg-[#3d4131]'}`}
                                                     ></div>
                                                     <div
-                                                        className={`absolute left-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-white transition ${isOnTwoFA ? 'translate-x-full' : ''}`}
+                                                        className={`absolute left-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-white transition ${data?.is_2fa === 1 ? 'translate-x-full' : ''}`}
                                                     ></div>
                                                 </div>
                                             </label>
@@ -1032,7 +1042,7 @@ export default function ProfilePage() {
                                                 <X className="h-7 w-7" />
                                             </button>
                                         </div>
-                                        <TwoFAVarification setIsOnTwoFA={setIsOnTwoFA} email={data?.email} />
+                                        <TwoFAVarification setIsOnTwoFA={setIsOnTwoFA} email={data?.email} twoFaLink={twoFaLink} backupCode={backupCode} />
                                     </DialogPanel>
                                 </div>
                             </div>
@@ -1040,6 +1050,7 @@ export default function ProfilePage() {
 
                     </div >
             }
+            <Disable2Fa twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={data?.email}/>
 
             <div className='shadow shadow-right hidden md:block'>
 

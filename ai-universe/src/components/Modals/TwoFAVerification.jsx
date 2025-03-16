@@ -9,11 +9,10 @@ import toast from "react-hot-toast"
 import axios from "axios"
 
 
-export default function TwoFAVarification({ setIsOnTwoFA, email }) {
+export default function TwoFAVarification({ setIsOnTwoFA, email, twoFaLink, backupCode }) {
     const [authCode, setAuthCode] = useState("")
     const [otpValidation, setOtpValidation] = useState(false)
     const [loading, setLoading] = useState(false)
-    const [backupCode, setBackupCode] = useState("sdas sdas dasd asda")
 
     const handleChange = (e) => {
         const { value } = e.target
@@ -33,7 +32,7 @@ export default function TwoFAVarification({ setIsOnTwoFA, email }) {
         if (loading) return
         setLoading(true)
         try {
-            const res = await axios.post(`${ROOT_URL}/verify_2FA`, { otp: authCode, email: email })
+            const res = await axios.post(`${ROOT_URL}/verify_2fa`, { otp: authCode, email: email })
             console.log("2fa verify res------>", res)
             if (res?.data?.success) {
                 toast.success(res?.data?.message)
@@ -64,7 +63,7 @@ export default function TwoFAVarification({ setIsOnTwoFA, email }) {
                                 <QRCode
                                     size={200}
                                     style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                                    value="hello"
+                                    value="otpauth://totp/AI%20Universe:sebos96447%40bankrau.com?secret=PB7M2TM4TLMDJUVNJLO3NSCERJNGMQ6W&issuer=AI%20Universe"
                                     viewBox={`0 0 256 256`}
                                 />
                             </div>
