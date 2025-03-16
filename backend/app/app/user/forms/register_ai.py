@@ -4,18 +4,19 @@ from pydantic import BaseModel , EmailStr
 
 
 
+
 class registerai_form(BaseModel):
-    email : EmailStr
-    owner : str
-    modelName : str
-    modelType : str
-    modelVersion : str
-    modelHeight : str
-    modelWeight  : str
-    manufactureName : str
-    feature : str
-    summary : str
-    image : UploadFile = File(...)
-    modelId : str
+    # email : Annotated[EmailStr , Form()]
+    owner : Annotated[str , Form()]
+    modelName : Annotated[str , Form()]
+    modelType : Annotated[str ,Form()]
+    modelVersion : Annotated[str , Form()]
+    modelHeight : Annotated[str , Form()]
+    modelWeight  : Annotated[str , Form()]
+    manufactureName : Annotated[str , Form()]
+    feature : Annotated[str , Form()]
+    summary : Annotated[str , Form()]
+    image : UploadFile = File(...) , Form()
+    # modelId : Annotated[str , Form()]
 
 

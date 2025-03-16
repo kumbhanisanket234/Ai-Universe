@@ -1,15 +1,14 @@
-from datetime import timedelta
-from os import access
-
+from datetime import datetime, timedelta
 from passlib.context import CryptContext
 from pydantic import BaseModel
 import jwt
 from fastapi.security import OAuth2PasswordRequestForm , OAuth2PasswordBearer
 from fastapi_mail import FastMail, MessageSchema, ConnectionConfig
 
+
+
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-
 context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/token")
 
@@ -19,17 +18,18 @@ oauth2_bearer = OAuth2PasswordBearer(tokenUrl="auth/token")
 
 
 
-
+# convert register password hash
 def hash_password(password: str):
     return context.hash(password)
 
+# login time verify password
 def verify_password(password : str , hashed_password):
     return context.verify(password, hashed_password)
 
 
-from datetime import datetime, timedelta
 
 
+# create token
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 2880  # Token expires in 2 day
@@ -38,6 +38,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 2880  # Token expires in 2 day
 class TokenData(BaseModel):
     email: str
 
+# generate token when user login
 
 def sign_token(email: str):
     expire_time = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -48,7 +49,7 @@ def sign_token(email: str):
     token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
     return token
 
-
+# decode token
 def decode_token(token: str):
 
     try:
@@ -63,6 +64,7 @@ def decode_token(token: str):
     #     return {}
 
 
+# use for mail
 conf = ConnectionConfig(
     MAIL_USERNAME="hiteshladumor266@gmail.com",
     MAIL_PASSWORD="jscf nhva pdme lgcf",
@@ -74,3 +76,4 @@ conf = ConnectionConfig(
     MAIL_SSL_TLS=False,
     TEMPLATE_FOLDER='./templates/'
 )
+

@@ -5,9 +5,11 @@ import React, { useState } from 'react'
 import { EMAIL_REGEX, ROOT_URL } from '@/utils/constant'
 import toast from 'react-hot-toast'
 import axios from 'axios'
+import { useRouter } from 'next/navigation'
 
 export default function ContactUs() {
   const [loading, setLoading] = useState(false)
+  const router=useRouter();
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
@@ -79,7 +81,8 @@ export default function ContactUs() {
       <div className='flex justify-center items-center gap-[40px]'>
         <div>
           <div className='heading-btn'>
-            <button disabled>Contact Us</button>
+          <button className='border border-[#cdff09] w-full max-w-[100px] rounded-[20px] py-2 hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
+
           </div>
           <div className='contactus-heading mt-6'>
             <h1>Get in Touch With Us</h1>

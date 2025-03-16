@@ -10,12 +10,15 @@ import { colorCode } from '@/utils/colorCode'
 import Loader from './Loader'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import ProductMoreDetails from './Modals/ProductMoreDetails'
+import { useRouter } from 'next/navigation'
 
 export default function DeviceDetails() {
 
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState()
     const [openMoreDetails, setOpenMoreDetails] = useState(false)
+    const [moreDetails, setMoreDetails] = useState()
+    const router = useRouter();
 
     const fetchData = async () => {
         setLoading(true)
@@ -35,7 +38,8 @@ export default function DeviceDetails() {
         fetchData();
     }, [])
 
-    const handleMoreDetails = () => {
+    const handleMoreDetails = (items) => {
+        setMoreDetails(items)
         setOpenMoreDetails(true)
     }
 
@@ -47,9 +51,7 @@ export default function DeviceDetails() {
                         <div className='dja h-screen'>
                             <Loader />
                         </div>
-
                         :
-
                         <>
                             {
                                 data?.length > 0 ?
@@ -60,8 +62,12 @@ export default function DeviceDetails() {
                                                 <h1 className='text-[40px] text-[#cdff09]'>Explore All Registered Devices</h1>
                                             </div>
                                         </div>
-                                        <div className='flex justify-end w-full mt-5'>
+                                        {/* <div className='flex justify-end w-full mt-5'>
                                             <input type="search" name="" id="" className='bg-[#455018] p-2  w-full max-w-[400px] rounded-lg' />
+                                        </div> */}
+                                        <div className='flex justify-start w-full mt-5'>
+                                            <button className='border border-[#cdff09] w-full max-w-[100px] rounded-[20px] py-2 hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
+
                                         </div>
                                         <div className='dja w-full'>
 
@@ -105,7 +111,7 @@ export default function DeviceDetails() {
                                                                             </div>
                                                                             <div>
                                                                                 <p className='text-[14px] opacity-50'>Register Date</p>
-                                                                                <p className='text-[14px]'>{items?.registerDate}</p>
+                                                                                <p className='text-[14px]'>{items?.registerDate?.split("T")[0]}</p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -133,7 +139,7 @@ export default function DeviceDetails() {
                                                                 <div className=' mt-3 bg-[#242b0b] border border-[#cdff09] rounded-md'>
                                                                     <div className='dja w-full'>
                                                                         <button className='gap-2 text-[14px] p-2 rounded-md w-full font-semibold'
-                                                                            onClick={handleMoreDetails}
+                                                                            onClick={() => { handleMoreDetails(items) }}
                                                                         >
                                                                             More Details
                                                                         </button>
@@ -157,7 +163,7 @@ export default function DeviceDetails() {
                                                         transition
                                                         className="relative transform overflow-hidden p-5 sm:p-7 rounded-[20px] bg-[#000] text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
                                                     >
-                                                        <ProductMoreDetails setOpenMoreDetails={setOpenMoreDetails} data={data} />
+                                                        <ProductMoreDetails setOpenMoreDetails={setOpenMoreDetails} moreDetails={moreDetails} />
                                                     </DialogPanel>
                                                 </div>
                                             </div>

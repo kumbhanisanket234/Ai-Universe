@@ -81,6 +81,7 @@ async def register(register_form: RegisterForm = Depends()):
             subtype="html",
         )
 
+        print(otp_storage)
         # Send email
         fm = FastMail(conf)
         await fm.send_message(message , template_name="email.html")
@@ -116,7 +117,8 @@ async def verify_user(email: Annotated[str, Body()], otp: Annotated[int, Body()]
 
 
         hashed_password = hash_password(form_data.password)
-    
+
+
         cur.execute(
             "INSERT INTO register (email, password, phone, fullName, dob, country, gender) "
             "VALUES (%s, %s, %s, %s, %s, %s, %s)",

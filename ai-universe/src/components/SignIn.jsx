@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { use, useRef, useState } from 'react'
 import toast from 'react-hot-toast'
+import Verify2FA from './Modals/Verify2FA'
 
 export default function SignIn() {
   const [loading, setLoading] = useState(false)
@@ -19,6 +20,7 @@ export default function SignIn() {
   const [newPassword, setNewPassword] = useState('')
   const [timer, setTimer] = useState(60)
   const [hidePassword, setHidePassword] = useState(true)
+  const [twoFAOpen, setTwoFAOpen] = useState(false)
 
   const inputsRef = {
     email: useRef(),
@@ -122,7 +124,7 @@ export default function SignIn() {
       if (res?.data?.success) {
         setCookie('token', res.data?.token)
         toast.success(res?.data?.message)
-      
+
         router.push('/ai-universe')
         return
       }
@@ -206,7 +208,7 @@ export default function SignIn() {
       <div className='flex justify-center items-center gap-[100px]'>
         <div>
           <div className='heading-btn'>
-            <button  className='hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
+            <button className='hover:bg-[#cdff09] hover:text-[#000] font-semibold transition-all duration-300' onClick={() => { router.back() }}>Back</button>
           </div>
           <div className='contactus-heading mt-6'>
             <h1>Welcome to <br />Ai-Universe</h1>
@@ -341,6 +343,7 @@ export default function SignIn() {
           </div>
         </div>
       </div>
+      <Verify2FA twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={formData?.email}/>
     </div>
 
   )

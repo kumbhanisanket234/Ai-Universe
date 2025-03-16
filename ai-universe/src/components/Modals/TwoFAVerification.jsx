@@ -1,19 +1,52 @@
 "use client"
-
 import { useState } from "react"
 import { Copy, X } from "lucide-react"
 import Image from "next/image"
 import copy from "copy-to-clipboard"
 import QRCode from "react-qr-code";
+import { NUMBER_REGEX, ROOT_URL } from "@/utils/constant"
+import toast from "react-hot-toast"
+import axios from "axios"
 
 
-export default function TwoFAVarification({ setIsOnTwoFA }) {
+export default function TwoFAVarification({ setIsOnTwoFA, email }) {
     const [authCode, setAuthCode] = useState("")
+    const [otpValidation, setOtpValidation] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [backupCode, setBackupCode] = useState("sdas sdas dasd asda")
 
-    const backupCode = "FHFS DB23 42H3 W48F 5A85 HFF5 ADFV HGT3"
+    const handleChange = (e) => {
+        const { value } = e.target
+        if (!NUMBER_REGEX.test(value)) return
+        setAuthCode(value)
+        setOtpValidation(false)
+    }
 
-    const handle2FA = () => {
-        setIsOnTwoFA(false)
+    const checkValidations = () => {
+        if (!authCode || authCode.length < 6) {
+            setOtpValidation(true)
+            return
+        }
+        handle2FA()
+    }
+    const handle2FA = async () => {
+        if (loading) return
+        setLoading(true)
+        try {
+            const res = await axios.post(`${ROOT_URL}/verify_2FA`, { otp: authCode, email: email })
+            console.log("2fa verify res------>", res)
+            if (res?.data?.success) {
+                toast.success(res?.data?.message)
+                setIsOnTwoFA(false)
+                return
+            }
+            toast.error(res?.data?.error || 'Something went wrong')
+        } catch (err) {
+            console.log(err)
+            toast.error(err.response?.data?.message || 'Something went wrong')
+        } finally {
+            setLoading(false)
+        }
     }
     return (
         <>
@@ -46,9 +79,12 @@ export default function TwoFAVarification({ setIsOnTwoFA }) {
                                 type="text"
                                 className="mt-1 bg-[#393a36] p-2 rounded-md outline-none w-full border focus:border-[#cdff09]"
                                 value={authCode}
-                                onChange={(e) => setAuthCode(e.target.value)}
+                                onChange={handleChange}
                                 placeholder="Enter 6-digit code"
                             />
+                            {
+                                otpValidation && <span className='error-message'>{authCode ? 'Enter Valid OTP' : 'Please Enter OTP'}</span>
+                            }
                         </div>
 
                         <p className="mt-2 text-xs text-gray-500">
@@ -73,14 +109,14 @@ export default function TwoFAVarification({ setIsOnTwoFA }) {
                         </div>
 
                         <div className="mt-6 flex justify-end gap-3">
-                            <button variant="outline" onClick={() => {setIsOnTwoFA(false)}}>
+                            <button variant="outline" onClick={() => { setIsOnTwoFA(false) }}>
                                 Cancel
                             </button>
                             <button
                                 className="dja border border-[#cdff09] p-2 px-5 rounded-lg hover:text-[#000] hover:bg-[#cdff09] transition-all duration-300 font-bold"
-                                onClick={handle2FA}
+                                onClick={checkValidations}
                             >
-                                Set Up
+                                {loading ? 'Loading...' : 'Set Up'}
                             </button>
                         </div>
                     </div>
