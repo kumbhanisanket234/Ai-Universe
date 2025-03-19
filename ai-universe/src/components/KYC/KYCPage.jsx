@@ -92,6 +92,7 @@ export default function KYCPage() {
     const deviceFormData = new FormData()
     deviceFormData.append('ownerName', deviceData?.ownerName)
     deviceFormData.append('deviceName', deviceData?.deviceName)
+    deviceFormData.append("modelId", getCookie("modelId"))
     deviceFormData.append('modelNumber', deviceData?.modelNumber)
     deviceFormData.append('manufacturer', deviceData?.manufacturer)
     deviceFormData.append('deviceImage', deviceData?.deviceImage)

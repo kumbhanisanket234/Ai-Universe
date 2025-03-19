@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { getCookie } from '@/utils/cookies'
+import { getCookie, setCookie } from '@/utils/cookies'
 import axios from 'axios'
 import { convert, FULLNAME_REGEX, ROOT_URL, STRING_REGEX } from '@/utils/constant'
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo'
@@ -30,7 +30,6 @@ export default function ProfilePage() {
     const [backupCode, setBackupCode] = useState("")
     const [twoFaLink, setTwoFaLink] = useState("")
     const [twoFAOpen, setTwoFAOpen] = useState(false)
-
 
     const [deviceUpdate, setDeviceUpdate] = useState({
         modelId: null,
@@ -165,7 +164,7 @@ export default function ProfilePage() {
         fetchProfileData()
         fetchMydevices()
         fetchRecentLogin()
-    }, [twoFAOpen,isOnTwoFA])
+    }, [twoFAOpen, isOnTwoFA])
 
     const handlePassChange = e => {
         const { name, value } = e.target
@@ -793,6 +792,12 @@ export default function ProfilePage() {
                                                         <div className='mt-5'>
                                                             <button
                                                                 className='p-2 rounded-xl border border-[#cdff09] hover:border-[#000] hover:bg-[#cdff09] hover:text-[#000] font-bold text-[14px] w-full'
+                                                                onClick={() => { setCookie("modelId", items?.modelId); router.push("/kyc") }}
+                                                            >Kyc</button>
+                                                        </div>
+                                                        <div className='mt-5'>
+                                                            <button
+                                                                className='p-2 rounded-xl border border-[#cdff09] hover:border-[#000] hover:bg-[#cdff09] hover:text-[#000] font-bold text-[14px] w-full'
                                                                 onClick={() => { setDeviceUpdate(items), setIsOpen({ updateProfile: true }) }}
                                                             >Update</button>
                                                         </div>
@@ -1050,7 +1055,7 @@ export default function ProfilePage() {
 
                     </div >
             }
-            <Disable2Fa twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={data?.email}/>
+            <Disable2Fa twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={data?.email} />
 
             <div className='shadow shadow-right hidden md:block'>
 
