@@ -77,7 +77,7 @@ export default function Disable2Fa({ twoFAOpen, setTwoFAOpen, email }) {
                                 <h1 className='opacity-70 text-[20px] w-full'>Enter Authentication Code</h1>
                                 <button onClick={() => { setTwoFAOpen(false) }}><i className="fa-solid fa-x text-[#cdff09]"></i></button>
                             </div>
-                            <p className='opacity-40 text-sm'>2FA Verification Code</p>
+                            <p className='opacity-40 text-sm'>For Disable 2FA Verification</p>
                             <div className='dja w-full mt-3'>
                                 <Image src="/images/verified.png" height={80} width={80} alt='verified' />
                             </div>

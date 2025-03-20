@@ -10,6 +10,7 @@ import axios from "axios"
 
 
 export default function TwoFAVarification({ setIsOnTwoFA, email, twoFaLink, backupCode }) {
+
     const [authCode, setAuthCode] = useState("")
     const [otpValidation, setOtpValidation] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -63,7 +64,7 @@ export default function TwoFAVarification({ setIsOnTwoFA, email, twoFaLink, back
                                 <QRCode
                                     size={200}
                                     style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-                                    value="otpauth://totp/AI%20Universe:sebos96447%40bankrau.com?secret=PB7M2TM4TLMDJUVNJLO3NSCERJNGMQ6W&issuer=AI%20Universe"
+                                    value={twoFaLink}
                                     viewBox={`0 0 256 256`}
                                 />
                             </div>

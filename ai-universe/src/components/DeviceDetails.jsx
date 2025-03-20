@@ -11,6 +11,7 @@ import Loader from './Loader'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import ProductMoreDetails from './Modals/ProductMoreDetails'
 import { useRouter } from 'next/navigation'
+import { getCookie } from '@/utils/cookies'
 
 export default function DeviceDetails() {
 
@@ -19,7 +20,7 @@ export default function DeviceDetails() {
     const [openMoreDetails, setOpenMoreDetails] = useState(false)
     const [moreDetails, setMoreDetails] = useState()
     const router = useRouter();
-    const [premiumUser, setPremiumUser] = useState()
+    const [premiumUser, setPremiumUser] = useState(false)
 
     const fetchData = async () => {
         setLoading(true)
@@ -39,7 +40,7 @@ export default function DeviceDetails() {
         try {
             const res = await axios.get(`${ROOT_URL}/premium_user`, {
                 headers: {
-                    'Authorization': `Bearer ${token}`
+                    'Authorization': `Bearer ${getCookie("token")}`
                 }
             })
 

@@ -110,7 +110,6 @@ export default function ProfilePage() {
             const res = await axios.get(`${ROOT_URL}/login/getuser`, {
                 headers: { Authorization: `Bearer ${token}` }
             })
-            console.log("res-------->", res)
             if (res?.data?.success) {
                 setData(res?.data?.user)
             }
@@ -165,7 +164,7 @@ export default function ProfilePage() {
         fetchProfileData()
         fetchMydevices()
         fetchRecentLogin()
-    }, [twoFAOpen,isOnTwoFA])
+    }, [twoFAOpen, isOnTwoFA])
 
     const handlePassChange = e => {
         const { name, value } = e.target
@@ -276,6 +275,7 @@ export default function ProfilePage() {
 
             if (res?.data?.success) {
                 toast.success(res?.data?.message)
+                setOpen(false)
                 return
             }
             toast.error(res?.data?.error || 'Something went wrong')
@@ -540,7 +540,7 @@ export default function ProfilePage() {
                                             ref={contentRef}
                                             className="overflow-hidden transition-[max-height] duration-500 ease-in-out w-full grid gap-5"
                                             style={{
-                                                maxHeight: isOpen.updateProfile ? `500px` : "0px",
+                                                maxHeight: isOpen.updateProfile ? `550px` : "0px",
                                             }}
                                         >
                                             <div className='flex gap-5 w-full mt-5'>
@@ -594,7 +594,7 @@ export default function ProfilePage() {
                                                 </div>
                                                 <div className='w-full p-1'>
                                                     <label htmlFor="" className='text-[14px] opacity-60 pl-[10px]'>Feature</label>
-                                                    <input
+                                                    {/* <input
                                                         type='text'
                                                         placeholder='Feature'
                                                         className='w-full p-3 rounded-lg text-gray-100 bg-[#121212] border border-transparent active:border-red-700 focus:!border-[#cdff09]'
@@ -602,7 +602,19 @@ export default function ProfilePage() {
                                                         ref={inputsRef.feature}
                                                         value={deviceUpdate?.feature}
                                                         onChange={handleDeviceUpdateChange}
-                                                    />
+                                                    /> */}
+                                                    <textarea
+                                                        id="w3review"
+                                                        rows="1"
+                                                        cols="50"
+                                                        type='text'
+                                                        placeholder='Feature'
+                                                        className='w-full p-3 opacity-70 rounded-lg text-gray-100 bg-[#121212] border border-transparent active:border-red-700 focus:!border-[#cdff09]'
+                                                        name='feature'
+                                                        ref={inputsRef.feature}
+                                                        value={deviceUpdate?.feature}
+                                                        onChange={handleDeviceUpdateChange}
+                                                    ></textarea>
                                                     {validations.feature && (
                                                         <span className='error-message'>Feature Required</span>
                                                     )}
@@ -655,7 +667,7 @@ export default function ProfilePage() {
                                             <div className='flex gap-5 w-full'>
                                                 <div className='w-full p-1'>
                                                     <label htmlFor="" className='text-[14px] opacity-60 pl-[10px]'>Summary</label>
-                                                    <input
+                                                    {/* <input
                                                         type='text'
                                                         placeholder='Summary'
                                                         className='w-full p-3 rounded-lg text-gray-100 bg-[#121212] border border-transparent active:border-red-700 focus:!border-[#cdff09]'
@@ -663,7 +675,20 @@ export default function ProfilePage() {
                                                         ref={inputsRef.summary}
                                                         value={deviceUpdate?.summary}
                                                         onChange={handleDeviceUpdateChange}
-                                                    />
+                                                    /> */}
+                                                    <textarea
+                                                        id="w3review"
+                                                        rows="3"
+                                                        cols="50"
+                                                        type='text'
+                                                        placeholder='Summary'
+                                                        className='w-full p-3 opacity-70 rounded-lg text-gray-100 bg-[#121212] border border-transparent active:border-red-700 focus:!border-[#cdff09]'
+                                                        name='summary'
+                                                        ref={inputsRef.summary}
+                                                        value={deviceUpdate?.summary}
+                                                        onChange={handleDeviceUpdateChange}
+                                                    >
+                                                    </textarea>
                                                     {validations.summary && (
                                                         <span className='error-message'>Summary Required</span>
                                                     )}
@@ -782,13 +807,16 @@ export default function ProfilePage() {
                                                                 </div>
                                                                 <div className='flex gap-2 items-center'>
                                                                     <Image src="/images/calendar.svg" height={25} width={25} alt='calendar' />
-                                                                    <p className='text-[16px] opacity-75' title='registered date'>{items?.registerDate}</p>
+                                                                    <p className='text-[16px] opacity-75' title='registered date'>{items?.registerDate?.split("T")[0]}</p>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className='flex gap-2 items-center mt-5 '>
+                                                        <div className='flex gap-2 items-center mt-5'>
                                                             <i className="fa-solid fa-rotate text-[#cdff09] text-[25px]"></i>
-                                                            <p className='text-[16px] opacity-75'>Last Update date: {items?.lastupdate || items?.registerDate}</p>
+                                                            <p className='text-[16px] opacity-75'>Last Update date: {items?.lastupdate || items?.registerDate?.split("T")[0]}</p>
+                                                        </div>
+                                                        <div className='flex gap-2 items-center mt-5 bg-[#242b0b] p-2 rounded-md w-fit'>
+                                                            <p className='text-[16px] opacity-75'>KYC : {items?.kyc ? "Verified" : 'Pending'}</p>
                                                         </div>
                                                         <div className='mt-5'>
                                                             <button
@@ -1050,7 +1078,7 @@ export default function ProfilePage() {
 
                     </div >
             }
-            <Disable2Fa twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={data?.email}/>
+            <Disable2Fa twoFAOpen={twoFAOpen} setTwoFAOpen={setTwoFAOpen} email={data?.email} />
 
             <div className='shadow shadow-right hidden md:block'>
 
